@@ -57,6 +57,7 @@ Main Features
     ],
     'installable': True,
     'application': True,
+    'auto_install': True,
     'qweb': [
         'static/src/xml/mail_thread.xml',
         'static/src/xml/mail_chatter.xml',

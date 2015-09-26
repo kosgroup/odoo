@@ -92,11 +92,11 @@ var PlannerLauncher = Widget.extend({
                 }).open();
             });
         } else if (menu === 'documentation') {
-            window.open('https://www.odoo.com/documentation/user', '_blank');
+            window.open('http://nextgerp.com/en/why-nextg-erp/odoo-is-our-core/docs-lib', '_blank');
         } else if (menu === 'planner') {
             if (this.dialog) this.show_dialog();
         } else if (menu === 'support') {
-            window.open('https://www.odoo.com/pricing?noredirect=1', '_blank');
+            window.open('http://nextgerp.com/en/support/forums', '_blank');
         }
     },
     setup: function(planner) {
