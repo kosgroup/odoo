@@ -71,6 +71,7 @@ Main Features
     ],
     'installable': True,
     'application': True,
+    'auto_install': True,
     'qweb': [
         'static/src/xml/mail.xml',
         'static/src/xml/mail_followers.xml',

@@ -1046,7 +1046,7 @@ instance.web.UserMenu =  instance.web.Widget.extend({
         this.update_promise = this.update_promise.then(fct, fct);
     },
     on_menu_help: function() {
-        window.open('http://help.odoo.com', '_blank');
+        window.open('http://nextgerp.com/en/support/forums', '_blank');
     },
     on_menu_logout: function() {
         this.trigger('user_logout');
