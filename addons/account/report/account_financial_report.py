@@ -27,8 +27,8 @@ class account_financial_report(models.Model):
         '''returns a recordset of all the children computed recursively, and sorted by sequence. Ready for the printing'''
         res = self
         children = self.search([('parent_id', 'in', self.ids)], order='sequence ASC')
-        if children:
-            res += children._get_children_by_order()
+        for item in children:
+            res += item._get_children_by_order()
         return res
 
     name = fields.Char('Report Name', required=True, translate=True)
