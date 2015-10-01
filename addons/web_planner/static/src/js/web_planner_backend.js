@@ -13,7 +13,7 @@ var QWeb = core.qweb;
 var _t = core._t;
 var PlannerDialog = planner.PlannerDialog;
 
-var PlannerLauncher = Widget.extend({
+var PlannerLauncher = Widget.extend(planner.PlannerHelpMixin, {
     template: "PlannerLauncher",
     init: function(parent) {
         this._super(parent);

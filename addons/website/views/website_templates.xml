@@ -130,6 +130,13 @@
             <t t-call-assets="website.assets_frontend" t-js="false"/>
             <t t-call-assets="web.assets_common" t-css="false"/>
             <t t-call-assets="website.assets_frontend" t-css="false"/>
+            <script type="text/javascript">
+                odoo.define('web.csrf', function (require) {
+                    var token = "<t t-esc="request.csrf_token(None)"/>";
+                    require('web.core').csrf_token = token;
+                    require('qweb').default_dict.csrf_token = token;
+                });
+            </script>
 
             <t t-raw="head or ''" name='layout_head'/>
         </head>
@@ -769,11 +776,9 @@
     <html>
         <head>
             <title t-esc="status_message">Internal Server Error</title>
-            <link rel='stylesheet' href='/web/static/lib/fontawesome/css/font-awesome.css'/>
-            <link rel="stylesheet" href='/website/static/src/less/import_bootstrap.less'/>
-            <link rel='stylesheet' href='/website/static/src/css/website.css'/>
-            <script type="text/javascript" src="/web/static/lib/jquery/jquery.js"></script>
-            <t t-call-assets="web.bootstrap"/>
+            <t t-set="debug" t-value="True"/>
+            <t t-call-assets="web.assets_common"/>
+            <t t-call-assets="website.assets_frontend"/>
             <script>
                 $(document).ready(function() {
                     var button = $('#reset_templates_button');
@@ -826,17 +831,19 @@
             </div>
 
             <div id="wrapwrap">
-                <div class="navbar navbar-default navbar-static-top">
-                    <div class="container">
-                        <div class="collapse navbar-collapse navbar-top-collapse">
-                            <ul class="nav navbar-nav pull-right">
-                                <li><a href="/">Home</a></li>
-                                <li><a href="javascript: window.history.back()">Back</a></li>
-                            </ul>
+                <header>
+                    <div class="navbar navbar-default navbar-static-top">
+                        <div class="container">
+                            <div class="collapse navbar-collapse navbar-top-collapse">
+                                <ul class="nav navbar-nav navbar-right" id="top_menu">
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="javascript: window.history.back()">Back</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="mb32">
+                </header>
+                <main>
                     <div class="oe_structure">
                         <h1 class="container mt32"><t t-esc="status_code"/>: <t t-esc="status_message"/></h1>
                     </div>
@@ -846,6 +853,7 @@
                             <p>An error occured while rendering the template <code t-esc="qweb_exception.qweb['template']"/>.</p>
                             <p>If this error is caused by a change of yours in the templates, you have the possibility to reset one or more templates to their <strong>factory settings</strong>.</p>
                             <form action="/website/reset_templates" method="post" id="reset_templates_form">
+                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                                 <ul class="oe_template_fallback">
                                     <li t-foreach="views" t-as="view">
                                         <label>
@@ -863,7 +871,7 @@
                     <t t-if="editable or request.debug">
                         <t t-call="website.http_error_debug"/>
                     </t>
-                </div>
+                </main>
             </div>
         </body>
     </html>

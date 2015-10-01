@@ -2524,8 +2524,8 @@ class stock_move(osv.osv):
                         qty = qty_min
                         redo_false_quants = True
                     else:
-                        move_quants_dict[lot] += [false_quants_move[0]]
-                        qty = false_quants_move[0][1]
+                        qty = false_quants_move[0].qty
+                        move_quants_dict[lot] += [(false_quants_move[0], qty)]
                         false_quants_move.pop(0)
                     lot_qty[lot] -= qty
                     lot_move_qty[move] -= qty
@@ -2538,6 +2538,8 @@ class stock_move(osv.osv):
                     quants = quant_obj.quants_get_preferred_domain(cr, uid, qty, move_rec, ops=ops, lot_id=lot, domain=domain,
                                                         preferred_domain_list=preferred_domain_list, context=context)
                     move_quants_dict[lot] += quants
+                    lot_qty[lot] -= qty
+                    lot_move_qty[move] -= qty
 
                 #Move all the quants related to that lot/move
                 if move_quants_dict[lot]:
@@ -2592,11 +2594,20 @@ class stock_move(osv.osv):
                 tot_qty += pack_lot.qty
             if ops.pack_lot_ids and ops.product_id and float_compare(tot_qty, ops.product_qty, precision_rounding=ops.product_uom_id.rounding) != 0.0:
                 raise UserError(_('You have a difference between the quantity on the operation and the quantities specified for the lots. '))
+
             quants_taken = []
             false_quants = []
             lot_move_qty = {}
+            #Group links by move first
+            move_qty_ops = {}
             for record in ops.linked_move_operation_ids:
                 move = record.move_id
+                if not move_qty_ops.get(move):
+                    move_qty_ops[move] = record.qty
+                else:
+                    move_qty_ops[move] += record.qty
+            #Process every move only once for every pack operation
+            for move in move_qty_ops:
                 self.check_tracking(cr, uid, move, ops, context=context)
                 preferred_domain = [('reservation_id', '=', move.id)]
                 fallback_domain = [('reservation_id', '=', False)]
@@ -2604,7 +2615,7 @@ class stock_move(osv.osv):
                 dom = main_domain
                 if not ops.pack_lot_ids:
                     preferred_domain_list = [preferred_domain] + [fallback_domain] + [fallback_domain2]
-                    quants = quant_obj.quants_get_preferred_domain(cr, uid, record.qty, move, ops=ops, domain=dom,
+                    quants = quant_obj.quants_get_preferred_domain(cr, uid, move_qty_ops[move], move, ops=ops, domain=dom,
                                                         preferred_domain_list=preferred_domain_list, context=context)
 
                     quant_obj.quants_move(cr, uid, quants, move, ops.location_dest_id, location_from=ops.location_id,
@@ -2612,7 +2623,7 @@ class stock_move(osv.osv):
                                           dest_package_id=quant_dest_package_id, entire_pack=entire_pack, context=context)
                 else:
                     # Check what you can do with reserved quants already
-                    qty_on_link = record.qty
+                    qty_on_link = move_qty_ops[move]
                     rounding = ops.product_id.uom_id.rounding
                     for reserved_quant in move.reserved_quant_ids:
                         if not reserved_quant.lot_id:
@@ -2630,7 +2641,7 @@ class stock_move(osv.osv):
 
                 if not move_qty.get(move.id):
                     raise UserError(_("The roundings of your Unit of Measures %s on the move vs. %s on the product don't allow to do these operations or you are not transferring the picking at once. ") % (move.product_uom.name, move.product_id.uom_id.name))
-                move_qty[move.id] -= record.qty
+                move_qty[move.id] -= move_qty_ops[move]
 
             #Handle lots separately
             if ops.pack_lot_ids:
@@ -3625,7 +3636,7 @@ class stock_warehouse(osv.osv):
 
         #choose the next available color for the picking types of this warehouse
         color = 0
-        available_colors = [c%9 for c in range(3, 12)]  # put flashy colors first
+        available_colors = [0, 3, 4, 5, 6, 7, 8, 1, 2]  # put white color first
         all_used_colors = self.pool.get('stock.picking.type').search_read(cr, uid, [('warehouse_id', '!=', False), ('color', '!=', False)], ['color'], order='color')
         #don't use sets to preserve the list order
         for x in all_used_colors:
@@ -3637,6 +3648,8 @@ class stock_warehouse(osv.osv):
         #order the picking types with a sequence allowing to have the following suit for each warehouse: reception, internal, pick, pack, ship. 
         max_sequence = self.pool.get('stock.picking.type').search_read(cr, uid, [], ['sequence'], order='sequence desc')
         max_sequence = max_sequence and max_sequence[0]['sequence'] or 0
+        internal_active_false = (warehouse.reception_steps == 'one_step') and (warehouse.delivery_steps == 'ship_only')
+        internal_active_false = internal_active_false and not self.user_has_groups(cr, uid, 'stock.group_locations')
 
         in_type_id = picking_type_obj.create(cr, uid, vals={
             'name': _('Receipts'),
@@ -3671,7 +3684,7 @@ class stock_warehouse(osv.osv):
             'sequence_id': int_seq_id,
             'default_location_src_id': wh_stock_loc.id,
             'default_location_dest_id': wh_stock_loc.id,
-            'active': True,
+            'active': not internal_active_false,
             'sequence': max_sequence + 2,
             'color': color}, context=context)
         pack_type_id = picking_type_obj.create(cr, uid, vals={
@@ -4452,6 +4465,8 @@ class stock_pack_operation(osv.osv):
         show_reserved = any([x for x in pack.pack_lot_ids if x.qty_todo > 0.0])
         ctx.update({'serial': serial,
                     'only_create': only_create,
+                    'create_lots': picking_type.use_create_lots,
+                    'state_done': pack.picking_id.state == 'done',
                     'show_reserved': show_reserved})
         return {
              'name': _('Lot Details'),
@@ -4530,18 +4545,22 @@ class stock_pack_operation_lot(osv.osv):
         ('uniq_lot_name', 'unique(operation_id, lot_name)', 'You have already mentioned this lot name in another line')]
 
     def do_plus(self, cr, uid, ids, context=None):
+        pack_obj = self.pool['stock.pack.operation']
         for packlot in self.browse(cr, uid, ids, context=context):
             self.write(cr, uid, [packlot.id], {'qty': packlot.qty + 1}, context=context)
-            self.pool['stock.pack.operation'].write(cr, uid, [packlot.operation_id.id], {'qty_done': packlot.operation_id.qty_done + 1}, context=context)
-        pack = self.browse(cr, uid, ids[0], context=context).operation_id.id
-        return self.pool['stock.pack.operation'].split_lot(cr, uid, [pack], context=context)
+        pack = self.browse(cr, uid, ids[0], context=context).operation_id
+        qty_done = sum([x.qty for x in pack.pack_lot_ids])
+        pack_obj.write(cr, uid, [pack.id], {'qty_done': qty_done}, context=context)
+        return pack_obj.split_lot(cr, uid, [pack.id], context=context)
 
     def do_minus(self, cr, uid, ids, context=None):
+        pack_obj = self.pool['stock.pack.operation']
         for packlot in self.browse(cr, uid, ids, context=context):
             self.write(cr, uid, [packlot.id], {'qty': packlot.qty - 1}, context=context)
-            self.pool['stock.pack.operation'].write(cr, uid, [packlot.operation_id.id], {'qty_done': packlot.operation_id.qty_done - 1}, context=context)
-        pack = self.browse(cr, uid, ids[0], context=context).operation_id.id
-        return self.pool['stock.pack.operation'].split_lot(cr, uid, [pack], context=context)
+        pack = self.browse(cr, uid, ids[0], context=context).operation_id
+        qty_done = sum([x.qty for x in pack.pack_lot_ids])
+        pack_obj.write(cr, uid, [pack.id], {'qty_done': qty_done}, context=context)
+        return pack_obj.split_lot(cr, uid, [pack.id], context=context)
 
 
 class stock_move_operation_link(osv.osv):
