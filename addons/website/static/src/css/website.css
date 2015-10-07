@@ -672,3 +672,74 @@ div.carousel .item.text_only .container > .carousel-caption > div {
 div.carousel .item.text_only .container > .carousel-image {
   display: none !important;
 }
+
+#wrapwrap .bg-alpha {
+    background-color: #428bca;
+    color: #fff;
+}
+
+#preheader {
+    vertical-align: middle;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+#preheader .list-inline {
+    display: inline-block;
+    margin-left: 0;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    margin-left: -5px;
+}
+
+#preheader #contact li {
+    margin-right: 20px;
+}
+
+#preheader .list-inline>li {
+    margin: 12px 0 0 0;
+    padding: 0;
+}
+
+#contact .fa.fa-home{
+	font-size: 20px;	
+}
+
+#contact a{
+	color: #fff;
+}
+
+#contact{
+	margin-bottom: 15px;
+}
+
+#social{
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+#social a{
+	color: #fff;
+	margin-left: 10px;
+}
+
+#copyright{
+	padding-top:10px;
+	padding-bottom: 10px;
+}
+
+#copyright a{
+	color: #fff;
+}
+
+#copyright .language_switcher{
+	margin-bottom: 0px;
+}
+
+#wrapwrap .navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
