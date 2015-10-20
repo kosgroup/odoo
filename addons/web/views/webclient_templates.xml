@@ -170,7 +170,7 @@
                 </div>
             </div>
             <div class="oe_footer">
-                Powered by <a href="http://www.odoo.com" target="_blank"><span>Odoo</span></a>, Hosted &amp; Supported by <a href="http://nextgerp.com" target="_blank"><span>NextG-ERP</span></a>
+                Powered by <a href="http://www.odoo.com" target="_blank"><span>Odoo</span></a>, Hosted &amp; Supported by <a href="http://nextgerp.com" target="_blank"><span>NextgCyber</span></a>
             </div>
         </template>
         <template id="web.menu_secondary_submenu">
@@ -264,7 +264,7 @@
                         </t>
                          -->
                         <a href="https://www.odoo.com" target="_blank">Powered by <span>Odoo</span></a><span class="oe_footer_seperator"> | </span>
-                        <a href="http://nextgerp.com" target="_blank">Hosted &amp; Supported by <span>NextG-ERP</span></a>
+                        <a href="http://nextgerp.com" target="_blank">Hosted &amp; Supported by <span>NextgCyber</span></a>
                     </div>
                 </div>
             </t>
