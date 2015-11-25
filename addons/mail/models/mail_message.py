@@ -28,7 +28,7 @@ class Message(models.Model):
     _name = 'mail.message'
     _description = 'Message'
     _inherit = ['ir.needaction_mixin']
-    _order = 'id desc'
+    _order = 'date desc'
     _rec_name = 'record_name'
 
     _message_read_limit = 30
