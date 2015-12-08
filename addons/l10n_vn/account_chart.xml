@@ -1934,7 +1934,7 @@
 
     <!-- Loại 10 -->
     <record id="chart10" model="account.account.template">
-        <field name="code">X10</field>
+        <field name="code">EX10</field>
         <field name="name">TÀI KHOẢN NGOÀI BẢNG</field>
         <field name="type">view</field>
         <field name="parent_id" ref="chart0" />
