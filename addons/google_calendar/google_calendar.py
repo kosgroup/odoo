@@ -236,12 +236,12 @@ class google_calendar(osv.AbstractModel):
             "start": {
                 type: start_date,
                 vstype: None,
-                'timeZone': context.get('tz', 'UTC'),
+                'timeZone': context.get('tz') or 'UTC',
             },
             "end": {
                 type: final_date,
                 vstype: None,
-                'timeZone': context.get('tz', 'UTC'),
+                'timeZone': context.get('tz') or 'UTC',
             },
             "attendees": attendee_list,
             "reminders": {
@@ -875,11 +875,9 @@ class google_calendar(osv.AbstractModel):
                     if actSrc == 'GG':
                         try:
                             self.delete_an_event(cr, uid, current_event[0], context=context)
-                        except Exception, e:
-                            error = simplejson.loads(e.read())
-                            error_nr = error.get('error', {}).get('code')
+                        except urllib2.HTTPError, e:
                             # if already deleted from gmail or never created
-                            if error_nr in (404, 410,):
+                            if e.code in (404, 410,):
                                 pass
                             else:
                                 raise e
@@ -991,9 +989,10 @@ class calendar_event(osv.Model):
     _inherit = "calendar.event"
 
     def get_fields_need_update_google(self, cr, uid, context=None):
-        return ['name', 'description', 'allday', 'start', 'date_end', 'stop',
-                'attendee_ids', 'alarm_ids', 'location', 'class', 'active',
-                'start_date', 'start_datetime', 'stop_date', 'stop_datetime']
+        recurrent_fields = self._get_recurrent_fields(cr, uid, context=context)
+        return recurrent_fields + ['name', 'description', 'allday', 'start', 'date_end', 'stop',
+                                   'attendee_ids', 'alarm_ids', 'location', 'class', 'active',
+                                   'start_date', 'start_datetime', 'stop_date', 'stop_datetime']
 
     def write(self, cr, uid, ids, vals, context=None):
         if context is None:

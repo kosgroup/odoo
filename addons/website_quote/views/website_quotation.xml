@@ -260,66 +260,65 @@
 										</div>
 
 
-										<div class="text-center mb16"
-											t-if="quotation.amount_undiscounted &gt; quotation.amount_untaxed">
-											<p class="text-muted mb8">Your advantage:</p>
-											<t t-if="quotation.amount_untaxed == quotation.amount_total">
-												<strong t-field="quotation.amount_total"
-													t-field-options='{"widget": "monetary", "display_currency": "quotation.pricelist_id.currency_id"}' />
-												<strong t-field="quotation.amount_undiscounted"
-													t-field-options='{"widget": "monetary", "display_currency": "quotation.pricelist_id.currency_id"}'
-													style="text-decoration: line-through" class="text-danger" />
-											</t>
-											<t t-if="quotation.amount_untaxed != quotation.amount_total">
-												<strong t-field="quotation.amount_untaxed"
-													t-field-options='{"widget": "monetary", "display_currency": "quotation.pricelist_id.currency_id"}' />
-												<strong t-field="quotation.amount_undiscounted"
-													t-field-options='{"widget": "monetary", "display_currency": "quotation.pricelist_id.currency_id"}'
-													style="text-decoration: line-through" class="text-danger" />
-												<br />
-												(
-												<span t-field="quotation.amount_total"
-													t-field-options='{"widget": "monetary", "display_currency": "quotation.pricelist_id.currency_id"}' />
-												Incl. tax)
-											</t>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-9">
-								<div class="alert alert-success alert-dismissable" t-if="message==1">
-									<button type="button" class="close" data-dismiss="alert"
-										aria-hidden="true">&amp;times;</button>
-									Your message has been successfully sent!
-								</div>
-								<div class="alert alert-warning alert-dismissable" t-if="message==2">
-									<button type="button" class="close" data-dismiss="alert"
-										aria-hidden="true">&amp;times;</button>
-									This quotation has been rejected.
-									<a href="#discussion">Contact us</a>
-									if you want a new one.
-								</div>
-								<div class="alert alert-warning alert-dismissable" t-if="message==3">
-									<button type="button" class="close" data-dismiss="alert"
-										aria-hidden="true">&amp;times;</button>
-									This order has been validated. Thanks for your trust
-									and do not hesitate to
-									<a href="#discussion">contact us</a>
-									for
-									any question.
-								</div>
-								<a id="introduction" />
-								<h1 class="page-header mt16">
-									<span t-if="quotation.state in ('draft','sent','cancel')">Your Quotation</span>
-									<span t-if="quotation.state not in ('draft','sent','cancel')">Your Order</span>
-									<em t-esc="quotation.name" />
-									<small t-field="quotation.state" />
-									<div groups="base.group_website_publisher" t-ignore="true"
-										class="pull-right css_editable_mode_hidden">
-										<a class="btn btn-info hidden-print"
-											t-att-href="'/web#return_label=Website&amp;model=%s&amp;id=%s' % (quotation._name, quotation.id)">Update Quote</a>
-									</div>
-								</h1>
+
+                              <div class="text-center mb16" t-if="quotation.amount_undiscounted &gt; quotation.amount_untaxed">
+                                  <p class="text-muted mb8">Your advantage:</p>
+                                  <t t-if="quotation.amount_untaxed == quotation.amount_total">
+                                      <strong t-field="quotation.amount_total"
+                                          t-field-options='{"widget": "monetary", "display_currency": "quotation.pricelist_id.currency_id"}'/>
+                                      <strong t-field="quotation.amount_undiscounted"
+                                          t-field-options='{"widget": "monetary", "display_currency": "quotation.pricelist_id.currency_id"}'
+                                          style="text-decoration: line-through"
+                                          class="text-danger"/>
+                                  </t>
+                                  <t t-if="quotation.amount_untaxed != quotation.amount_total">
+                                      <strong t-field="quotation.amount_untaxed"
+                                          t-field-options='{"widget": "monetary", "display_currency": "quotation.pricelist_id.currency_id"}'/>
+                                      <strong t-field="quotation.amount_undiscounted"
+                                          t-field-options='{"widget": "monetary", "display_currency": "quotation.pricelist_id.currency_id"}'
+                                          style="text-decoration: line-through"
+                                          class="text-danger"/>
+                                      <br />
+                                      (<span t-field="quotation.amount_total"
+                                          t-field-options='{"widget": "monetary", "display_currency": "quotation.pricelist_id.currency_id"}'/> Incl. tax)
+                                  </t>
+                              </div>
+                         </div>
+                      </div>
+                  </div>
+                  <div class="col-md-9">
+                      <div class="alert alert-success alert-dismissable" t-if="message==1">
+                          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&amp;times;</button>
+                          Your message has been successfully sent!
+                      </div>
+                      <div class="alert alert-warning alert-dismissable" t-if="message==2">
+                          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&amp;times;</button>
+                          This quotation has been rejected. <a href="#discussion">Contact us</a> if you want a new one.
+                      </div>
+                      <div class="alert alert-warning alert-dismissable" t-if="message==3">
+                          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&amp;times;</button>
+                          This order has been validated. Thanks for your trust
+                          and do not hesitate to <a href="#discussion">contact us</a> for
+                          any question.
+                      </div>
+                      <div class="alert alert-warning alert-dismissable" t-if="message==4 and quotation.state != 'sent'">
+                          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&amp;times;</button>
+                          This order has already been 
+                            <t t-if="quotation.state=='cancel'">cancelled</t>
+                            <t t-if="quotation.state not in ('cancel','draft')">validated</t>
+                          ! You can <a href="#discussion">contact us</a> for
+                          any question.
+                      </div>
+                      <a id="introduction"/>
+                      <h1 class="page-header mt16">
+                          <span t-if="quotation.state in ('draft','sent','cancel')">Your Quotation</span>
+                          <span t-if="quotation.state not in ('draft','sent','cancel')">Your Order</span>
+                          <em t-esc="quotation.name"/>
+                          <small t-field="quotation.state"/>
+                          <div groups="base.group_website_publisher" t-ignore="true" class="pull-right css_editable_mode_hidden">
+                              <a class="btn btn-info hidden-print" t-att-href="'/web#return_label=Website&amp;model=%s&amp;id=%s' % (quotation._name, quotation.id)">Update Quote</a>
+                          </div>
+                      </h1>
 
 								<div class="modal fade" id="modelaccept" role="dialog"
 									aria-hidden="true">

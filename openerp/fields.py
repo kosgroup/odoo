@@ -539,8 +539,9 @@ class Field(object):
         others = records.sudo() if self.related_sudo else records
         for record, other in zip(records, others):
             if not record.id:
-                # draft record, do not switch to another environment
-                other = record
+                # draft records: copy record's cache to other's cache first
+                for name, value in record._cache.iteritems():
+                    other[name] = value
             # traverse the intermediate fields; follow the first record at each step
             for name in self.related[:-1]:
                 other = other[name][:1]
@@ -548,13 +549,15 @@ class Field(object):
 
     def _inverse_related(self, records):
         """ Inverse the related field ``self`` on ``records``. """
+        # store record values, otherwise they may be lost by cache invalidation!
+        record_value = {record: record[self.name] for record in records}
         for record in records:
             other = record
             # traverse the intermediate fields, and keep at most one record
             for name in self.related[:-1]:
                 other = other[name][:1]
             if other:
-                other[self.related[-1]] = record[self.name]
+                other[self.related[-1]] = record_value[record]
 
     def _search_related(self, records, operator, value):
         """ Determine the domain to search on field ``self``. """
