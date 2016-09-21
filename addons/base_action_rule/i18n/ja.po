@@ -3,13 +3,14 @@
 # * base_action_rule
 # 
 # Translators:
+# Yoshi Tashiro <tashiro@roomsfor.hk>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-07 14:40+0000\n"
-"PO-Revision-Date: 2015-09-07 16:32+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"POT-Creation-Date: 2015-10-09 09:18+0000\n"
+"PO-Revision-Date: 2016-09-10 07:43+0000\n"
+"Last-Translator: Yoshi Tashiro <tashiro@roomsfor.hk>\n"
 "Language-Team: Japanese (http://www.transifex.com/odoo/odoo-9/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +32,7 @@ msgstr "アクションルール"
 #. module: base_action_rule
 #: model:ir.model,name:base_action_rule.model_base_action_rule_lead_test
 msgid "Action Rule Test"
-msgstr ""
+msgstr "アクションルールテスト"
 
 #. module: base_action_rule
 #: model:ir.model,name:base_action_rule.model_base_action_rule
@@ -58,32 +59,37 @@ msgstr "フォロワーを追加"
 #: model:ir.actions.act_window,name:base_action_rule.base_action_rule_act
 #: model:ir.ui.menu,name:base_action_rule.menu_base_action_rule_form
 msgid "Automated Actions"
-msgstr "自動的なアクション"
+msgstr "自動アクション"
 
 #. module: base_action_rule
 #: selection:base.action.rule,kind:0
 msgid "Based on Form Modification"
-msgstr ""
+msgstr "フォーム更新基準"
 
 #. module: base_action_rule
 #: selection:base.action.rule,kind:0
 msgid "Based on Timed Condition"
-msgstr ""
+msgstr "時間基準"
 
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_filter_pre_domain
 msgid "Before Update Domain"
-msgstr ""
+msgstr "更新前ドメイン"
 
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_filter_pre_id
 msgid "Before Update Filter"
-msgstr ""
+msgstr "更新前フィルタ"
 
 #. module: base_action_rule
 #: selection:base.action.rule.lead.test,state:0
 msgid "Cancelled"
 msgstr "キャンセル済"
+
+#. module: base_action_rule
+#: model:ir.model.fields,help:base_action_rule.field_base_action_rule_lead_test_customer
+msgid "Check this box if this contact is a customer."
+msgstr ""
 
 #. module: base_action_rule
 #: model:ir.actions.act_window,help:base_action_rule.base_action_rule_act
@@ -129,7 +135,7 @@ msgstr "日"
 #. module: base_action_rule
 #: model:ir.ui.view,arch_db:base_action_rule.view_base_action_rule_form
 msgid "Delay After Trigger Date"
-msgstr "トリガー日後の遅延"
+msgstr "トリガ日後待ち時間"
 
 #. module: base_action_rule
 #: model:ir.model.fields,help:base_action_rule.field_base_action_rule_trg_date_range
@@ -142,7 +148,7 @@ msgstr ""
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_trg_date_range
 msgid "Delay after trigger date"
-msgstr "トリガー日後の遅延"
+msgstr "トリガ日後待ち時間"
 
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_trg_date_range_type
@@ -153,7 +159,7 @@ msgstr "遅延タイプ"
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_display_name
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_lead_test_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "表示名"
 
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_filter_domain
@@ -168,7 +174,7 @@ msgstr ""
 #. module: base_action_rule
 #: model:ir.ui.view,arch_db:base_action_rule.view_base_action_rule_form
 msgid "Fields to Change"
-msgstr "変更する項目"
+msgstr "変更対象項目"
 
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_filter_id
@@ -186,7 +192,7 @@ msgid ""
 "Go to your \"Related Document Model\" page and set the filter parameters in "
 "the \"Search\" view (Example of filter based on Leads/Opportunities: "
 "Creation Date \"is equal to\" 01/01/2012)"
-msgstr ""
+msgstr "「関連ドキュメントモデル」ページにて、検索ビューにフィルタパラメタを設定します。(リード/案件のフィルタ例: 「作成日」「が次と一致する」「2012年1月1日」)"
 
 #. module: base_action_rule
 #: selection:base.action.rule,trg_date_range_type:0
@@ -226,7 +232,12 @@ msgid ""
 "In this same \"Search\" view, select the menu \"Save Current Filter\", enter"
 " the name (Ex: Create the 01/01/2012) and add the option \"Share with all "
 "users\""
-msgstr ""
+msgstr "同じ検索ビューにて、「現在のフィルタを保存」メニューを選択します。名称 (例: 「2012年1月1日作成」) を設定し、「全ユーザと共有」オプションを選択してください。"
+
+#. module: base_action_rule
+#: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_lead_test_customer
+msgid "Is a Customer"
+msgstr "顧客"
 
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_lead_test_date_action_last
@@ -237,7 +248,7 @@ msgstr "最終アクション"
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule___last_update
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_lead_test___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "最終更新日"
 
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_last_run
@@ -279,27 +290,27 @@ msgstr "新規"
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_on_change_fields
 msgid "On Change Fields Trigger"
-msgstr ""
+msgstr "オンチェンジ項目トリガ"
 
 #. module: base_action_rule
 #: selection:base.action.rule,kind:0
 msgid "On Creation"
-msgstr ""
+msgstr "作成時"
 
 #. module: base_action_rule
 #: selection:base.action.rule,kind:0
 msgid "On Creation & Update"
-msgstr ""
+msgstr "作成時および更新時"
 
 #. module: base_action_rule
 #: selection:base.action.rule,kind:0
 msgid "On Deletion"
-msgstr ""
+msgstr "削除時"
 
 #. module: base_action_rule
 #: selection:base.action.rule,kind:0
 msgid "On Update"
-msgstr ""
+msgstr "更新時"
 
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_lead_test_partner_id
@@ -314,7 +325,7 @@ msgstr "保留"
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_model_id
 msgid "Related Document Model"
-msgstr "関連する文書モデル"
+msgstr "関連ドキュメントモデル"
 
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_lead_test_user_id
@@ -331,7 +342,7 @@ msgstr "ルール名"
 msgid ""
 "Select when the action must be run, and choose records and/or timing "
 "conditions."
-msgstr ""
+msgstr "アクションをいつ実行するか選択し、対象レコード、そのた条件を指定してください。"
 
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_sequence
@@ -347,17 +358,17 @@ msgstr "サーバーアクション"
 #. module: base_action_rule
 #: model:ir.ui.view,arch_db:base_action_rule.view_base_action_rule_form
 msgid "Server actions to run"
-msgstr ""
+msgstr "実行するサーバアクション"
 
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_act_user_id
 msgid "Set Responsible"
-msgstr ""
+msgstr "担当者を設定"
 
 #. module: base_action_rule
 #: model:ir.ui.view,arch_db:base_action_rule.view_base_action_rule_form
 msgid "Set selection based on a search filter:"
-msgstr ""
+msgstr "検索フィルタに基づきレコード選択"
 
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_lead_test_state
@@ -370,14 +381,29 @@ msgid "Subject"
 msgstr "件名"
 
 #. module: base_action_rule
+#: model:ir.filters,name:base_action_rule.test_filter_done
+msgid "Test lead in state 'done'"
+msgstr ""
+
+#. module: base_action_rule
+#: model:ir.filters,name:base_action_rule.test_filter_draft
+msgid "Test lead in state 'draft'"
+msgstr ""
+
+#. module: base_action_rule
+#: model:ir.filters,name:base_action_rule.test_filter_open
+msgid "Test lead in state 'open'"
+msgstr ""
+
+#. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_trg_date_id
 msgid "Trigger Date"
-msgstr "トリガー日"
+msgstr "トリガ日"
 
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_trg_date_calendar_id
 msgid "Use Calendar"
-msgstr ""
+msgstr "カレンダを使用"
 
 #. module: base_action_rule
 #: model:ir.actions.act_window,help:base_action_rule.base_action_rule_act
@@ -406,7 +432,7 @@ msgstr ""
 #. module: base_action_rule
 #: model:ir.model.fields,field_description:base_action_rule.field_base_action_rule_kind
 msgid "When to Run"
-msgstr ""
+msgstr "実行タイミング"
 
 #. module: base_action_rule
 #: model:ir.model.fields,help:base_action_rule.field_base_action_rule_active
@@ -418,4 +444,4 @@ msgstr ""
 msgid ""
 "You may also use filters instead of choosing records. In order to create a "
 "new filter:"
-msgstr ""
+msgstr "レコードを選択する代わりにフィルタを使うこともできます。フィルタ新規作成の手順は次のとおり:"

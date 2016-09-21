@@ -19,28 +19,41 @@ class SaleAdvancePaymentInv(models.TransientModel):
         if self._count() == 1:
             sale_obj = self.env['sale.order']
             order = sale_obj.browse(self._context.get('active_ids'))[0]
-            if all([line.product_id.invoice_policy == 'order' for line in order.order_line]):
+            if all([line.product_id.invoice_policy == 'order' for line in order.order_line]) or order.invoice_count:
                 return 'all'
         return 'delivered'
 
+    @api.model
+    def _default_product_id(self):
+        product_id = self.env['ir.values'].get_default('sale.config.settings', 'deposit_product_id_setting')
+        return self.env['product.product'].browse(product_id)
+
+    @api.model
+    def _default_deposit_account_id(self):
+        return self._default_product_id().property_account_income_id
+
+    @api.model
+    def _default_deposit_taxes_id(self):
+        return self._default_product_id().taxes_id
+
     advance_payment_method = fields.Selection([
-        ('all', 'Invoiceable lines (deduct deposits)'),
         ('delivered', 'Invoiceable lines'),
-        ('percentage', 'Deposit (percentage)'),
-        ('fixed', 'Deposit (fixed amount)')
+        ('all', 'Invoiceable lines (deduct down payments)'),
+        ('percentage', 'Down payment (percentage)'),
+        ('fixed', 'Down payment (fixed amount)')
         ], string='What do you want to invoice?', default=_get_advance_payment_method, required=True)
-    product_id = fields.Many2one('product.product', string='Deposit Product', domain=[('type', '=', 'service')],\
-        default=lambda self: self.env['ir.values'].get_default('sale.config.settings', 'deposit_product_id_setting'))
+    product_id = fields.Many2one('product.product', string='Down Payment Product', domain=[('type', '=', 'service')],\
+        default=_default_product_id)
     count = fields.Integer(default=_count, string='# of Orders')
-    amount = fields.Float('Deposit Amount', digits=dp.get_precision('Account'), help="The amount to be invoiced in advance, taxes excluded.")
+    amount = fields.Float('Down Payment Amount', digits=dp.get_precision('Account'), help="The amount to be invoiced in advance, taxes excluded.")
     deposit_account_id = fields.Many2one("account.account", string="Income Account", domain=[('deprecated', '=', False)],\
-        help="Account used for deposits")
-    deposit_taxes_id = fields.Many2many("account.tax", string="Customer Taxes", help="Taxes used for deposits")
+        help="Account used for deposits", default=_default_deposit_account_id)
+    deposit_taxes_id = fields.Many2many("account.tax", string="Customer Taxes", help="Taxes used for deposits", default=_default_deposit_taxes_id)
 
     @api.onchange('advance_payment_method')
     def onchange_advance_payment_method(self):
         if self.advance_payment_method == 'percentage':
-            return {'value': {'amount':0, 'product_id':False}}
+            return {'value': {'amount': 0}}
         return {}
 
     @api.multi
@@ -61,13 +74,13 @@ class SaleAdvancePaymentInv(models.TransientModel):
                     (self.product_id.name,))
 
         if self.amount <= 0.00:
-            raise UserError(_('The value of the deposit amount must be positive.'))
+            raise UserError(_('The value of the down payment amount must be positive.'))
         if self.advance_payment_method == 'percentage':
             amount = order.amount_untaxed * self.amount / 100
-            name = _("Deposit of %s%%") % (self.amount,)
+            name = _("Down payment of %s%%") % (self.amount,)
         else:
             amount = self.amount
-            name = _('Deposit')
+            name = _('Down Payment')
 
         invoice = inv_obj.create({
             'name': order.client_order_ref or order.name,
@@ -110,7 +123,7 @@ class SaleAdvancePaymentInv(models.TransientModel):
             if not self.product_id:
                 vals = self._prepare_deposit_product()
                 self.product_id = self.env['product.product'].create(vals)
-                self.env['ir.values'].set_default('sale.config.settings', 'deposit_product_id_setting', self.product_id.id)
+                self.env['ir.values'].sudo().set_default('sale.config.settings', 'deposit_product_id_setting', self.product_id.id)
 
             sale_line_obj = self.env['sale.order.line']
             for order in sale_orders:
@@ -119,9 +132,9 @@ class SaleAdvancePaymentInv(models.TransientModel):
                 else:
                     amount = self.amount
                 if self.product_id.invoice_policy != 'order':
-                    raise UserError(_('The product used to invoice a deposit should have an invoice policy set to "Ordered quantities". Please update your deposit product to be able to create a deposit invoice.'))
+                    raise UserError(_('The product used to invoice a down payment should have an invoice policy set to "Ordered quantities". Please update your deposit product to be able to create a deposit invoice.'))
                 if self.product_id.type != 'service':
-                    raise UserError(_("The product used to invoice an deposit should be of type 'Service'. Please use another product or update this product."))
+                    raise UserError(_("The product used to invoice a down payment should be of type 'Service'. Please use another product or update this product."))
                 so_line = sale_line_obj.create({
                     'name': _('Advance: %s') % (time.strftime('%m %Y'),),
                     'price_unit': amount,
@@ -139,7 +152,7 @@ class SaleAdvancePaymentInv(models.TransientModel):
 
     def _prepare_deposit_product(self):
         return {
-            'name': 'Deposit',
+            'name': 'Down payment',
             'type': 'service',
             'invoice_policy': 'order',
             'property_account_income_id': self.deposit_account_id.id,

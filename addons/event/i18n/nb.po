@@ -3,13 +3,14 @@
 # * event
 # 
 # Translators:
+# Roy Edvard Ellingsen <roy@royedvard.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-18 08:11+0000\n"
-"PO-Revision-Date: 2015-09-19 08:19+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"POT-Creation-Date: 2015-10-01 06:27+0000\n"
+"PO-Revision-Date: 2016-09-05 13:15+0000\n"
+"Last-Translator: Roy Edvard Ellingsen <roy@royedvard.com>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/odoo/odoo-9/language/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -213,7 +214,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:event.field_event_event_message_needaction
 #: model:ir.model.fields,field_description:event.field_event_registration_message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "Handling"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event_active
@@ -319,16 +320,6 @@ msgid "Attendees"
 msgstr "Deltakere."
 
 #. module: event
-#: model:ir.ui.view,arch_db:event.view_event_kanban
-msgid "Attendees confirmed"
-msgstr ""
-
-#. module: event
-#: model:ir.ui.view,arch_db:event.view_event_kanban
-msgid "Attendees expected"
-msgstr ""
-
-#. module: event
 #: model:ir.model.fields,field_description:event.field_event_config_settings_auto_confirmation
 msgid "Auto Confirmation"
 msgstr ""
@@ -358,7 +349,7 @@ msgstr ""
 #: model:event.event,description:event.event_1
 #: model:event.event,description:event.event_3
 msgid "Banner Odoo Image"
-msgstr ""
+msgstr "Banner Odoo-bilde"
 
 #. module: event
 #: selection:event.mail,interval_type:0
@@ -455,7 +446,7 @@ msgstr "Firma"
 #: code:addons/event/models/event.py:397
 #, python-format
 msgid "Compose Email"
-msgstr ""
+msgstr "Skriv e-post"
 
 #. module: event
 #: model:event.type,name:event.event_type_2
@@ -512,6 +503,11 @@ msgid "Confirmed"
 msgstr "Bekreftet"
 
 #. module: event
+#: model:ir.ui.view,arch_db:event.view_event_kanban
+msgid "Confirmed attendees"
+msgstr ""
+
+#. module: event
 #: model:ir.ui.view,arch_db:event.view_event_search
 msgid "Confirmed events"
 msgstr "Bekreftede hendelser"
@@ -538,6 +534,13 @@ msgstr "Land"
 #: model:event.event,description:event.event_1
 #: model:event.event,description:event.event_3
 msgid "Course Summary"
+msgstr ""
+
+#. module: event
+#: model:web.tip,description:event.event_tip_1
+msgid ""
+"Create and manage registrations for this event, send emails to attendees and"
+" print identification badges."
 msgstr ""
 
 #. module: event
@@ -577,13 +580,13 @@ msgstr "Kunde"
 #: code:addons/event/models/event.py:376
 #, python-format
 msgid "Customer Email"
-msgstr ""
+msgstr "Kundens e-post"
 
 #. module: event
 #: model:ir.model.fields,help:event.field_event_event_message_last_post
 #: model:ir.model.fields,help:event.field_event_registration_message_last_post
 msgid "Date of the last message posted on the record."
-msgstr ""
+msgstr "Dato for siste melding på denne posten."
 
 #. module: event
 #: model:event.event,description:event.event_0
@@ -604,7 +607,7 @@ msgstr ""
 #: model:event.event,description:event.event_1
 #: model:event.event,description:event.event_3
 msgid "Day 3"
-msgstr ""
+msgstr "Dag 3"
 
 #. module: event
 #: selection:event.mail,interval_unit:0
@@ -648,7 +651,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:event.field_event_type_display_name
 #: model:ir.model.fields,field_description:event.field_report_event_registration_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Visnings navn"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_mail_sequence
@@ -877,6 +880,11 @@ msgid "Expected"
 msgstr "Forventet."
 
 #. module: event
+#: model:ir.ui.view,arch_db:event.view_event_kanban
+msgid "Expected attendees"
+msgstr ""
+
+#. module: event
 #: model:ir.ui.view,arch_db:event.view_report_event_registration_search
 msgid "Extended Filters..."
 msgstr "Utvidet Filtere ..."
@@ -1020,12 +1028,6 @@ msgid "Immediately"
 msgstr ""
 
 #. module: event
-#: model:ir.ui.view,arch_db:event.view_event_search
-#: model:ir.ui.view,arch_db:event.view_registration_search
-msgid "Important Messages"
-msgstr ""
-
-#. module: event
 #: model:event.event,description:event.event_0
 #: model:event.event,description:event.event_1
 #: model:event.event,description:event.event_3
@@ -1110,7 +1112,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:event.field_event_event_message_last_post
 #: model:ir.model.fields,field_description:event.field_event_registration_message_last_post
 msgid "Last Message Date"
-msgstr ""
+msgstr "Siste meldingsdato"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_config_settings___last_update
@@ -1122,7 +1124,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:event.field_event_type___last_update
 #: model:ir.model.fields,field_description:event.field_report_event_registration___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Sist oppdatert "
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_config_settings_write_uid
@@ -1299,7 +1301,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:event.field_event_event_message_needaction_counter
 #: model:ir.model.fields,field_description:event.field_event_registration_message_needaction_counter
 msgid "Number of Actions"
-msgstr ""
+msgstr "Antall handlinger"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_report_event_registration_nbevent
@@ -1325,13 +1327,13 @@ msgstr ""
 #: model:ir.model.fields,help:event.field_event_event_message_needaction_counter
 #: model:ir.model.fields,help:event.field_event_registration_message_needaction_counter
 msgid "Number of messages which requires an action"
-msgstr ""
+msgstr "Antall meldinger som krever handling"
 
 #. module: event
 #: model:ir.model.fields,help:event.field_event_event_message_unread_counter
 #: model:ir.model.fields,help:event.field_event_registration_message_unread_counter
 msgid "Number of unread messages"
-msgstr ""
+msgstr "Antall uleste meldinger"
 
 #. module: event
 #: model:event.event,description:event.event_0
@@ -1630,7 +1632,7 @@ msgstr ""
 #. module: event
 #: model:ir.ui.view,arch_db:event.view_event_search
 msgid "Start Month"
-msgstr ""
+msgstr "Startmåned"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event_state
@@ -1761,6 +1763,8 @@ msgstr "Ubegrenset"
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event_message_unread
 #: model:ir.model.fields,field_description:event.field_event_registration_message_unread
+#: model:ir.ui.view,arch_db:event.view_event_search
+#: model:ir.ui.view,arch_db:event.view_registration_search
 msgid "Unread Messages"
 msgstr "Uleste meldinger."
 
@@ -1809,6 +1813,16 @@ msgid ""
 "Warning: This Event has not reached its Minimum Registration Limit. Are you "
 "sure you want to confirm it?"
 msgstr "Advarsel: Denne hendelsen har ikke nådd sitt Minimum registrering Limit. Er du sikker på at du vil bekrefte det?"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event_website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_event_website_message_ids
+msgid "Website communication history"
+msgstr ""
 
 #. module: event
 #: selection:event.mail,interval_unit:0

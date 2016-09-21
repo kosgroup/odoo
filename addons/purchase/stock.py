@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from openerp import SUPERUSER_ID
 from openerp.osv import fields, osv
 from openerp.tools.translate import _
 from openerp.exceptions import UserError
@@ -10,8 +9,16 @@ class stock_picking(osv.osv):
     _inherit = 'stock.picking'
     _columns = {
         'purchase_id': fields.related('move_lines', 'purchase_line_id', 'order_id', string="Purchase Orders",
-            readonly=True, relation="many2one"),
+            readonly=True, type="many2one", relation="purchase.order"),
     }
+
+    def _prepare_values_extra_move(self, cr, uid, op, product, remaining_qty, context=None):
+        res = super(stock_picking, self)._prepare_values_extra_move(cr, uid, op, product, remaining_qty, context=context)
+        for m in op.linked_move_operation_ids:
+            if m.move_id.purchase_line_id and m.move_id.product_id == product:
+                res['purchase_line_id'] = m.move_id.purchase_line_id.id
+                break
+        return res
 
 
 class stock_move(osv.osv):
@@ -25,6 +32,17 @@ class stock_move(osv.osv):
     def get_price_unit(self, cr, uid, move, context=None):
         """ Returns the unit price to store on the quant """
         if move.purchase_line_id:
+            order = move.purchase_line_id.order_id
+            #if the currency of the PO is different than the company one, the price_unit on the move must be reevaluated
+            #(was created at the rate of the PO confirmation, but must be valuated at the rate of stock move execution)
+            if order.currency_id != move.company_id.currency_id:
+                #we don't pass the move.date in the compute() for the currency rate on purpose because
+                # 1) get_price_unit() is supposed to be called only through move.action_done(),
+                # 2) the move hasn't yet the correct date (currently it is the expected date, after
+                #    completion of action_done() it will be now() )
+                price_unit = move.purchase_line_id._get_stock_move_price_unit()
+                move.write({'price_unit': price_unit})
+                return price_unit
             return move.price_unit
         return super(stock_move, self).get_price_unit(cr, uid, move, context=context)
 
@@ -40,7 +58,7 @@ class stock_move(osv.osv):
 class stock_warehouse(osv.osv):
     _inherit = 'stock.warehouse'
     _columns = {
-        'buy_to_resupply': fields.boolean('Purchase to resupply this warehouse', 
+        'buy_to_resupply': fields.boolean('Purchase to resupply this warehouse',
                                           help="When products are bought, they can be delivered to this warehouse"),
         'buy_pull_id': fields.many2one('procurement.rule', 'Buy rule'),
     }

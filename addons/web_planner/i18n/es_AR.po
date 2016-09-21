@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-07 14:41+0000\n"
-"PO-Revision-Date: 2015-09-10 21:10+0000\n"
+"POT-Creation-Date: 2016-02-15 15:34+0000\n"
+"PO-Revision-Date: 2016-02-19 19:31+0000\n"
 "Last-Translator: Martin Trigaux\n"
 "Language-Team: Spanish (Argentina) (http://www.transifex.com/odoo/odoo-9/language/es_AR/)\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr "Datos"
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Mostrar Nombre"
 
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner_id
@@ -58,7 +58,7 @@ msgstr ""
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última modificación en"
 
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner_write_uid
@@ -130,4 +130,4 @@ msgstr "Plantilla"
 #. module: web_planner
 #: model:ir.ui.view,arch_db:web_planner.web_planner_view_search
 msgid "Unactive"
-msgstr ""
+msgstr "Inactivo"

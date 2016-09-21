@@ -3,13 +3,15 @@
 # * hr
 # 
 # Translators:
+# AMAAL RU <Fabu1410@yahoo.com>, 2016
+# Noureddine LOUAHEDJ <n.louahedj@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-18 08:11+0000\n"
-"PO-Revision-Date: 2015-09-19 08:16+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"POT-Creation-Date: 2016-01-15 10:41+0000\n"
+"PO-Revision-Date: 2016-08-17 06:33+0000\n"
+"Last-Translator: AMAAL RU <Fabu1410@yahoo.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/odoo/odoo-9/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,7 +34,7 @@ msgstr "%s (نسخة)"
 #: model:hr.job,website_description:hr.job_marketing
 #: model:hr.job,website_description:hr.job_trainee
 msgid "<i>Work in a fun atmosphere</i>"
-msgstr ""
+msgstr "<i>العمل في جو ممتع</i>"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_ceo
@@ -43,7 +45,7 @@ msgstr ""
 #: model:hr.job,website_description:hr.job_marketing
 #: model:hr.job,website_description:hr.job_trainee
 msgid "<i>You are passionate</i>"
-msgstr ""
+msgstr "<I>أنت شغوف</i>"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_cto
@@ -70,7 +72,7 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.hr_department_view_kanban
 msgid "<span>Reports</span>"
-msgstr ""
+msgstr "<span>التقارير</span>"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.hr_department_view_kanban
@@ -113,7 +115,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr.field_hr_employee_message_needaction
 #: model:ir.model.fields,field_description:hr.field_hr_job_message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "الاجراء المطلوب"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_active
@@ -128,7 +130,7 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_filter
 msgid "Archived"
-msgstr ""
+msgstr "مؤرشف"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_bank_account_id
@@ -195,25 +197,30 @@ msgid "City"
 msgstr "المدينة"
 
 #. module: hr
+#: model:web.tip,description:hr.hr_tip_2
+msgid "Click here to change the recruitment goal!"
+msgstr ""
+
+#. module: hr
 #: model:ir.actions.act_window,help:hr.act_employee_from_department
 #: model:ir.actions.act_window,help:hr.open_view_employee_list_my
 msgid "Click to add a new employee."
-msgstr ""
+msgstr "انقر هنا لإضافة موظف جديد."
 
 #. module: hr
 #: model:ir.actions.act_window,help:hr.open_module_tree_department
 msgid "Click to create a department."
-msgstr ""
+msgstr "أنقر هنا لإضافة قسم جديد."
 
 #. module: hr
 #: model:ir.actions.act_window,help:hr.view_department_form_installer
 msgid "Click to define a new department."
-msgstr ""
+msgstr "أنقر هنا لإضافة قسم جديد."
 
 #. module: hr
 #: model:ir.actions.act_window,help:hr.action_hr_job
 msgid "Click to define a new job position."
-msgstr ""
+msgstr "أنقر هنا لإضافة منصب جديد."
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_ceo
@@ -224,7 +231,7 @@ msgstr ""
 #: model:hr.job,website_description:hr.job_marketing
 #: model:hr.job,website_description:hr.job_trainee
 msgid "Close to the perfection ..."
-msgstr ""
+msgstr "قريب من المثالي ..."
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_coach_id
@@ -266,7 +273,7 @@ msgstr "الإعدادات"
 #. module: hr
 #: model:hr.job,name:hr.job_consultant
 msgid "Consultant"
-msgstr ""
+msgstr "مستشار"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
@@ -362,7 +369,7 @@ msgstr "الأقسام"
 #: model:ir.model.fields,field_description:hr.field_hr_employee_display_name
 #: model:ir.model.fields,field_description:hr.field_hr_job_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "اسم العرض"
 
 #. module: hr
 #: selection:hr.employee,marital:0
@@ -488,14 +495,14 @@ msgstr "المتابعون"
 #: model:ir.model.fields,field_description:hr.field_hr_employee_message_channel_ids
 #: model:ir.model.fields,field_description:hr.field_hr_job_message_channel_ids
 msgid "Followers (Channels)"
-msgstr ""
+msgstr "المتابعون (القنوات)"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_message_partner_ids
 #: model:ir.model.fields,field_description:hr.field_hr_employee_message_partner_ids
 #: model:ir.model.fields,field_description:hr.field_hr_job_message_partner_ids
 msgid "Followers (Partners)"
-msgstr ""
+msgstr "المتابعون (الشرماء)"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_gender
@@ -551,7 +558,7 @@ msgstr "تجميع حسب"
 #. module: hr
 #: model:ir.model,name:hr.model_hr_department
 msgid "HR Department"
-msgstr ""
+msgstr "قسم الموارد البشرية"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
@@ -623,21 +630,13 @@ msgstr "إذا حددته، ستتطلب الرسائل الجديدة انتب�
 #: model:ir.model.fields,help:hr.field_hr_employee_message_needaction
 #: model:ir.model.fields,help:hr.field_hr_job_message_needaction
 msgid "If checked, new messages require your attention."
-msgstr ""
+msgstr "عند التفعيل، توجد رسالة جديدة"
 
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_employee_active
 msgid ""
 "If the active field is set to False, it will allow you to hide the resource "
 "record without removing it."
-msgstr ""
-
-#. module: hr
-#: model:ir.ui.view,arch_db:hr.hr_kanban_view_employees
-#: model:ir.ui.view,arch_db:hr.view_department_filter
-#: model:ir.ui.view,arch_db:hr.view_employee_filter
-#: model:ir.ui.view,arch_db:hr.view_job_filter
-msgid "Important Messages"
 msgstr ""
 
 #. module: hr
@@ -676,7 +675,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr.field_hr_employee_message_is_follower
 #: model:ir.model.fields,field_description:hr.field_hr_job_message_is_follower
 msgid "Is Follower"
-msgstr ""
+msgstr "متابع"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_filter
@@ -747,6 +746,11 @@ msgstr "تاريخ آخر رسالة"
 #: model:ir.model.fields,field_description:hr.field_hr_job___last_update
 msgid "Last Modified on"
 msgstr "آخر تعديل في"
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_res_users_last_website_so_id
+msgid "Last Online Sale Order"
+msgstr "اخر امر بيع عبر الانترنت"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_write_uid
@@ -854,13 +858,6 @@ msgid "Messages"
 msgstr "الرسائل"
 
 #. module: hr
-#: model:ir.model.fields,help:hr.field_hr_department_message_ids
-#: model:ir.model.fields,help:hr.field_hr_employee_message_ids
-#: model:ir.model.fields,help:hr.field_hr_job_message_ids
-msgid "Messages and communication history"
-msgstr "الرسائل و سجل التواصل"
-
-#. module: hr
 #: model:ir.ui.view,arch_db:hr.hr_department_view_kanban
 msgid "More <i class=\"fa fa-caret-down\"/>"
 msgstr ""
@@ -914,7 +911,7 @@ msgstr "الملاحظات"
 #: model:ir.model.fields,field_description:hr.field_hr_employee_message_needaction_counter
 #: model:ir.model.fields,field_description:hr.field_hr_job_message_needaction_counter
 msgid "Number of Actions"
-msgstr ""
+msgstr "عدد الاجراءات"
 
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_job_no_of_employee
@@ -932,7 +929,7 @@ msgstr "عدد الموظفين الذين تم تعيينهم لمنصب هذه
 #: model:ir.model.fields,help:hr.field_hr_employee_message_needaction_counter
 #: model:ir.model.fields,help:hr.field_hr_job_message_needaction_counter
 msgid "Number of messages which requires an action"
-msgstr ""
+msgstr "عدد الرسائل الواجب اجراءها"
 
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_job_no_of_recruitment
@@ -944,7 +941,7 @@ msgstr "عدد الموظفين المتوقع توظيفهم."
 #: model:ir.model.fields,help:hr.field_hr_employee_message_unread_counter
 #: model:ir.model.fields,help:hr.field_hr_job_message_unread_counter
 msgid "Number of unread messages"
-msgstr ""
+msgstr "عدد الرسائل غير المقروءة"
 
 #. module: hr
 #: model:ir.actions.act_window,help:hr.open_module_tree_department
@@ -1189,9 +1186,14 @@ msgid "Subordinates"
 msgstr "المرؤوسين"
 
 #. module: hr
+#: model:ir.model.fields,field_description:hr.field_res_users_subscription_count
+msgid "Subscriptions"
+msgstr "الاشتراكات"
+
+#. module: hr
 #: sql_constraint:hr.employee.category:0
 msgid "Tag name already exists !"
-msgstr ""
+msgstr "بطاقة الاسم موجودة بالأصل"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_category_ids
@@ -1248,6 +1250,10 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr.field_hr_department_message_unread
 #: model:ir.model.fields,field_description:hr.field_hr_employee_message_unread
 #: model:ir.model.fields,field_description:hr.field_hr_job_message_unread
+#: model:ir.ui.view,arch_db:hr.hr_kanban_view_employees
+#: model:ir.ui.view,arch_db:hr.view_department_filter
+#: model:ir.ui.view,arch_db:hr.view_employee_filter
+#: model:ir.ui.view,arch_db:hr.view_job_filter
 msgid "Unread Messages"
 msgstr "رسائل غير مقروءة"
 
@@ -1256,7 +1262,7 @@ msgstr "رسائل غير مقروءة"
 #: model:ir.model.fields,field_description:hr.field_hr_employee_message_unread_counter
 #: model:ir.model.fields,field_description:hr.field_hr_job_message_unread_counter
 msgid "Unread Messages Counter"
-msgstr ""
+msgstr "عداد الرسائل الغير مقروءة"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_job_write_date
@@ -1568,7 +1574,7 @@ msgstr ""
 #. module: hr
 #: model:hr.job,website_description:hr.job_trainee
 msgid "You will work closely with all trainees"
-msgstr ""
+msgstr "سوف تعمل بشكل وثيق مع جميع المتدربين"
 
 #. module: hr
 #: model:ir.actions.act_window,help:hr.view_department_form_installer

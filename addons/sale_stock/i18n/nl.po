@@ -3,14 +3,15 @@
 # * sale_stock
 # 
 # Translators:
+# Erwin van der Ploeg <erwin@odooexperts.nl>, 2016
 # Yenthe Van Ginneken <yenthespam@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-29 10:26+0000\n"
-"PO-Revision-Date: 2015-09-30 09:28+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"POT-Creation-Date: 2015-10-01 06:27+0000\n"
+"PO-Revision-Date: 2016-03-08 19:02+0000\n"
+"Last-Translator: Erwin van der Ploeg <erwin@odooexperts.nl>\n"
 "Language-Team: Dutch (http://www.transifex.com/odoo/odoo-9/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,11 +28,11 @@ msgstr "<strong>Incotermen:</strong>"
 #. module: sale_stock
 #: selection:sale.config.settings,module_delivery:0
 msgid "Allow adding shipping costs"
-msgstr "Sta toevoegen afleveringskosten toe"
+msgstr "Sta toevoegen verzendkosten toe"
 
 #. module: sale_stock
 #: selection:sale.config.settings,group_mrp_properties:0
-msgid "Allow setting manufacturing order properties per order line (avanced)"
+msgid "Allow setting manufacturing order properties per order line (advanced)"
 msgstr "Sta productieorder eigenschap instellingen toe per orderregel (gevorderd)"
 
 #. module: sale_stock
@@ -42,7 +43,7 @@ msgstr "Geeft u de mogelijkheid om verkooporderregels te labellen met eigenschap
 #. module: sale_stock
 #: selection:sale.config.settings,group_route_so_lines:0
 msgid "Choose specific routes on sales order lines (advanced)"
-msgstr "Kies specifieke routes voor verkooporderlijnen (geavanceerd)"
+msgstr "Kies specifieke routes voor verkooporderregels (geavanceerd)"
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_res_company
@@ -116,6 +117,11 @@ msgid "Invoice"
 msgstr "Factuuradres"
 
 #. module: sale_stock
+#: model:ir.model,name:sale_stock.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Factuurregel"
+
+#. module: sale_stock
 #: model:ir.model.fields,help:sale_stock.field_res_company_security_lead
 msgid ""
 "Margin of error for dates promised to customers. Products will be scheduled "
@@ -134,7 +140,7 @@ msgid "No shipping costs on sales orders"
 msgstr "Geen verzendkosten op verkooporders"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:142
+#: code:addons/sale_stock/sale_stock.py:141
 #, python-format
 msgid "Not enough inventory!"
 msgstr "Niet genoeg voorraad!"
@@ -151,7 +157,7 @@ msgid "Order Routing"
 msgstr "Orderproductie"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:153
+#: code:addons/sale_stock/sale_stock.py:152
 #, python-format
 msgid "Ordered quantity decreased!"
 msgstr "Bestelde hoeveelheid is verminderd!"
@@ -179,7 +185,7 @@ msgstr "Productsjabloon"
 #. module: sale_stock
 #: model:ir.model.fields,field_description:sale_stock.field_sale_config_settings_group_mrp_properties
 msgid "Properties on SO Lines"
-msgstr "Eigenschappen op SO lijnen"
+msgstr "Eigenschappen op verkooporderregels"
 
 #. module: sale_stock
 #: model:ir.model.fields,field_description:sale_stock.field_sale_order_line_route_id
@@ -189,12 +195,7 @@ msgstr "Route"
 #. module: sale_stock
 #: model:ir.model.fields,field_description:sale_stock.field_stock_picking_sale_id
 msgid "Sale Order"
-msgstr ""
-
-#. module: sale_stock
-#: model:ir.model.fields,field_description:sale_stock.field_procurement_order_so_line_id
-msgid "Sale Order Line"
-msgstr "Verkooporderregel"
+msgstr "Verkooporder"
 
 #. module: sale_stock
 #: model:ir.ui.view,arch_db:sale_stock.stock_location_route_form_view_inherit_sale_stock
@@ -258,7 +259,7 @@ msgid "Stock Move"
 msgstr "Voorraadmutatie"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:195
+#: code:addons/sale_stock/sale_stock.py:194
 #, python-format
 msgid "This product is packaged by %d . You should sell %d ."
 msgstr "Dit product is verpakt door %d. U moet %d verkopen."
@@ -266,7 +267,7 @@ msgstr "Dit product is verpakt door %d. U moet %d verkopen."
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_stock_picking
 msgid "Transfer"
-msgstr ""
+msgstr "Verplaatsing"
 
 #. module: sale_stock
 #: model:ir.model.fields,field_description:sale_stock.field_sale_order_warehouse_id
@@ -275,26 +276,26 @@ msgid "Warehouse"
 msgstr "Magazijn"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:194
+#: code:addons/sale_stock/sale_stock.py:193
 #, python-format
 msgid "Warning"
 msgstr "Waarschuwing"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:154
+#: code:addons/sale_stock/sale_stock.py:153
 #, python-format
 msgid ""
 "You are decreasing the ordered quantity! Do not forget to manually update "
 "the delivery order if needed."
-msgstr "U verminderd de order hoeveelheid! Vergeet niet om manueel uw leveringsorder te updaten indien dit nodig is."
+msgstr "U verminderd de order hoeveelheid! Vergeet niet om handmatig uw leveringsorder te updaten indien dit nodig is."
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:143
+#: code:addons/sale_stock/sale_stock.py:142
 #, python-format
 msgid ""
 "You plan to sell %.2f %s but you only have %.2f %s available!\n"
 "The stock on hand is %.2f %s."
-msgstr "U plant om %.2f %s te verkopen maar u heeft maar %.2f %s beschikbaar!\nDe beschikbare stock is %.2f %s."
+msgstr "U plant om %.2f %s te verkopen maar u heeft maar %.2f %s beschikbaar!\nDe beschikbare voorraad is %.2f %s."
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_sale_config_settings

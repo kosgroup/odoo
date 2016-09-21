@@ -213,6 +213,7 @@ var DashBoard = form_common.FormWidget.extend({
             headless: true,
             low_profile: true,
             display_title: false,
+            search_disable_custom_filters: true,
             list: {
                 selectable: false
             }
@@ -224,9 +225,7 @@ var DashBoard = form_common.FormWidget.extend({
         this.action_managers.push(am);
         am.appendTo($action);
         am.do_action(action);
-        am.do_action = function (action) {
-            self.do_action(action);
-        };
+        am.do_action = this.do_action.bind(this);
         if (am.inner_widget) {
             var new_form_action = function(id, editable) {
                 var new_views = [];
@@ -256,8 +255,8 @@ var DashBoard = form_common.FormWidget.extend({
             var kanban = am.inner_widget.views.kanban;
             if (kanban) {
                 kanban.created.done(function() {
-                    kanban.controller.open_record = function(id, editable) {
-                        new_form_action(id, editable);
+                    kanban.controller.open_record = function(event, editable) {
+                        new_form_action(event.data.id, editable);
                     };
                 });
             }

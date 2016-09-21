@@ -10,6 +10,7 @@ except ImportError:
     import pickle
 import random
 import datetime
+from openerp.release import version_info
 from openerp.osv import fields, osv
 from openerp.tools.translate import _
 from openerp.tools.safe_eval import safe_eval as eval
@@ -71,7 +72,7 @@ class ir_model_fields_anonymization(osv.osv):
             if global_state == 'anonymized':
                 raise UserError(_("The database is currently anonymized, you cannot create, modify or delete fields."))
             elif global_state == 'unstable':
-                msg = _("The database anonymization is currently in an unstable state. Some fields are anonymized," + \
+                msg = _("The database anonymization is currently in an unstable state. Some fields are anonymized,"
                       " while some fields are not anonymized. You should try to solve this problem before trying to create, write or delete fields.")
                 raise UserError(msg)
 
@@ -263,16 +264,17 @@ class ir_model_fields_anonymize_wizard(osv.osv_memory):
 
         for anon_field in anon_fields:
             field = fields_by_id.get(anon_field.field_id.id)
-
-            values = {
-                'model_name': field.model_id.name,
-                'model_code': field.model_id.model,
-                'field_code': field.name,
-                'field_name': field.field_description,
-                'state': anon_field.state,
-            }
-            summary += u" * %(model_name)s (%(model_code)s) -> %(field_name)s (%(field_code)s): state: (%(state)s)\n" % values
-
+            if field:
+                values = {
+                    'model_name': field.model_id.name,
+                    'model_code': field.model_id.model,
+                    'field_code': field.name,
+                    'field_name': field.field_description,
+                    'state': anon_field.state,
+                }
+                summary += u" * %(model_name)s (%(model_code)s) -> %(field_name)s (%(field_code)s): state: (%(state)s)\n" % values
+            else:
+                summary += u"* Missing local model (%s) and field (%s): state: (%s) \n" % (anon_field.model_name, anon_field.field_name, anon_field.state)
         return summary
 
     def default_get(self, cr, uid, fields_list, context=None):
@@ -338,7 +340,7 @@ class ir_model_fields_anonymize_wizard(osv.osv_memory):
                 # remove the placeholer:
                 eview.remove(placeholder)
             else:
-                msg = _("The database anonymization is currently in an unstable state. Some fields are anonymized," + \
+                msg = _("The database anonymization is currently in an unstable state. Some fields are anonymized,"
                   " while some fields are not anonymized. You should try to solve this problem before trying to do anything else.")
                 raise UserError(msg)
 
@@ -371,7 +373,7 @@ class ir_model_fields_anonymize_wizard(osv.osv_memory):
         if state == 'anonymized':
             self._raise_after_history_update(cr, uid, history_id, _('Error !'), _("The database is currently anonymized, you cannot anonymize it again."))
         elif state == 'unstable':
-            msg = _("The database anonymization is currently in an unstable state. Some fields are anonymized," + \
+            msg = _("The database anonymization is currently in an unstable state. Some fields are anonymized,"
                   " while some fields are not anonymized. You should try to solve this problem before trying to do anything.")
             self._raise_after_history_update(cr, uid, history_id, 'Error !', msg)
 
@@ -412,6 +414,8 @@ class ir_model_fields_anonymize_wizard(osv.osv_memory):
                 elif field_type == 'selection':
                     anonymized_value = 'xxx'+sid
                 elif field_type == 'text':
+                    anonymized_value = 'xxx'+sid
+                elif field_type == 'html':
                     anonymized_value = 'xxx'+sid
                 elif field_type == 'boolean':
                     anonymized_value = random.choice([True, False])
@@ -476,8 +480,7 @@ class ir_model_fields_anonymize_wizard(osv.osv_memory):
 
         # handle the view:
         view_id = self.pool['ir.model.data'].xmlid_to_res_id(
-            cr, uid, 'anonymization.view_ir_model_fields_anonymize_wizard_form',
-            context=context
+            cr, uid, 'anonymization.view_ir_model_fields_anonymize_wizard_form'
         )
 
         return {
@@ -509,7 +512,7 @@ class ir_model_fields_anonymize_wizard(osv.osv_memory):
         if state == 'clear':
             raise UserError(_("The database is not currently anonymized, you cannot reverse the anonymization."))
         elif state == 'unstable':
-            msg = _("The database anonymization is currently in an unstable state. Some fields are anonymized," + \
+            msg = _("The database anonymization is currently in an unstable state. Some fields are anonymized,"
                   " while some fields are not anonymized. You should try to solve this problem before trying to do anything.")
             raise UserError(msg)
 
@@ -524,7 +527,7 @@ class ir_model_fields_anonymize_wizard(osv.osv_memory):
             data = pickle.loads(base64.decodestring(wizard.file_import))
 
             migration_fix_obj = self.pool.get('ir.model.fields.anonymization.migration.fix')
-            fix_ids = migration_fix_obj.search(cr, uid, [('target_version', '=', '8.0')])
+            fix_ids = migration_fix_obj.search(cr, uid, [('target_version', '=', '.'.join(map(str, version_info[:2])))])
             fixes = migration_fix_obj.read(cr, uid, fix_ids, ['model_name', 'field_name', 'query', 'query_type', 'sequence'])
             fixes = group(fixes, ('model_name', 'field_name'))
 
@@ -583,8 +586,7 @@ class ir_model_fields_anonymize_wizard(osv.osv_memory):
 
             # handle the view:
             view_id = self.pool['ir.model.data'].xmlid_to_res_id(
-                cr, uid, 'anonymization.view_ir_model_fields_anonymize_wizard_form',
-                context=context
+                cr, uid, 'anonymization.view_ir_model_fields_anonymize_wizard_form'
             )
 
 

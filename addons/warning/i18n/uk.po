@@ -3,13 +3,14 @@
 # * warning
 # 
 # Translators:
+# Yaroslav Molochko <onorua@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-07 14:41+0000\n"
-"PO-Revision-Date: 2015-09-08 09:17+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"PO-Revision-Date: 2016-08-28 12:33+0000\n"
+"Last-Translator: Bohdan Lisnenko\n"
 "Language-Team: Ukrainian (http://www.transifex.com/odoo/odoo-9/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,12 +40,12 @@ msgstr ""
 #. module: warning
 #: model:ir.model.fields,field_description:warning.field_res_partner_purchase_warn_msg
 msgid "Message for Purchase Order"
-msgstr ""
+msgstr "Повідомлення для замовлення закупівлі"
 
 #. module: warning
 #: model:ir.model.fields,field_description:warning.field_product_template_purchase_line_warn_msg
 msgid "Message for Purchase Order Line"
-msgstr ""
+msgstr "Повідомлення для рядка замовлення на куппівлю"
 
 #. module: warning
 #: model:ir.model.fields,field_description:warning.field_res_partner_sale_warn_msg
@@ -54,7 +55,7 @@ msgstr ""
 #. module: warning
 #: model:ir.model.fields,field_description:warning.field_product_template_sale_line_warn_msg
 msgid "Message for Sales Order Line"
-msgstr ""
+msgstr "Повідомлення для рядка замовлення на продаж"
 
 #. module: warning
 #: model:ir.model.fields,field_description:warning.field_res_partner_picking_warn_msg
@@ -72,12 +73,12 @@ msgstr ""
 #. module: warning
 #: model:ir.model,name:warning.model_res_partner
 msgid "Partner"
-msgstr "Partner"
+msgstr "Партнер"
 
 #. module: warning
 #: model:ir.model,name:warning.model_product_template
 msgid "Product Template"
-msgstr "Шаблон продукту"
+msgstr "Шаблон товару"
 
 #. module: warning
 #: model:ir.model,name:warning.model_purchase_order
@@ -101,7 +102,7 @@ msgstr "Sales Order"
 #: model:ir.model,name:warning.model_sale_order_line
 #: model:ir.model.fields,field_description:warning.field_product_template_sale_line_warn
 msgid "Sales Order Line"
-msgstr ""
+msgstr "Рядок замовлення на продаж"
 
 #. module: warning
 #: code:addons/warning/warning.py:14
@@ -116,7 +117,7 @@ msgid ""
 "Selecting the \"Warning\" option will notify user with the message, "
 "Selecting \"Blocking Message\" will throw an exception with the message and "
 "block the flow. The Message has to be written in the next field."
-msgstr ""
+msgstr "Обираючи \"Попередження\" ви надішлете повідомлення користувачу. Якщо обрати \"Повідомлення блокування\", то буде запущено виключення з відповідним повідомленням користувачу та процес зупиниться. Повідомлення потрібно вказати у наступному полі."
 
 #. module: warning
 #: model:ir.model.fields,field_description:warning.field_res_partner_picking_warn
@@ -177,4 +178,4 @@ msgstr ""
 #. module: warning
 #: model:ir.ui.view,arch_db:warning.view_partner_warning_form
 msgid "Warnings"
-msgstr ""
+msgstr "Попередження"

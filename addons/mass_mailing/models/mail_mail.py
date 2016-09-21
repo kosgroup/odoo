@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import urlparse
 import re
+import urlparse
 import werkzeug.urls
 
 from openerp import tools
@@ -79,6 +79,11 @@ class MailMail(osv.Model):
         domain = self.pool.get("ir.config_parameter").get_param(cr, uid, "web.base.url", context=context)
         base = "<base href='%s'>" % domain
         body = tools.append_content_to_html(base, body, plaintext=False, container_tag='div')
+        # resolve relative image url to absolute for outlook.com
+        def _sub_relative2absolute(match):
+            return match.group(1) + urlparse.urljoin(domain, match.group(2))
+        body = re.sub('(<img(?=\s)[^>]*\ssrc=")(/[^/][^"]+)', _sub_relative2absolute, body)
+        body = re.sub(r'(<[^>]+\bstyle="[^"]+\burl\(\'?)(/[^/\'][^\'")]+)', _sub_relative2absolute, body)
 
         # generate tracking URL
         if mail.statistics_ids:
@@ -103,7 +108,7 @@ class MailMail(osv.Model):
 
     def _postprocess_sent_message(self, cr, uid, mail, context=None, mail_sent=True):
         if mail_sent is True and mail.statistics_ids:
-            self.pool['mail.mail.statistics'].write(cr, uid, [s.id for s in mail.statistics_ids], {'sent': fields.datetime.now()}, context=context)
+            self.pool['mail.mail.statistics'].write(cr, uid, [s.id for s in mail.statistics_ids], {'sent': fields.datetime.now(), 'exception': False}, context=context)
         elif mail_sent is False and mail.statistics_ids:
             self.pool['mail.mail.statistics'].write(cr, uid, [s.id for s in mail.statistics_ids], {'exception': fields.datetime.now()}, context=context)
         return super(MailMail, self)._postprocess_sent_message(cr, uid, mail, context=context, mail_sent=mail_sent)

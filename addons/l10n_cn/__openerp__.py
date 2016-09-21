@@ -9,7 +9,7 @@
 {
     'name': '中国会计科目表',
     'version': '1.8',
-    'category': 'Localization/Account Charts',
+    'category': 'Localization',
     'author': 'www.openerp-china.org',
     'maintainer': 'jeff@osbzr.com',
     'website': 'http://openerp-china.org',
@@ -23,14 +23,10 @@
 
     """,
     'depends': ['base', 'account'],
-    'demo': [],
     'data': [
-        'account_chart_type.xml',
-        'account_chart_template.xml',
-        'account_chart_template.yml',
         'base_data.xml',
+        'account_chart_type.xml',
     ],
     'license': 'GPL-3',
-    'auto_install': False,
     'installable': True,
 }

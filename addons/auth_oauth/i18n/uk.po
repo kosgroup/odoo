@@ -3,13 +3,15 @@
 # * auth_oauth
 # 
 # Translators:
+# Bohdan Lisnenko, 2015-2016
+# Bohdan Lisnenko, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-07 14:40+0000\n"
-"PO-Revision-Date: 2015-09-07 16:15+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"PO-Revision-Date: 2016-05-06 12:24+0000\n"
+"Last-Translator: Bohdan Lisnenko\n"
 "Language-Team: Ukrainian (http://www.transifex.com/odoo/odoo-9/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +35,7 @@ msgstr ""
 #: code:addons/auth_oauth/controllers/main.py:99
 #, python-format
 msgid "Access Denied"
-msgstr "Меню доступу"
+msgstr "У доступі відмовлено"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_property_account_payable_id
@@ -48,22 +50,22 @@ msgstr "Рахунок дебітора"
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_base_config_settings_auth_oauth_google_enabled
 msgid "Allow users to sign in with Google"
-msgstr ""
+msgstr "Дозволити користувачам заходити через Google"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider_enabled
 msgid "Allowed"
-msgstr ""
+msgstr "Дозволено"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider_auth_endpoint
 msgid "Authentication URL"
-msgstr ""
+msgstr "URL автентифікації"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_bank_account_count
 msgid "Bank"
-msgstr "Bank"
+msgstr "Банк"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider_body
@@ -73,13 +75,13 @@ msgstr "Тіло"
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider_css_class
 msgid "CSS class"
-msgstr ""
+msgstr "Клас CSS"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider_client_id
 #: model:ir.model.fields,field_description:auth_oauth.field_base_config_settings_auth_oauth_google_client_id
 msgid "Client ID"
-msgstr ""
+msgstr "ID клієнта"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_ref_company_ids
@@ -90,42 +92,42 @@ msgstr "Компанії, що стосуються партнера"
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_contract_ids
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_contracts_count
 msgid "Contracts"
-msgstr ""
+msgstr "Контракти"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider_create_uid
 msgid "Created by"
-msgstr "Created by"
+msgstr "Створив"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider_create_date
 msgid "Created on"
-msgstr "Created on"
+msgstr "Дата створення"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_currency_id
 msgid "Currency id"
-msgstr ""
+msgstr "ІД валюти"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_property_payment_term_id
 msgid "Customer Payment Term"
-msgstr ""
+msgstr "Термін оплати для клієнта"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider_data_endpoint
 msgid "Data URL"
-msgstr ""
+msgstr "URL даних"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Назва для відображення"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_property_account_position_id
 msgid "Fiscal Position"
-msgstr "Fiscal Position"
+msgstr "Схема оподаткування"
 
 #. module: auth_oauth
 #: model:ir.ui.view,arch_db:auth_oauth.view_general_configuration
@@ -135,12 +137,12 @@ msgstr ""
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_has_unreconciled_entries
 msgid "Has unreconciled entries"
-msgstr ""
+msgstr "Має неузгоджені записи"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider_id
 msgid "ID"
-msgstr "ІД"
+msgstr "ID"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_invoice_ids
@@ -151,22 +153,22 @@ msgstr "Рахунки"
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_issued_total
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_journal_item_count
 msgid "Journal Items"
-msgstr ""
+msgstr "Проведення"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Остання модифікація"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider_write_uid
 msgid "Last Updated by"
-msgstr "Last Updated by"
+msgstr "Востаннє оновив"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider_write_date
 msgid "Last Updated on"
-msgstr "Last Updated on"
+msgstr "Останнє оновлення"
 
 #. module: auth_oauth
 #: model:ir.model.fields,help:auth_oauth.field_res_users_last_time_entries_checked
@@ -189,12 +191,12 @@ msgstr ""
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_oauth_provider_id
 msgid "OAuth Provider"
-msgstr ""
+msgstr "Провайдер OAuth"
 
 #. module: auth_oauth
 #: model:ir.ui.menu,name:auth_oauth.menu_oauth_providers
 msgid "OAuth Providers"
-msgstr ""
+msgstr "Провайдери OAuth"
 
 #. module: auth_oauth
 #: sql_constraint:res.users:0
@@ -209,7 +211,7 @@ msgstr ""
 #. module: auth_oauth
 #: model:ir.model,name:auth_oauth.model_auth_oauth_provider
 msgid "OAuth2 provider"
-msgstr ""
+msgstr "Провайдер OAuth2"
 
 #. module: auth_oauth
 #: model:ir.ui.view,arch_db:auth_oauth.view_users_form
@@ -229,17 +231,17 @@ msgstr "Ліміт Платежів"
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider_name
 msgid "Provider name"
-msgstr ""
+msgstr "Назва полвайдера"
 
 #. module: auth_oauth
 #: model:ir.actions.act_window,name:auth_oauth.action_oauth_provider
 msgid "Providers"
-msgstr ""
+msgstr "Провайдери"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider_scope
 msgid "Scope"
-msgstr ""
+msgstr "Сфера"
 
 #. module: auth_oauth
 #: code:addons/auth_oauth/controllers/main.py:97
@@ -299,7 +301,7 @@ msgstr ""
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_total_invoiced
 msgid "Total Invoiced"
-msgstr ""
+msgstr "Всього по рахунку"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_debit
@@ -314,12 +316,12 @@ msgstr "Всього за дебіторами"
 #. module: auth_oauth
 #: model:ir.model.fields,help:auth_oauth.field_res_users_credit
 msgid "Total amount this customer owes you."
-msgstr ""
+msgstr " Загальна сума, яку цей клієнт повинен заплатити вам"
 
 #. module: auth_oauth
 #: model:ir.model.fields,help:auth_oauth.field_res_users_debit
 msgid "Total amount you have to pay to this vendor."
-msgstr ""
+msgstr " Загальна сума, яку ви повинні заплатити цьому постаччальнику"
 
 #. module: auth_oauth
 #: model:ir.model,name:auth_oauth.model_res_users
@@ -334,12 +336,12 @@ msgstr ""
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_auth_oauth_provider_validation_endpoint
 msgid "Validation URL"
-msgstr ""
+msgstr "URL підтвердження"
 
 #. module: auth_oauth
 #: model:ir.model.fields,field_description:auth_oauth.field_res_users_property_supplier_payment_term_id
 msgid "Vendor Payment Term"
-msgstr ""
+msgstr "Термін оплати постачальника"
 
 #. module: auth_oauth
 #: code:addons/auth_oauth/controllers/main.py:101
@@ -359,7 +361,7 @@ msgstr ""
 #. module: auth_oauth
 #: model:ir.model,name:auth_oauth.model_base_config_settings
 msgid "base.config.settings"
-msgstr ""
+msgstr "base.config.settings"
 
 #. module: auth_oauth
 #: model:ir.ui.view,arch_db:auth_oauth.view_general_configuration

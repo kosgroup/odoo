@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-18 08:10+0000\n"
-"PO-Revision-Date: 2015-09-19 08:20+0000\n"
+"PO-Revision-Date: 2016-09-11 05:33+0000\n"
 "Last-Translator: Martin Trigaux\n"
 "Language-Team: Hindi (http://www.transifex.com/odoo/odoo-9/language/hi/)\n"
 "MIME-Version: 1.0\n"
@@ -87,6 +87,11 @@ msgid "Able to see Remaining Leaves"
 msgstr ""
 
 #. module: hr_holidays
+#: model:ir.ui.view,arch_db:hr_holidays.hr_department_view_kanban
+msgid "Absence"
+msgstr ""
+
+#. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_department_absence_of_today
 msgid "Absence by Today"
 msgstr ""
@@ -105,7 +110,7 @@ msgstr ""
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "कार्रवाई की जरूरत है"
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_status_active
@@ -317,7 +322,7 @@ msgstr ""
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_status_company_id
 msgid "Company"
-msgstr ""
+msgstr "संस्था"
 
 #. module: hr_holidays
 #: model:hr.holidays.status,name:hr_holidays.holiday_status_comp
@@ -347,7 +352,7 @@ msgstr "पुष्टि"
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_summary_dept_create_uid
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_summary_employee_create_uid
 msgid "Created by"
-msgstr ""
+msgstr "निर्माण कर्ता"
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_create_date
@@ -355,7 +360,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_summary_dept_create_date
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_summary_employee_create_date
 msgid "Created on"
-msgstr ""
+msgstr "निर्माण तिथि"
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_employee_current_leave_state
@@ -380,7 +385,7 @@ msgstr ""
 #. module: hr_holidays
 #: model:ir.model.fields,help:hr_holidays.field_hr_holidays_message_last_post
 msgid "Date of the last message posted on the record."
-msgstr ""
+msgstr "आखिरी अंकित संदेश की तारीख़।"
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_department_id
@@ -416,12 +421,12 @@ msgstr "विवरण"
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_summary_employee_display_name
 #: model:ir.model.fields,field_description:hr_holidays.field_report_hr_holidays_report_holidayssummary_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "नाम दिखाएँ"
 
 #. module: hr_holidays
 #: model:ir.ui.view,arch_db:hr_holidays.edit_holiday_new
 msgid "Duration"
-msgstr ""
+msgstr "अवधि"
 
 #. module: hr_holidays
 #: model:ir.model,name:hr_holidays.model_hr_employee
@@ -467,17 +472,17 @@ msgstr ""
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_message_follower_ids
 msgid "Followers"
-msgstr ""
+msgstr "फ़ॉलोअर्स"
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_message_channel_ids
 msgid "Followers (Channels)"
-msgstr ""
+msgstr "अनुयायी (चैनल)"
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_message_partner_ids
 msgid "Followers (Partners)"
-msgstr ""
+msgstr "अनुयायी (सहयोगी)"
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_summary_dept_date_from
@@ -499,7 +504,7 @@ msgstr ""
 #. module: hr_holidays
 #: model:ir.ui.view,arch_db:hr_holidays.view_hr_holidays_filter
 msgid "Group By"
-msgstr ""
+msgstr "वर्गीकरण का आधार"
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_report_note
@@ -529,7 +534,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_summary_employee_id
 #: model:ir.model.fields,field_description:hr_holidays.field_report_hr_holidays_report_holidayssummary_id
 msgid "ID"
-msgstr ""
+msgstr "पहचान"
 
 #. module: hr_holidays
 #: model:ir.model.fields,help:hr_holidays.field_hr_holidays_message_unread
@@ -557,11 +562,6 @@ msgid ""
 msgstr ""
 
 #. module: hr_holidays
-#: model:ir.ui.view,arch_db:hr_holidays.view_hr_holidays_filter
-msgid "Important Messages"
-msgstr ""
-
-#. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_message_is_follower
 msgid "Is Follower"
 msgstr ""
@@ -574,7 +574,7 @@ msgstr ""
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_message_last_post
 msgid "Last Message Date"
-msgstr ""
+msgstr "अंतिम संदेश की तारीख"
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays___last_update
@@ -584,7 +584,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_summary_employee___last_update
 #: model:ir.model.fields,field_description:hr_holidays.field_report_hr_holidays_report_holidayssummary___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "अन्तिम संशोधन कब"
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_status_write_uid
@@ -592,7 +592,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_summary_employee_write_uid
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "अंतिम सुधारकर्ता"
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_status_write_date
@@ -600,7 +600,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_summary_employee_write_date
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "अंतिम सुधार की तिथि"
 
 #. module: hr_holidays
 #: selection:hr.holidays.status,color_name:0
@@ -830,7 +830,7 @@ msgstr "मजेंटा"
 #. module: hr_holidays
 #: model:ir.ui.view,arch_db:hr_holidays.view_hr_holidays_filter
 msgid "Manager"
-msgstr ""
+msgstr "प्रबंधक"
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_status_max_leaves
@@ -866,7 +866,7 @@ msgstr "संदेश"
 #. module: hr_holidays
 #: model:ir.model.fields,help:hr_holidays.field_hr_holidays_message_ids
 msgid "Messages and communication history"
-msgstr ""
+msgstr "संदेश और संचार इतिहास"
 
 #. module: hr_holidays
 #: model:ir.ui.view,arch_db:hr_holidays.edit_holiday_new
@@ -877,7 +877,7 @@ msgstr ""
 #. module: hr_holidays
 #: model:ir.ui.view,arch_db:hr_holidays.report_holidayssummary
 msgid "Month"
-msgstr ""
+msgstr "माह"
 
 #. module: hr_holidays
 #: model:ir.ui.view,arch_db:hr_holidays.view_hr_holidays_filter
@@ -1240,8 +1240,9 @@ msgstr ""
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_message_unread
+#: model:ir.ui.view,arch_db:hr_holidays.view_hr_holidays_filter
 msgid "Unread Messages"
-msgstr ""
+msgstr "अपठित संदेश"
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_holidays_message_unread_counter

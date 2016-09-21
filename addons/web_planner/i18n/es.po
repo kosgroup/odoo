@@ -3,12 +3,15 @@
 # * web_planner
 # 
 # Translators:
+# Ana Juaristi <ajuaristio@gmail.com>, 2015
+# Antonio Trueba, 2015-2016
+# Sergio Flores <vitavitae1@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-07 14:41+0000\n"
-"PO-Revision-Date: 2015-09-11 04:17+0000\n"
+"POT-Creation-Date: 2016-02-15 15:34+0000\n"
+"PO-Revision-Date: 2016-02-16 10:39+0000\n"
 "Last-Translator: Martin Trigaux\n"
 "Language-Team: Spanish (http://www.transifex.com/odoo/odoo-9/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +44,7 @@ msgstr "Datos"
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nombre mostrado"
 
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner_id
@@ -53,7 +56,7 @@ msgstr "ID (identificación)"
 msgid ""
 "If the active field is set to False, it will allow you to hide the planner. "
 "This change requires a refreshing a your page."
-msgstr ""
+msgstr "Si el campo activo se desmarca, permite ocultar el planificador. Este cambio requiere actualizar la página."
 
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner___last_update
@@ -75,7 +78,7 @@ msgstr "Última actualización en"
 #: code:addons/web_planner/static/src/xml/web_planner.xml:31
 #, python-format
 msgid "Mark As Done"
-msgstr ""
+msgstr "Marcar como terminado"
 
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner_menu_id
@@ -92,14 +95,14 @@ msgstr "Nombre"
 #: code:addons/web_planner/static/src/xml/web_planner.xml:34
 #, python-format
 msgid "Next step"
-msgstr ""
+msgstr "Siguiente paso"
 
 #. module: web_planner
 #: model:ir.model,name:web_planner.model_web_planner
 #: model:ir.ui.view,arch_db:web_planner.web_planner_view_search
 #: model:ir.ui.view,arch_db:web_planner.web_planner_view_tree
 msgid "Planner"
-msgstr ""
+msgstr "Planificador"
 
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner_planner_application
@@ -120,7 +123,7 @@ msgstr ""
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner_progress
 msgid "Progress Percentage"
-msgstr ""
+msgstr "Porcentaje de progreso"
 
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner_view_id

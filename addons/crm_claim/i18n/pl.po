@@ -3,13 +3,14 @@
 # * crm_claim
 # 
 # Translators:
+# Piotr Szlązak <szlazakpiotr@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-18 08:11+0000\n"
-"PO-Revision-Date: 2015-09-19 08:21+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"PO-Revision-Date: 2016-06-27 10:49+0000\n"
+"Last-Translator: Piotr Szlązak <szlazakpiotr@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/odoo/odoo-9/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +21,7 @@ msgstr ""
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_res_partner_claim_count
 msgid "# Claims"
-msgstr ""
+msgstr "# Skargi"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_email
@@ -30,7 +31,7 @@ msgstr "# wiadomości"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_nbr
 msgid "# of Claims"
-msgstr ""
+msgstr "# z serwisów"
 
 #. module: crm_claim
 #: code:addons/crm_claim/crm_claim.py:142
@@ -41,12 +42,12 @@ msgstr "%s (kopia)"
 #. module: crm_claim
 #: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Action Description..."
-msgstr ""
+msgstr "Opis akcji..."
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "Wymagana akcja"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_type_action
@@ -109,7 +110,7 @@ msgstr "Data serwisu"
 #. module: crm_claim
 #: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Claim Date by Month"
-msgstr ""
+msgstr "Data serwisu wg miesięcy"
 
 #. module: crm_claim
 #: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
@@ -119,7 +120,7 @@ msgstr "Opis serwisu"
 #. module: crm_claim
 #: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Claim Month"
-msgstr ""
+msgstr "Serwis miesiąca"
 
 #. module: crm_claim
 #: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
@@ -175,7 +176,7 @@ msgstr "Analiza serwisu"
 #. module: crm_claim
 #: model:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
 msgid "Click to create a claim category."
-msgstr ""
+msgstr "Kliknij aby utworzyć kategorię skargi."
 
 #. module: crm_claim
 #: model:ir.actions.act_window,help:crm_claim.crm_claim_stage_act
@@ -298,7 +299,7 @@ msgstr "Mail docelowy dla bramy pocztowej"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_display_name
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Wyświetlana nazwa "
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_email_from
@@ -328,12 +329,12 @@ msgstr "Obserwatorzy"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_channel_ids
 msgid "Followers (Channels)"
-msgstr ""
+msgstr "Obserwatorzy (kanały)"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_partner_ids
 msgid "Followers (Partners)"
-msgstr ""
+msgstr "Obserwatorzy (partnerzy)"
 
 #. module: crm_claim
 #: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
@@ -369,7 +370,7 @@ msgstr "Jeśli zaznaczone, to wiadomość wymaga twojej uwagi"
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim_message_needaction
 msgid "If checked, new messages require your attention."
-msgstr ""
+msgstr "Jeśli zaznaczone, to nowa wiadomość wymaga twojej uwagi."
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim_stage_case_default
@@ -386,7 +387,7 @@ msgstr "W toku"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_is_follower
 msgid "Is Follower"
-msgstr ""
+msgstr "Jest obserwatorem"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_last_post
@@ -485,7 +486,7 @@ msgstr "Zwykły"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_needaction_counter
 msgid "Number of Actions"
-msgstr ""
+msgstr "Liczba akcji"
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim_report_delay_close
@@ -495,12 +496,12 @@ msgstr "Liczba dni do zamknięcia sprawy"
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim_message_needaction_counter
 msgid "Number of messages which requires an action"
-msgstr ""
+msgstr "Liczba wiadomości wymagających akcji"
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim_message_unread_counter
 msgid "Number of unread messages"
-msgstr ""
+msgstr "Liczba nieprzeczytanych wiadomości"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_delay_expected
@@ -663,7 +664,7 @@ msgstr "Zespół"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_team_ids
 msgid "Teams"
-msgstr ""
+msgstr "Zespoły"
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim_email_cc
@@ -697,7 +698,7 @@ msgstr "Nieprzeczytane wiadomości"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_message_unread_counter
 msgid "Unread Messages Counter"
-msgstr ""
+msgstr "Licznik nieprzeczytanych wiadomości"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_write_date

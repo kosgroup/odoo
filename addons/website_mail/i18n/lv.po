@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-07 14:41+0000\n"
-"PO-Revision-Date: 2015-09-08 10:35+0000\n"
+"POT-Creation-Date: 2015-09-29 10:26+0000\n"
+"PO-Revision-Date: 2016-08-19 16:25+0000\n"
 "Last-Translator: Martin Trigaux\n"
 "Language-Team: Latvian (http://www.transifex.com/odoo/odoo-9/language/lv/)\n"
 "MIME-Version: 1.0\n"
@@ -20,11 +20,16 @@ msgstr ""
 #. module: website_mail
 #: model:mail.channel,name:website_mail.channel_public
 msgid "Discussion Group"
-msgstr ""
+msgstr "Diskusiju Grupa"
 
 #. module: website_mail
 #: model:ir.model,name:website_mail.model_mail_thread
 msgid "Email Thread"
+msgstr ""
+
+#. module: website_mail
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "Leave a comment"
 msgstr ""
 
 #. module: website_mail
@@ -74,16 +79,26 @@ msgstr "Atrakstīties"
 #. module: website_mail
 #: model:ir.model.fields,help:website_mail.field_mail_message_website_published
 msgid "Visible on the website as a comment"
-msgstr ""
+msgstr "Redzams tīmekļa lapā kā komentārs"
 
 #. module: website_mail
 #: model:ir.model.fields,field_description:website_mail.field_mail_thread_website_message_ids
 msgid "Website Messages"
-msgstr ""
+msgstr "Mājaslapas Ziņojumi"
 
 #. module: website_mail
 #: model:ir.model.fields,help:website_mail.field_mail_thread_website_message_ids
 msgid "Website communication history"
+msgstr "Mājaslapas komunikācijas vēsture"
+
+#. module: website_mail
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "Write a message..."
+msgstr ""
+
+#. module: website_mail
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "You must be"
 msgstr ""
 
 #. module: website_mail
@@ -91,6 +106,11 @@ msgstr ""
 #: code:addons/website_mail/static/src/xml/chatter_message.xml:8
 #, python-format
 msgid "just now"
+msgstr ""
+
+#. module: website_mail
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "logged in"
 msgstr ""
 
 #. module: website_mail
@@ -104,6 +124,11 @@ msgid "publisher_warranty.contract"
 msgstr ""
 
 #. module: website_mail
+#: model:ir.ui.view,arch_db:website_mail.message_thread
+msgid "to post a comment."
+msgstr ""
+
+#. module: website_mail
 #: model:ir.model.fields,field_description:website_mail.field_mail_message_description
 msgid "unknown"
 msgstr "nav zināms"
@@ -111,4 +136,4 @@ msgstr "nav zināms"
 #. module: website_mail
 #: model:ir.ui.view,arch_db:website_mail.follow
 msgid "your email..."
-msgstr ""
+msgstr "tavs e-pasts..."

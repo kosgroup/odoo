@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-29 10:26+0000\n"
-"PO-Revision-Date: 2015-09-30 09:23+0000\n"
+"PO-Revision-Date: 2016-08-31 09:48+0000\n"
 "Last-Translator: Martin Trigaux\n"
 "Language-Team: Czech (http://www.transifex.com/odoo/odoo-9/language/cs/)\n"
 "MIME-Version: 1.0\n"
@@ -257,7 +257,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:product.field_product_product_message_needaction
 #: model:ir.model.fields,field_description:product.field_product_template_message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "Vyžadována akce"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_active
@@ -324,7 +324,7 @@ msgstr ""
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_pricelist_view
 msgid "Applicable On"
-msgstr ""
+msgstr "Použitelný na"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_applied_on
@@ -335,7 +335,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:product.product_pricelist_view_search
 #: model:ir.ui.view,arch_db:product.product_template_search_view
 msgid "Archived"
-msgstr ""
+msgstr "Archivováno"
 
 #. module: product
 #: model:product.product,name:product.product_assembly
@@ -398,7 +398,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:product.field_product_product_barcode
 #: model:ir.model.fields,field_description:product.field_product_template_barcode
 msgid "Barcode"
-msgstr ""
+msgstr "Čárový kód"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_pricelist_item_base
@@ -617,7 +617,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute,name:product.product_attribute_2
 msgid "Color"
-msgstr ""
+msgstr "Barva"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_color
@@ -679,6 +679,12 @@ msgstr ""
 #: model:product.public.category,name:product.sub_computers
 msgid "Computers"
 msgstr "Počítače"
+
+#. module: product
+#: code:addons/product/product.py:460
+#, python-format
+msgid "Consumable"
+msgstr ""
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_uom_category_id
@@ -909,7 +915,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:product.field_product_uom_display_name
 #: model:ir.model.fields,field_description:product.field_report_product_report_pricelist_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Zobrazovaný název"
 
 #. module: product
 #: model:product.uom,name:product.product_uom_dozen
@@ -1558,7 +1564,7 @@ msgstr "Datum posledního vzkazu"
 #: model:ir.model.fields,field_description:product.field_product_uom_categ___last_update
 #: model:ir.model.fields,field_description:product.field_report_product_report_pricelist___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Naposled upraveno"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_attribute_line_write_uid
@@ -2211,7 +2217,7 @@ msgstr "Varianta výrobku"
 #: model:ir.ui.menu,name:product.menu_products
 #: model:ir.ui.view,arch_db:product.product_product_tree_view
 msgid "Product Variants"
-msgstr ""
+msgstr "Varianty výrobku"
 
 #. module: product
 #: model:ir.model,name:product.model_product_uom_categ
@@ -2491,6 +2497,12 @@ msgstr "Číselná řada"
 #: model:product.public.category,name:product.server
 #: model:product.template,name:product.product_product_59_product_template
 msgid "Server"
+msgstr ""
+
+#. module: product
+#: code:addons/product/product.py:460
+#, python-format
+msgid "Service"
 msgstr ""
 
 #. module: product
@@ -3065,7 +3077,7 @@ msgstr "Nepřečtené zprávy"
 #: model:ir.model.fields,field_description:product.field_product_product_message_unread_counter
 #: model:ir.model.fields,field_description:product.field_product_template_message_unread_counter
 msgid "Unread Messages Counter"
-msgstr ""
+msgstr "Počítadlo nepřečtených zpráv"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_supplierinfo_form_view

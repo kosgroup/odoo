@@ -78,40 +78,40 @@ var TopBarContent = Widget.extend({
             }
         });
     },
-        rename_page: function() {
-            var self = this;
-            var context = website.get_context();
-            self.mo_id = self.getMainObject().id;
+    rename_page: function() {
+        var self = this;
+        var context = base.get_context();
+        self.mo_id = self.getMainObject().id;
 
-            openerp.jsonRpc('/web/dataset/call_kw', 'call', {
-                model: 'website',
-                method: 'page_search_dependencies',
-                args: [self.mo_id],
-                kwargs: {
-                    context: context
-                },
-            }).then(function (deps) {
-                website.prompt({
-                    id: "editor_rename_page",
-                    window_title: _t("Rename Page"),
-                    dependencies: deps,
-                }, 'website.rename_page').then(function (val, field, $dialog) {
-                    openerp.jsonRpc('/web/dataset/call_kw', 'call', {
-                        model: 'website',
-                        method: 'rename_page',
-                        args: [
-                            self.mo_id,
-                            val,
-                        ],
-                        kwargs: {
-                            context: context
-                        },
-                    }).then(function (new_name) {
-                        window.location = "/page/" + encodeURIComponent(new_name);
-                    });
+        ajax.jsonRpc('/web/dataset/call_kw', 'call', {
+            model: 'website',
+            method: 'page_search_dependencies',
+            args: [self.mo_id],
+            kwargs: {
+                context: context
+            },
+        }).then(function (deps) {
+            website.prompt({
+                id: "editor_rename_page",
+                window_title: _t("Rename Page"),
+                dependencies: deps,
+            }, 'website.rename_page').then(function (val, field, $dialog) {
+                ajax.jsonRpc('/web/dataset/call_kw', 'call', {
+                    model: 'website',
+                    method: 'rename_page',
+                    args: [
+                        self.mo_id,
+                        val,
+                    ],
+                    kwargs: {
+                        context: context
+                    },
+                }).then(function (new_name) {
+                    window.location = "/page/" + encodeURIComponent(new_name);
                 });
             });
-        },
+        });
+    },
     delete_page: function() {
         var self = this;
         var context = base.get_context();
@@ -233,7 +233,7 @@ var EditMenuDialog = widget.Dialog.extend({
                 id: _.uniqueId('new-'),
                 name: link.text,
                 url: link.url,
-                new_window: link.newWindow,
+                new_window: link.isNewWindow,
                 parent_id: false,
                 sequence: 0,
                 children: [],
@@ -256,7 +256,7 @@ var EditMenuDialog = widget.Dialog.extend({
                 _.extend(menu_obj, {
                     'name': link.text,
                     'url': link.url,
-                    'new_window': link.newWindow,
+                    'new_window': link.isNewWindow,
                 });
                 var $menu = self.$('[data-menu-id="' + id + '"]');
                 $menu.find('.js_menu_label').first().text(menu_obj.name);
@@ -307,19 +307,19 @@ var EditMenuDialog = widget.Dialog.extend({
 });
 
 var MenuEntryDialog = widget.LinkDialog.extend({
-    template: 'website.contentMenu.dialog.add',
     init: function (editor, data) {
         data.text = data.name || '';
-        data.newWindow = data.new_window;
+        data.isNewWindow = data.new_window;
         this.data = data;
         return this._super.apply(this, arguments);
     },
     start: function () {
         var self = this;
-        var result = $.when(this._super.apply(this, arguments)).then(function () {
-            if (self.data) {
-                self.bind_data();
-            }
+
+        this.$(".link-style").remove();
+        this.$("label[for=link-new]").text("Menu Label");
+
+        return $.when(this._super.apply(this, arguments)).then(function () {
             var $link_text = self.$('#link-text').focus();
             self.$('#link-page').change(function (e) {
                 if ($link_text.val()) { return; }
@@ -328,7 +328,6 @@ var MenuEntryDialog = widget.LinkDialog.extend({
                 $link_text.focus();
             });
         });
-        return result;
     },
     save: function () {
         var $e = this.$('#link-text');

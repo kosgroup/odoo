@@ -3,13 +3,16 @@
 # * hr_attendance
 # 
 # Translators:
+# Bohdan Lisnenko, 2015-2016
+# Bohdan Lisnenko, 2016
+# Yaroslav Molochko <onorua@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-07 14:40+0000\n"
-"PO-Revision-Date: 2015-09-07 20:24+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"PO-Revision-Date: 2016-08-12 11:36+0000\n"
+"Last-Translator: Yaroslav Molochko <onorua@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/odoo/odoo-9/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,17 +25,17 @@ msgstr ""
 msgid ""
 "(*) A positive delay means that the employee worked less than recorded.<br/>\n"
 "(*) A negative delay means that the employee worked more than encoded."
-msgstr ""
+msgstr "(*) Затримка зі знаком + означає що працівник працював меньше ніж в записах<br/>\n(*) Затримка зі знаком - означає що працівник пропрацював більше ніж в записах"
 
 #. module: hr_attendance
 #: model:ir.ui.view,arch_db:hr_attendance.report_attendanceerrors
 msgid "<strong>Total period</strong>"
-msgstr ""
+msgstr "<strong>Увесь період</strong>"
 
 #. module: hr_attendance
 #: selection:hr.employee,state:0
 msgid "Absent"
-msgstr ""
+msgstr "Відсутній"
 
 #. module: hr_attendance
 #: selection:hr.attendance,action:0
@@ -61,7 +64,7 @@ msgstr ""
 #. module: hr_attendance
 #: model:ir.ui.view,arch_db:hr_attendance.view_hr_attendance_error
 msgid "Analysis Information"
-msgstr ""
+msgstr "Інформація аналізу"
 
 #. module: hr_attendance
 #: model:ir.model,name:hr_attendance.model_hr_attendance
@@ -110,7 +113,7 @@ msgstr ""
 #: model:ir.ui.menu,name:hr_attendance.menu_open_view_attendance
 #: model:ir.ui.view,arch_db:hr_attendance.hr_department_view_kanban
 msgid "Attendances"
-msgstr "Екземпляри"
+msgstr "Відвідування"
 
 #. module: hr_attendance
 #: model:ir.ui.view,arch_db:hr_attendance.view_hr_attendance_error
@@ -123,7 +126,7 @@ msgstr ""
 #. module: hr_attendance
 #: model:ir.ui.view,arch_db:hr_attendance.view_hr_attendance_error
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "Скасувати"
 
 #. module: hr_attendance
 #. openerp-web
@@ -135,31 +138,31 @@ msgstr ""
 #. module: hr_attendance
 #: model:ir.ui.menu,name:hr_attendance.menu_hr_attendance_config
 msgid "Configuration"
-msgstr "Configuration"
+msgstr "Налаштування"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_action_reason_create_uid
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_create_uid
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_error_create_uid
 msgid "Created by"
-msgstr "Created by"
+msgstr "Створив"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_action_reason_create_date
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_create_date
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_error_create_date
 msgid "Created on"
-msgstr "Created on"
+msgstr "Дата створення"
 
 #. module: hr_attendance
 #: model:ir.ui.view,arch_db:hr_attendance.view_hr_attendance_filter
 msgid "Current Month"
-msgstr ""
+msgstr "Поточний місяць"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_name
 msgid "Date"
-msgstr "Date"
+msgstr "Дата"
 
 #. module: hr_attendance
 #: model:ir.ui.view,arch_db:hr_attendance.report_attendanceerrors
@@ -192,7 +195,7 @@ msgstr "Department"
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_error_display_name
 #: model:ir.model.fields,field_description:hr_attendance.field_report_hr_attendance_report_attendanceerrors_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Назва для відображення"
 
 #. module: hr_attendance
 #: model:ir.model,name:hr_attendance.model_hr_employee
@@ -211,7 +214,7 @@ msgstr ""
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_error_end_date
 msgid "Ending Date"
-msgstr ""
+msgstr "Кінцева дата"
 
 #. module: hr_attendance
 #: constraint:hr.attendance:0
@@ -234,7 +237,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_id
 #: model:ir.model.fields,field_description:hr_attendance.field_report_hr_attendance_report_attendanceerrors_id
 msgid "ID"
-msgstr "ІД"
+msgstr "ID"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_action_reason___last_update
@@ -242,7 +245,7 @@ msgstr "ІД"
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_error___last_update
 #: model:ir.model.fields,field_description:hr_attendance.field_report_hr_attendance_report_attendanceerrors___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Остання модифікація"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_last_sign
@@ -254,14 +257,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_error_write_uid
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_write_uid
 msgid "Last Updated by"
-msgstr "Last Updated by"
+msgstr "Востаннє оновив"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_action_reason_write_date
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_error_write_date
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_write_date
 msgid "Last Updated on"
-msgstr "Last Updated on"
+msgstr "Останнє оновлення"
 
 #. module: hr_attendance
 #. openerp-web
@@ -299,7 +302,7 @@ msgstr ""
 #. module: hr_attendance
 #: model:ir.ui.view,arch_db:hr_attendance.report_attendanceerrors
 msgid "Operation"
-msgstr ""
+msgstr "Операція"
 
 #. module: hr_attendance
 #: selection:hr.employee,state:0
@@ -309,7 +312,7 @@ msgstr "Присутній"
 #. module: hr_attendance
 #: model:ir.ui.view,arch_db:hr_attendance.view_hr_attendance_error
 msgid "Print"
-msgstr "Print"
+msgstr "Друк"
 
 #. module: hr_attendance
 #: model:ir.ui.view,arch_db:hr_attendance.view_hr_attendance_error
@@ -324,7 +327,7 @@ msgstr ""
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_action_reason_name
 msgid "Reason"
-msgstr "Ok"
+msgstr "Причина"
 
 #. module: hr_attendance
 #: model:ir.ui.menu,name:hr_attendance.menu_hr_attendance_report
@@ -382,7 +385,7 @@ msgstr ""
 #. module: hr_attendance
 #: model:ir.ui.menu,name:hr_attendance.menu_hr_time_tracking
 msgid "Time Tracking"
-msgstr ""
+msgstr "Слідкування за часом"
 
 #. module: hr_attendance
 #: model:ir.ui.menu,name:hr_attendance.timesheet_menu_root
@@ -392,7 +395,7 @@ msgstr "Табелі"
 #. module: hr_attendance
 #: model:ir.ui.view,arch_db:hr_attendance.view_hr_attendance_filter
 msgid "Today"
-msgstr ""
+msgstr "Сьогодні"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance_worked_hours

@@ -3,13 +3,14 @@
 # * point_of_sale
 # 
 # Translators:
+# bluesoft83 <bluesoft83@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-18 08:10+0000\n"
-"PO-Revision-Date: 2015-09-19 08:19+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"POT-Creation-Date: 2015-10-09 09:18+0000\n"
+"PO-Revision-Date: 2016-07-06 13:33+0000\n"
+"Last-Translator: bluesoft83 <bluesoft83@gmail.com>\n"
 "Language-Team: Bosnian (http://www.transifex.com/odoo/odoo-9/language/bs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +21,7 @@ msgstr ""
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_res_users_supplier_invoice_count
 msgid "# Vendor Bills"
-msgstr ""
+msgstr "# Računa dobavljača"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_nbr
@@ -34,10 +35,10 @@ msgstr "Br. nabavnih narudžbi"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1278
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1284
 #, python-format
 msgid "% discount"
-msgstr ""
+msgstr "% popust"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.index
@@ -46,8 +47,8 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1405
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1445
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1411
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1451
 #, python-format
 msgid "&nbsp;"
 msgstr "&nbsp;"
@@ -64,7 +65,7 @@ msgstr "+ Transakcije"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:271
+#: code:addons/point_of_sale/static/src/xml/pos.xml:277
 #, python-format
 msgid "123.14 €"
 msgstr ""
@@ -86,63 +87,63 @@ msgstr ""
 msgid ""
 "<br/>\n"
 "                        Date:"
-msgstr ""
+msgstr "<br/>\n                        Datum:"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
 msgid ""
 "<span class=\"o_stat_text\">Put</span>\n"
 "                                    <span class=\"o_stat_text\">Money In</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Stavi</span>\n                                    <span class=\"o_stat_text\">Novac</span>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
 msgid "<span class=\"o_stat_text\">Set Closing Balance</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Unesi zaključni saldo blagajne</span>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
 msgid "<span class=\"o_stat_text\">Set Opening Balance</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Unesi početni saldo blagajne</span>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
 msgid ""
 "<span class=\"o_stat_text\">Take</span>\n"
 "                                    <span class=\"o_stat_text\">Money Out</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Uzmi</span>\n                                    <span class=\"o_stat_text\">Novac</span>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
 msgid "<span>Cash Balance</span>"
-msgstr ""
+msgstr "<span>Saldo blagajne</span>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
 msgid "<span>Last Closing Date</span>"
-msgstr ""
+msgstr "<span>Zadnji zaključni datum</span>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
 msgid "<span>Reports</span>"
-msgstr ""
+msgstr "<span>Izvještaji</span>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
 msgid "<span>View</span>"
-msgstr ""
+msgstr "<span>Pogled</span>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 msgid "<strong>Closing Date</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Datum zatvaranja</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_payment
 msgid ""
 "<strong>Company</strong>:\n"
 "                            <br/>"
-msgstr ""
+msgstr "<strong>Kompanija</strong>:\n                            <br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
@@ -150,98 +151,98 @@ msgstr ""
 #: model:ir.ui.view,arch_db:point_of_sale.report_statement
 #: model:ir.ui.view,arch_db:point_of_sale.report_usersproduct
 msgid "<strong>Company</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Kompanija</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 msgid "<strong>Currency</strong>"
-msgstr ""
+msgstr "<strong>Valuta</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 msgid "<strong>Date</strong>"
-msgstr ""
+msgstr "<strong>Datum</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_saleslines
 msgid "<strong>Description</strong>"
-msgstr ""
+msgstr "<strong>Opis</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 msgid "<strong>Difference</strong>"
-msgstr ""
+msgstr "<strong>Razlika</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 msgid "<strong>Disc(%)</strong>"
-msgstr ""
+msgstr "<strong>Pop.(%)</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_saleslines
 msgid "<strong>Disc. (%)</strong>"
-msgstr ""
+msgstr "<strong>Pop. (%)</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_payment
 msgid "<strong>Disc.(%)</strong>"
-msgstr ""
+msgstr "<strong>Pop.(%)</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 msgid "<strong>End Period</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Krajnji period</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 msgid "<strong>Ending Balance</strong>"
-msgstr ""
+msgstr "<strong>Završni saldo</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_statement
 msgid "<strong>Ending Balance</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Završni saldo</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 msgid "<strong>Invoiced</strong>"
-msgstr ""
+msgstr "<strong>Fakturisano</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 msgid "<strong>Journal</strong>"
-msgstr ""
+msgstr "<strong>Dnevnik knjiženja</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_statement
 msgid "<strong>Journal</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Dnevnik knjiženja</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_payment
 msgid "<strong>Net Total</strong>"
-msgstr ""
+msgstr "<strong>Neto</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_saleslines
 msgid "<strong>No. Of Articles</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Broj artikala</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 #: model:ir.ui.view,arch_db:point_of_sale.report_statement
 msgid "<strong>Opening Date</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Datum otvaranja</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 msgid "<strong>Order</strong>"
-msgstr ""
+msgstr "<strong>Narudžba</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 msgid "<strong>Payment</strong>"
-msgstr ""
+msgstr "<strong>Plaćanje</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
@@ -252,82 +253,82 @@ msgstr ""
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 #: model:ir.ui.view,arch_db:point_of_sale.report_saleslines
 msgid "<strong>Price</strong>"
-msgstr ""
+msgstr "<strong>Cijena</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 #: model:ir.ui.view,arch_db:point_of_sale.report_usersproduct
 msgid "<strong>Print Date</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Datum štampanja</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_payment
 msgid ""
 "<strong>Print date</strong>:\n"
 "                            <br/>"
-msgstr ""
+msgstr "<strong>Datum štampanja</strong>:\n                            <br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_saleslines
 msgid "<strong>Print date</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Datum štampanja</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 #: model:ir.ui.view,arch_db:point_of_sale.report_payment
 msgid "<strong>Product</strong>"
-msgstr ""
+msgstr "<strong>Proizvod</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 msgid "<strong>Qty of product</strong>"
-msgstr ""
+msgstr "<strong>Količina proizvoda</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 #: model:ir.ui.view,arch_db:point_of_sale.report_payment
 msgid "<strong>Qty</strong>"
-msgstr ""
+msgstr "<strong>Kol</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_saleslines
 msgid "<strong>Quantity</strong>"
-msgstr ""
+msgstr "<strong>Količina</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 msgid "<strong>Reference</strong>"
-msgstr ""
+msgstr "<strong>Referenca</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 msgid "<strong>Responsible</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Odgovoran</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 msgid "<strong>Sales total(Revenue)</strong>"
-msgstr ""
+msgstr "<strong>Ukupna prodaja (Dobit)</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 msgid "<strong>Start Period</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Početni period</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 msgid "<strong>Starting Balance</strong>"
-msgstr ""
+msgstr "<strong>Početni saldo</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_statement
 msgid "<strong>Starting Balance</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Početni saldo</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_usersproduct
 msgid "<strong>Starting Date</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Početni datum</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_statement
@@ -347,43 +348,43 @@ msgstr ""
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_saleslines
 msgid "<strong>Tax</strong>"
-msgstr ""
+msgstr "<strong>Porez</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 #: model:ir.ui.view,arch_db:point_of_sale.report_receipt
 msgid "<strong>Taxes</strong>"
-msgstr ""
+msgstr "<strong>Porezi</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 msgid "<strong>Total Transactions</strong>"
-msgstr ""
+msgstr "<strong>Ukupno transakcija</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_saleslines
 msgid "<strong>Total Without Taxes</strong>"
-msgstr ""
+msgstr "<strong>Ukupno bez poreza</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 msgid "<strong>Total discount</strong>"
-msgstr ""
+msgstr "<strong>Ukupni popust</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 msgid "<strong>Total invoiced</strong>"
-msgstr ""
+msgstr "<strong>Ukupno fakturisano</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 msgid "<strong>Total of the day</strong>"
-msgstr ""
+msgstr "<strong>Dnevni promet</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 msgid "<strong>Total paid</strong>"
-msgstr ""
+msgstr "<strong>Ukupno plaćeno</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_payment
@@ -392,59 +393,59 @@ msgstr ""
 #: model:ir.ui.view,arch_db:point_of_sale.report_statement
 #: model:ir.ui.view,arch_db:point_of_sale.report_usersproduct
 msgid "<strong>Total</strong>"
-msgstr ""
+msgstr "<strong>Ukupno</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_payment
 #: model:ir.ui.view,arch_db:point_of_sale.report_saleslines
 msgid "<strong>Unit Price</strong>"
-msgstr ""
+msgstr "<strong>Jedinična cijena</strong>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_statement
 #: model:ir.ui.view,arch_db:point_of_sale.report_usersproduct
 msgid "<strong>User</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Korisnik</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_detailsofsales
 msgid "<strong>Users</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Korisnici</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
 msgid "= Theoretical Closing Balance"
-msgstr ""
+msgstr "= Teoretski saldo zatvaranja"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1849
+#: code:addons/point_of_sale/static/src/js/screens.js:1854
 #, python-format
 msgid "? Clicking \"Confirm\" will validate the payment."
-msgstr ""
+msgstr "? Klikom na \"Potvrdi\" verifikovati će te plaćanje."
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1141
+#: code:addons/point_of_sale/static/src/js/screens.js:1145
 #, python-format
 msgid "A Customer Name Is Required"
-msgstr ""
+msgstr "Ime kupca je obavezno"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_res_users_pos_security_pin
 msgid ""
 "A Security PIN used to protect sensible functionality in the Point of Sale"
-msgstr ""
+msgstr "Sigurnosni PIN koji se koristi za zaštitu osjetljivih funkcionalnosti  Point of Sale-a"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
 msgid "A custom receipt footer message"
-msgstr ""
+msgstr "Prilagođena poruka podnožja računa"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
 msgid "A custom receipt header message"
-msgstr ""
+msgstr "Prilagođena poruka zaglavlja računa"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_config_uuid
@@ -491,7 +492,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1444
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1450
 #, python-format
 msgid "ABC"
 msgstr "ABC"
@@ -536,14 +537,14 @@ msgstr "Aktivan"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_account_journal_journal_user
 msgid "Active in Point of Sale"
-msgstr ""
+msgstr "Aktivno u Point of Sale"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1693
+#: code:addons/point_of_sale/static/src/js/screens.js:1698
 #, python-format
 msgid "Add Tip"
-msgstr ""
+msgstr "Dodaj bakšiš"
 
 #. module: point_of_sale
 #: model:ir.model,name:point_of_sale.model_pos_discount
@@ -552,8 +553,8 @@ msgstr "Dodaj globalni popust"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:366
-#: code:addons/point_of_sale/static/src/xml/pos.xml:444
+#: code:addons/point_of_sale/static/src/xml/pos.xml:372
+#: code:addons/point_of_sale/static/src/xml/pos.xml:450
 #, python-format
 msgid "Address"
 msgstr "Adresa"
@@ -576,12 +577,12 @@ msgstr "Sve stavke prodaje"
 #. module: point_of_sale
 #: selection:pos.config.settings,module_pos_reprint:0
 msgid "Allow cashier to reprint receipts"
-msgstr ""
+msgstr "Dozvoli kaseru da ponovno odštampa račun"
 
 #. module: point_of_sale
 #: selection:pos.config.settings,module_pos_discount:0
 msgid "Allow discounts on order lines only"
-msgstr ""
+msgstr "Dozvoli popust samo na stavkama računa"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_share
@@ -591,12 +592,12 @@ msgstr "Dozvoli dijeljenje dokumenata"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_auth_signup_uninvited
 msgid "Allow external users to sign up"
-msgstr ""
+msgstr "Dozvoli prijavu vanjskim korisnicima"
 
 #. module: point_of_sale
 #: selection:pos.config.settings,module_pos_discount:0
 msgid "Allow global discounts"
-msgstr ""
+msgstr "Dozvoli globalni popust"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_google_calendar
@@ -671,7 +672,7 @@ msgstr "Primjeni popust"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1841
+#: code:addons/point_of_sale/static/src/js/screens.js:1846
 #, python-format
 msgid "Are you sure that the customer wants to  pay"
 msgstr ""
@@ -684,7 +685,7 @@ msgstr ""
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_google_drive_authorization_code
 msgid "Authorization Code"
-msgstr ""
+msgstr "Autorizacijski kod"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_session_rescue
@@ -694,12 +695,12 @@ msgstr ""
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_print_auto
 msgid "Automatic Receipt Printing"
-msgstr ""
+msgstr "Automatsko štampanje računa"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_cashdrawer
 msgid "Automatically open the cashdrawer"
-msgstr ""
+msgstr "Automatski otvori ladicu za novac"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_journal_ids
@@ -720,8 +721,8 @@ msgstr "Prosječna Cijena"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:259
-#: code:addons/point_of_sale/static/src/xml/pos.xml:579
+#: code:addons/point_of_sale/static/src/xml/pos.xml:265
+#: code:addons/point_of_sale/static/src/xml/pos.xml:585
 #, python-format
 msgid "Back"
 msgstr "Natrag"
@@ -739,8 +740,8 @@ msgstr "Stavka izvoda banke"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:343
-#: code:addons/point_of_sale/static/src/xml/pos.xml:385
+#: code:addons/point_of_sale/static/src/xml/pos.xml:349
+#: code:addons/point_of_sale/static/src/xml/pos.xml:391
 #, python-format
 msgid "Barcode"
 msgstr "Barkod"
@@ -752,7 +753,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1152
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1158
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
 #, python-format
 msgid "Barcode Scanner"
@@ -761,7 +762,7 @@ msgstr "Barkod čitač"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_barcode_nomenclature_id
 msgid "Barcodes"
-msgstr ""
+msgstr "Barkodovi"
 
 #. module: point_of_sale
 #: model:product.product,name:point_of_sale.belle_vue_kriek_25cl
@@ -788,7 +789,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:853
+#: code:addons/point_of_sale/static/src/js/screens.js:857
 #, python-format
 msgid "Button"
 msgstr "Dugme"
@@ -800,19 +801,19 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:776
+#: code:addons/point_of_sale/static/src/xml/pos.xml:782
 #, python-format
 msgid "CHANGE"
 msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:412
-#: code:addons/point_of_sale/static/src/xml/pos.xml:904
-#: code:addons/point_of_sale/static/src/xml/pos.xml:921
-#: code:addons/point_of_sale/static/src/xml/pos.xml:938
-#: code:addons/point_of_sale/static/src/xml/pos.xml:958
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1010
+#: code:addons/point_of_sale/static/src/xml/pos.xml:418
+#: code:addons/point_of_sale/static/src/xml/pos.xml:910
+#: code:addons/point_of_sale/static/src/xml/pos.xml:927
+#: code:addons/point_of_sale/static/src/xml/pos.xml:944
+#: code:addons/point_of_sale/static/src/xml/pos.xml:964
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1016
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_confirm
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_details
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_discount
@@ -830,7 +831,7 @@ msgstr "Otkazan"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1830
+#: code:addons/point_of_sale/static/src/js/screens.js:1835
 #, python-format
 msgid "Cannot return change without a cash payment method"
 msgstr ""
@@ -844,17 +845,17 @@ msgstr ""
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_cash_control
 msgid "Cash Control"
-msgstr ""
+msgstr "Kontrola gotovine"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session_cash_journal_id
 msgid "Cash Journal"
-msgstr ""
+msgstr "Gotovinski dnevnik"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_pos_jl_id
 msgid "Cash Journals"
-msgstr ""
+msgstr "Gotovinski dnevnici"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session_cash_register_id
@@ -870,7 +871,13 @@ msgstr ""
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_cashdrawer
 msgid "Cashdrawer"
-msgstr ""
+msgstr "Ladica za novac"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/point_of_sale.py:1604
+#, python-format
+msgid "Cashier"
+msgstr "Kaser"
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,help:point_of_sale.product_pos_category_action
@@ -881,7 +888,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:485
+#: code:addons/point_of_sale/static/src/xml/pos.xml:491
 #, python-format
 msgid "Change"
 msgstr "Promjeni"
@@ -891,26 +898,26 @@ msgstr "Promjeni"
 #: code:addons/point_of_sale/static/src/js/chrome.js:101
 #, python-format
 msgid "Change Cashier"
-msgstr ""
+msgstr "Promjena kasera"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1086
+#: code:addons/point_of_sale/static/src/js/screens.js:1090
 #, python-format
 msgid "Change Customer"
-msgstr ""
+msgstr "Promjena kupca"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1693
+#: code:addons/point_of_sale/static/src/js/screens.js:1698
 #, python-format
 msgid "Change Tip"
-msgstr ""
+msgstr "Promjena bakšiša"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:641
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1334
+#: code:addons/point_of_sale/static/src/xml/pos.xml:647
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1340
 #, python-format
 msgid "Change:"
 msgstr "Za vratiti:"
@@ -953,7 +960,7 @@ msgstr "Označite ovdje ukoliko želite grupisati stavke dnevnika po proizvodima
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1879
+#: code:addons/point_of_sale/static/src/js/screens.js:1884
 #, python-format
 msgid "Check your internet connection and try again."
 msgstr ""
@@ -971,8 +978,8 @@ msgstr "Chimay Red 33cl"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:314
-#: code:addons/point_of_sale/static/src/xml/pos.xml:315
+#: code:addons/point_of_sale/static/src/xml/pos.xml:320
+#: code:addons/point_of_sale/static/src/xml/pos.xml:321
 #, python-format
 msgid "City"
 msgstr "Grad"
@@ -980,37 +987,37 @@ msgstr "Grad"
 #. module: point_of_sale
 #: model:ir.actions.act_window,help:point_of_sale.product_template_action
 msgid "Click to add a new product."
-msgstr ""
+msgstr "Klikni za dodavanje novog proizvoda."
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,help:point_of_sale.action_account_journal_form
 msgid "Click to add a payment method."
-msgstr ""
+msgstr "Klikni za dodavanje metode plaćanja."
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,help:point_of_sale.action_pos_config_kanban
 msgid "Click to create a new PoS config."
-msgstr ""
+msgstr "Klikni za kreiranje nove konfiguracije POS-a."
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,help:point_of_sale.action_pos_pos_form
 msgid "Click to create a new order."
-msgstr ""
+msgstr "Klikni za dodavanje nove narudžbe."
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,help:point_of_sale.product_pos_category_action
 msgid "Click to define a new category."
-msgstr ""
+msgstr "Klikni za definisanje nove kategorije."
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,help:point_of_sale.action_pos_session
 msgid "Click to start a new session."
-msgstr ""
+msgstr "Klikni za početak nove sesije."
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_auth_oauth_google_client_id
 msgid "Client ID"
-msgstr ""
+msgstr "ID Klijenta"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_cal_client_id
@@ -1043,7 +1050,7 @@ msgstr "Zatvoreno i proknjiženo"
 #: code:addons/point_of_sale/static/src/js/gui.js:333
 #, python-format
 msgid "Closing ..."
-msgstr ""
+msgstr "Zatvaranje ..."
 
 #. module: point_of_sale
 #: code:addons/point_of_sale/point_of_sale.py:166
@@ -1109,7 +1116,7 @@ msgstr "Konfiguracija"
 #. module: point_of_sale
 #: model:ir.actions.act_window,name:point_of_sale.action_pos_configuration
 msgid "Configure Point of Sale"
-msgstr ""
+msgstr "Konfiguriši Point of Sale"
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,help:point_of_sale.action_pos_config_kanban
@@ -1121,7 +1128,7 @@ msgstr ""
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/js/chrome.js:647
-#: code:addons/point_of_sale/static/src/xml/pos.xml:901
+#: code:addons/point_of_sale/static/src/xml/pos.xml:907
 #, python-format
 msgid "Confirm"
 msgstr "Portvrdi"
@@ -1131,30 +1138,30 @@ msgstr "Portvrdi"
 #: code:addons/point_of_sale/static/src/js/models.js:114
 #, python-format
 msgid "Connecting to the PosBox"
-msgstr ""
+msgstr "Konektovanje na PosBox"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
 msgid "Continue Selling"
-msgstr ""
+msgstr "Nastavi prodavati"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1229
+#: code:addons/point_of_sale/static/src/js/screens.js:1233
 #, python-format
 msgid "Could Not Read Image"
-msgstr ""
+msgstr "Slika se ne može učitati"
 
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/js/gui.js:342
 #, python-format
 msgid "Could not close the point of sale."
-msgstr ""
+msgstr "Ne može se zatvoriti POS."
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:322
+#: code:addons/point_of_sale/static/src/xml/pos.xml:328
 #, python-format
 msgid "Country"
 msgstr "Država"
@@ -1196,7 +1203,7 @@ msgstr "Datum kreiranja"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_pos_mercury
 msgid "Credit Cards"
-msgstr ""
+msgstr "Kreditne kartice"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_currency_id
@@ -1207,13 +1214,13 @@ msgstr "Valuta"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_current_session_id
 msgid "Current Session"
-msgstr ""
+msgstr "Trenutna sesija"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1704
-#: code:addons/point_of_sale/static/src/xml/pos.xml:110
-#: code:addons/point_of_sale/static/src/xml/pos.xml:609
+#: code:addons/point_of_sale/static/src/js/screens.js:1709
+#: code:addons/point_of_sale/static/src/xml/pos.xml:116
+#: code:addons/point_of_sale/static/src/xml/pos.xml:615
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_partner_id
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
 #, python-format
@@ -1221,7 +1228,7 @@ msgid "Customer"
 msgstr "Kupac"
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1168
+#: code:addons/point_of_sale/point_of_sale.py:1162
 #, python-format
 msgid "Customer Invoice"
 msgstr "Faktura kupca"
@@ -1256,7 +1263,7 @@ msgstr "Datum narudžbe"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_details_date_start
 msgid "Date Start"
-msgstr ""
+msgstr "Početni datum"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_details
@@ -1265,7 +1272,7 @@ msgstr "Datumi"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1142
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1148
 #, python-format
 msgid "Debug Window"
 msgstr "Prozor za ispravljanje grešaka"
@@ -1273,14 +1280,14 @@ msgstr "Prozor za ispravljanje grešaka"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_res_users_pos_config
 msgid "Default Point of Sale"
-msgstr ""
+msgstr "Zadani Point of Sale"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_config_barcode_nomenclature_id
 msgid ""
 "Defines what kind of barcodes are available and how they are assigned to "
 "products, customers and cashiers"
-msgstr ""
+msgstr "Definiše koje vrste barkodova su dostupni i kako su dodjeljeni proizvodima, kupcima i kaserima"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_delay_validation
@@ -1289,31 +1296,31 @@ msgstr "Odgoda ovjere"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1162
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1168
 #, python-format
 msgid "Delete Paid Orders"
-msgstr ""
+msgstr "Obriši plaćene narudžbe"
 
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/js/chrome.js:260
 #, python-format
 msgid "Delete Paid Orders ?"
-msgstr ""
+msgstr "Obriši plaćene narudžbe ?"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1163
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1169
 #, python-format
 msgid "Delete Unpaid Orders"
-msgstr ""
+msgstr "Obriši ne plaćene narudžbe"
 
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/js/chrome.js:270
 #, python-format
 msgid "Delete Unpaid Orders ?"
-msgstr ""
+msgstr "Obriši ne plaćene narudžbe ?"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_res_users_property_delivery_carrier_id
@@ -1333,17 +1340,17 @@ msgstr "Opis"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1089
+#: code:addons/point_of_sale/static/src/js/screens.js:1093
 #, python-format
 msgid "Deselect Customer"
-msgstr ""
+msgstr "Ukloni kupca"
 
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/js/chrome.js:52
 #, python-format
 msgid "Destroy Current Order ?"
-msgstr ""
+msgstr "Obriši trenutnu narudžbu ?"
 
 #. module: point_of_sale
 #: model:ir.actions.report.xml,name:point_of_sale.pos_lines_detail
@@ -1361,11 +1368,11 @@ msgstr "Razlika"
 msgid ""
 "Difference between the theoretical closing balance and the real closing "
 "balance."
-msgstr ""
+msgstr "Razlika između teoretskog salda zatvaranja i stvarnog salda zatvaranja."
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:133
+#: code:addons/point_of_sale/static/src/xml/pos.xml:139
 #, python-format
 msgid "Disc"
 msgstr "Pop."
@@ -1393,23 +1400,29 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:719
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1307
+#: code:addons/point_of_sale/static/src/xml/pos.xml:725
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1313
 #, python-format
 msgid "Discount:"
-msgstr ""
+msgstr "Popust:"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/point_of_sale.py:1602
+#, python-format
+msgid "Discounted Product"
+msgstr "Sniženi proizvod"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:785
+#: code:addons/point_of_sale/static/src/xml/pos.xml:791
 #, python-format
 msgid "Discounts"
-msgstr ""
+msgstr "Popusti"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_display_categ_images
 msgid "Display Category Pictures"
-msgstr ""
+msgstr "Prikaži slike kategorija"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_category_display_name
@@ -1435,12 +1448,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos_month_display_name
 #: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_pos_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Prikaži naziv"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_fullscreen
 msgid "Display the Point of Sale in full screen mode"
-msgstr ""
+msgstr "Prikaži point of sale preko čitavog ekrana"
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,help:point_of_sale.product_template_action
@@ -1463,7 +1476,7 @@ msgstr "Gotovo"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:483
+#: code:addons/point_of_sale/static/src/xml/pos.xml:489
 #, python-format
 msgid "Due"
 msgstr "Krajnji rok"
@@ -1488,7 +1501,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1145
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1151
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_electronic_scale
 #, python-format
 msgid "Electronic Scale"
@@ -1496,18 +1509,18 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:335
-#: code:addons/point_of_sale/static/src/xml/pos.xml:370
+#: code:addons/point_of_sale/static/src/xml/pos.xml:341
+#: code:addons/point_of_sale/static/src/xml/pos.xml:376
 #, python-format
 msgid "Email"
 msgstr "E-Mail"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1801
+#: code:addons/point_of_sale/static/src/js/screens.js:1806
 #, python-format
 msgid "Empty Order"
-msgstr ""
+msgstr "Prazna narudžba"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_scan_via_proxy
@@ -1555,14 +1568,14 @@ msgid "Error ! You cannot create recursive categories."
 msgstr "Greška! Ne možete kreirati rekurzivne kategorije."
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1552
+#: code:addons/point_of_sale/point_of_sale.py:1553
 #, python-format
 msgid "Error!"
 msgstr "Greška !"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1158
+#: code:addons/point_of_sale/static/src/js/screens.js:1162
 #, python-format
 msgid "Error: Could not Save Changes"
 msgstr ""
@@ -1586,17 +1599,17 @@ msgstr "Evian 50cl"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1164
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1170
 #, python-format
 msgid "Export Paid Orders"
-msgstr ""
+msgstr "Izvezi plaćene narudžbe"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1165
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1171
 #, python-format
 msgid "Export Unpaid Orders"
-msgstr ""
+msgstr "Izvezi ne plaćene narudžbe"
 
 #. module: point_of_sale
 #: model:product.product,name:point_of_sale.chicon_flandria_extra
@@ -1651,25 +1664,35 @@ msgstr "Karakteristike"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1024
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1030
 #, python-format
 msgid "Finished Importing Orders"
 msgstr ""
 
 #. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_fiscal_position_id
+msgid "Fiscal Position"
+msgstr "Fiskalna pozicija"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_fiscal_position_ids
+msgid "Fiscal Positions"
+msgstr "Fiskalne pozicije"
+
+#. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
 msgid "Footer"
-msgstr ""
+msgstr "Podnožje"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_config_iface_big_scrollbars
 msgid "For imprecise industrial touchscreens"
-msgstr ""
+msgstr "Za neprecizne industrijske ekrane na dodir"
 
 #. module: point_of_sale
 #: model:pos.category,name:point_of_sale.fruits_vegetables
 msgid "Fruits and Vegetables"
-msgstr ""
+msgstr "Voće i povrće"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_fullscreen
@@ -1689,7 +1712,7 @@ msgstr "Generiši stavke"
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_confirm
 msgid "Generate Journal Entries"
-msgstr ""
+msgstr "Generiši zapise dnevnika"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_confirm
@@ -1749,18 +1772,18 @@ msgstr "Grupiši po"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_group_by
 msgid "Group Journal Items"
-msgstr ""
+msgstr "Grupiši stavke dnevnika"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:700
+#: code:addons/point_of_sale/static/src/xml/pos.xml:706
 #, python-format
 msgid "Guests:"
-msgstr ""
+msgstr "Gosti:"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1176
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1182
 #, python-format
 msgid "Hardware Events"
 msgstr "Hardverski događaji"
@@ -1772,7 +1795,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1172
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1178
 #, python-format
 msgid "Hardware Status"
 msgstr "Status hardwera"
@@ -1785,7 +1808,7 @@ msgstr "Koristi kontrolu novčanica"
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
 msgid "Header"
-msgstr ""
+msgstr "Zaglavlje"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_category_id
@@ -1862,10 +1885,10 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1166
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1172
 #, python-format
 msgid "Import Orders"
-msgstr ""
+msgstr "Uvezi narudžbe"
 
 #. module: point_of_sale
 #: model:product.product,name:point_of_sale.tomate_en_grappe
@@ -1881,7 +1904,7 @@ msgid "In Progress"
 msgstr "U Toku"
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:803
+#: code:addons/point_of_sale/point_of_sale.py:784
 #, python-format
 msgid "In order to delete a sale, it must be new or cancelled."
 msgstr ""
@@ -1895,14 +1918,14 @@ msgstr "Neaktivan"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_tax_included
 msgid "Include Taxes in Prices"
-msgstr ""
+msgstr "Cijene sa porezom"
 
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/js/gui.js:264
 #, python-format
 msgid "Incorrect Password"
-msgstr ""
+msgstr "Netačna lozinka"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_note
@@ -1911,7 +1934,7 @@ msgstr "Interne zabilješke"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:617
+#: code:addons/point_of_sale/static/src/xml/pos.xml:623
 #: model:ir.actions.report.xml,name:point_of_sale.pos_invoice_report
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_invoice_id
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
@@ -1993,7 +2016,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:point_of_sale.field_report_sales_by_user_pos_month___last_update
 #: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_pos___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Zadnje mijenjano"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_category_write_uid
@@ -2008,7 +2031,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_write_uid
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session_write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Zadnji ažurirao"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_category_write_date
@@ -2023,7 +2046,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_write_date
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session_write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Zadnje ažurirano"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_res_users_date_review
@@ -2088,7 +2111,7 @@ msgstr "Popis gotovinskih kasa"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/models.js:450
+#: code:addons/point_of_sale/static/src/js/models.js:484
 #: code:addons/point_of_sale/static/src/xml/pos.xml:38
 #, python-format
 msgid "Loading"
@@ -2110,17 +2133,17 @@ msgstr ""
 #: code:addons/point_of_sale/static/src/js/gui.js:291
 #, python-format
 msgid "Login as a Manager"
-msgstr ""
+msgstr "Prijavi se kao menadžer"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_pos_loyalty
-msgid "Loyalty"
-msgstr ""
+msgid "Loyalty Program"
+msgstr "Program lojalnosti"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_payment
 msgid "Make Payment"
-msgstr ""
+msgstr "Napravi plaćanje"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_inter_company_rules
@@ -2130,6 +2153,11 @@ msgstr ""
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_group_product_variant
 msgid "Manage Product Variants"
+msgstr "Upravljaj varijantama proizvoda"
+
+#. module: point_of_sale
+#: model:ir.ui.view,arch_db:point_of_sale.view_sale_config_settings_form_pos
+msgid "Manage loyalty program with points and rewards for customers"
 msgstr ""
 
 #. module: point_of_sale
@@ -2157,7 +2185,7 @@ msgstr "Slika kategorije srednje veličine. Automatski je promijenjena veličina
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:486
+#: code:addons/point_of_sale/static/src/xml/pos.xml:492
 #, python-format
 msgid "Method"
 msgstr "Metoda"
@@ -2169,22 +2197,14 @@ msgid "Miscellaneous"
 msgstr "Dodatna podešavanja"
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:942
-#, python-format
-msgid ""
-"Missing source or destination location for picking type %s. Please configure"
-" those fields and try again."
-msgstr ""
-
-#. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
 msgid "Month of order date"
-msgstr ""
+msgstr "Mjesec narudžbe"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
 msgid "More <i class=\"fa fa-caret-down\"/>"
-msgstr ""
+msgstr "Više <i class=\"fa fa-caret-down\"/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
@@ -2193,17 +2213,17 @@ msgstr "Moje prodaje"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:379
-#: code:addons/point_of_sale/static/src/xml/pos.xml:390
-#: code:addons/point_of_sale/static/src/xml/pos.xml:399
+#: code:addons/point_of_sale/static/src/xml/pos.xml:385
+#: code:addons/point_of_sale/static/src/xml/pos.xml:396
+#: code:addons/point_of_sale/static/src/xml/pos.xml:405
 #, python-format
 msgid "N/A"
 msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:302
-#: code:addons/point_of_sale/static/src/xml/pos.xml:443
+#: code:addons/point_of_sale/static/src/xml/pos.xml:308
+#: code:addons/point_of_sale/static/src/xml/pos.xml:449
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_category_complete_name
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_category_name
 #: model:ir.ui.view,arch_db:point_of_sale.report_statement
@@ -2218,7 +2238,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1811
+#: code:addons/point_of_sale/static/src/js/screens.js:1816
 #, python-format
 msgid "Negative Bank Payment"
 msgstr ""
@@ -2232,14 +2252,14 @@ msgstr "Novi"
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
 msgid "New Session"
-msgstr ""
+msgstr "Nova sesija"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:642
+#: code:addons/point_of_sale/static/src/xml/pos.xml:648
 #, python-format
 msgid "Next Order"
-msgstr ""
+msgstr "Sljedeća narudžba"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_res_users_date_review_next
@@ -2247,7 +2267,7 @@ msgid "Next Partner Review"
 msgstr "Sljedeća ocjena partnera"
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:744
+#: code:addons/point_of_sale/point_of_sale.py:725
 #, python-format
 msgid ""
 "No cash statement found for this session. Unable to record returned cash."
@@ -2256,33 +2276,28 @@ msgstr "Nije pronađen nijedan zapis gotovine. Nemogu snimiti povrat novca."
 #. module: point_of_sale
 #: selection:pos.config.settings,module_pos_mercury:0
 msgid "No credit card"
-msgstr ""
+msgstr "Nema kreditne kartice"
 
 #. module: point_of_sale
 #: code:addons/point_of_sale/report/pos_invoice.py:29
 #, python-format
 msgid "No link to an invoice for %s."
-msgstr ""
-
-#. module: point_of_sale
-#: selection:pos.config.settings,module_pos_loyalty:0
-msgid "No loyalty programs"
-msgstr ""
+msgstr "Nema veze do fakture za %s."
 
 #. module: point_of_sale
 #: selection:pos.config.settings,module_pos_reprint:0
 msgid "No reprint"
-msgstr ""
+msgstr "Bez ponovnog štampanja"
 
 #. module: point_of_sale
 #: code:addons/point_of_sale/wizard/pos_open_statement.py:40
 #, python-format
 msgid "No sequence defined on the journal"
-msgstr ""
+msgstr "Sekvenca nije definisana za dnevnk knjiženja"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:324
+#: code:addons/point_of_sale/static/src/xml/pos.xml:330
 #, python-format
 msgid "None"
 msgstr "Ništa"
@@ -2297,7 +2312,7 @@ msgstr "Nije fakturisano"
 msgid ""
 "Note that you may use the menu <i>Your Session</i>\n"
 "                to quickly open a new session."
-msgstr ""
+msgstr "Zapamtite da možete koristiti meni <i>Vaša sesija</i>\n                da bi ste brzo otvorili novu sesiju."
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
@@ -2331,18 +2346,18 @@ msgstr ""
 #: code:addons/point_of_sale/static/src/js/gui.js:315
 #, python-format
 msgid "Offline Orders"
-msgstr ""
+msgstr "Offline narudžbe"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:833
-#: code:addons/point_of_sale/static/src/xml/pos.xml:847
-#: code:addons/point_of_sale/static/src/xml/pos.xml:861
-#: code:addons/point_of_sale/static/src/xml/pos.xml:887
-#: code:addons/point_of_sale/static/src/xml/pos.xml:918
-#: code:addons/point_of_sale/static/src/xml/pos.xml:935
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1013
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1049
+#: code:addons/point_of_sale/static/src/xml/pos.xml:839
+#: code:addons/point_of_sale/static/src/xml/pos.xml:853
+#: code:addons/point_of_sale/static/src/xml/pos.xml:867
+#: code:addons/point_of_sale/static/src/xml/pos.xml:893
+#: code:addons/point_of_sale/static/src/xml/pos.xml:924
+#: code:addons/point_of_sale/static/src/xml/pos.xml:941
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1019
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1055
 #, python-format
 msgid "Ok"
 msgstr "U redu"
@@ -2355,7 +2370,7 @@ msgstr "Luk"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1215
+#: code:addons/point_of_sale/static/src/js/screens.js:1219
 #, python-format
 msgid "Only web-compatible Image formats such as .png or .jpeg are supported"
 msgstr ""
@@ -2368,12 +2383,12 @@ msgstr "Otvori"
 #. module: point_of_sale
 #: model:ir.actions.act_window,name:point_of_sale.action_pos_open_statement
 msgid "Open Cash Register"
-msgstr ""
+msgstr "Otvori registar kasu"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:628
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1178
+#: code:addons/point_of_sale/static/src/xml/pos.xml:634
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1184
 #, python-format
 msgid "Open Cashbox"
 msgstr "Otvori kasu"
@@ -2390,6 +2405,7 @@ msgstr "Otvorene kase"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
 msgid "Open Session"
 msgstr "Otvori sesiju"
 
@@ -2410,7 +2426,7 @@ msgstr "Početni saldo"
 #: selection:pos.session,state:0
 #, python-format
 msgid "Opening Control"
-msgstr ""
+msgstr "Kontrola otvaranja"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session_start_at
@@ -2425,18 +2441,18 @@ msgstr "Orange Butterfly"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:274
+#: code:addons/point_of_sale/static/src/xml/pos.xml:280
 #, python-format
 msgid "Order"
 msgstr "Nalog"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/models.js:1461
-#: code:addons/point_of_sale/static/src/js/models.js:1488
+#: code:addons/point_of_sale/static/src/js/models.js:1512
+#: code:addons/point_of_sale/static/src/js/models.js:1539
 #, python-format
 msgid "Order "
-msgstr ""
+msgstr "Narudžba"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_date_order
@@ -2459,13 +2475,13 @@ msgstr "Stavke naloga"
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
 #: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
 msgid "Order Month"
-msgstr ""
+msgstr "Mjesec narudžbe"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_order_id
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_name
 msgid "Order Ref"
-msgstr ""
+msgstr "Ref. narudžbe"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session_sequence_number
@@ -2475,11 +2491,11 @@ msgstr ""
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
 msgid "Order lines"
-msgstr ""
+msgstr "Stavke narudžbe"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1159
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1165
 #: model:ir.actions.act_window,name:point_of_sale.act_pos_session_orders
 #: model:ir.actions.act_window,name:point_of_sale.action_pos_order_filtered
 #: model:ir.actions.act_window,name:point_of_sale.action_pos_pos_form
@@ -2517,12 +2533,12 @@ msgstr "POS"
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_details
 msgid "POS Details"
-msgstr ""
+msgstr "POS Detalji"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_saleslines
 msgid "POS Lines"
-msgstr ""
+msgstr "POS Stavke"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_line_form
@@ -2542,7 +2558,7 @@ msgstr "POS Stavke"
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_tree_all_sales_lines
 msgid "POS Orders lines"
-msgstr ""
+msgstr "POS Stavke narudžbe"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_report_sales_by_user_pos_calendar
@@ -2550,7 +2566,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:point_of_sale.view_report_transaction_pos_calendar
 #: model:ir.ui.view,arch_db:point_of_sale.view_report_transaction_pos_graph
 msgid "POS Report"
-msgstr ""
+msgstr "POS Izvještaj"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
@@ -2596,7 +2612,7 @@ msgstr "Datum partnerstva"
 #: code:addons/point_of_sale/static/src/js/gui.js:261
 #, python-format
 msgid "Password ?"
-msgstr ""
+msgstr "Šifra ?"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_payment
@@ -2605,8 +2621,8 @@ msgstr "Naplati naručeno"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:115
-#: code:addons/point_of_sale/static/src/xml/pos.xml:582
+#: code:addons/point_of_sale/static/src/xml/pos.xml:121
+#: code:addons/point_of_sale/static/src/xml/pos.xml:588
 #: code:addons/point_of_sale/wizard/pos_payment.py:57
 #: model:ir.actions.act_window,name:point_of_sale.action_pos_payment
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
@@ -2623,7 +2639,7 @@ msgstr "Datum plaćanja"
 #: model:ir.actions.act_window,name:point_of_sale.action_account_journal_form
 #: model:ir.ui.menu,name:point_of_sale.menu_action_account_journal_form_open
 msgid "Payment Methods"
-msgstr ""
+msgstr "Metoda plaćanja"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment_journal_id
@@ -2639,7 +2655,7 @@ msgstr "Referenca plaćanja"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_payment_terminal
 msgid "Payment Terminal"
-msgstr ""
+msgstr "Platni terminal"
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,help:point_of_sale.action_account_journal_form
@@ -2671,16 +2687,16 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:339
-#: code:addons/point_of_sale/static/src/xml/pos.xml:374
-#: code:addons/point_of_sale/static/src/xml/pos.xml:445
+#: code:addons/point_of_sale/static/src/xml/pos.xml:345
+#: code:addons/point_of_sale/static/src/xml/pos.xml:380
+#: code:addons/point_of_sale/static/src/xml/pos.xml:451
 #, python-format
 msgid "Phone"
 msgstr "Telefon"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1256
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1262
 #, python-format
 msgid "Phone:"
 msgstr "Telefon:"
@@ -2698,41 +2714,41 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1840
+#: code:addons/point_of_sale/static/src/js/screens.js:1845
 #, python-format
 msgid "Please Confirm Large Amount"
-msgstr ""
+msgstr "Molimo da potvrdite veliki iznos"
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1295
+#: code:addons/point_of_sale/point_of_sale.py:1289
 #, python-format
 msgid "Please define income account for this product: \"%s\" (id:%d)."
 msgstr "Molimo definirajte konto prihoda za ovaj proizvod \"%s\" (id:%d)."
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1115
+#: code:addons/point_of_sale/point_of_sale.py:1105
 #, python-format
 msgid "Please provide a partner for the sale."
-msgstr ""
+msgstr "Molimo da odaberete partnera za prodaju."
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:466
+#: code:addons/point_of_sale/static/src/xml/pos.xml:472
 #, python-format
 msgid "Please select a payment method."
-msgstr ""
+msgstr "Molimo izaberite način plaćanja."
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1870
+#: code:addons/point_of_sale/static/src/js/screens.js:1875
 #, python-format
 msgid "Please select the Customer"
-msgstr ""
+msgstr "Molimo odaberite kupca"
 
 #. module: point_of_sale
 #: model:stock.picking.type,name:point_of_sale.picking_type_posout
 msgid "PoS Orders"
-msgstr ""
+msgstr "PoS Naružbe"
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,name:point_of_sale.action_pos_config_kanban
@@ -2757,7 +2773,7 @@ msgstr "POS Kasa"
 #: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_pivot
 #: model:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
 msgid "Point of Sale Analysis"
-msgstr ""
+msgstr "Point of Sale Analiza"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_product_template_pos_categ_id
@@ -2778,7 +2794,7 @@ msgstr "Postavke prodajnog mjesta"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_group_pos_manager_id
 msgid "Point of Sale Manager Group"
-msgstr ""
+msgstr "Point of Sale menadžerska grupa"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_name
@@ -2794,7 +2810,7 @@ msgstr "Narudžbe POS-a"
 #. module: point_of_sale
 #: model:ir.model,name:point_of_sale.model_report_pos_order
 msgid "Point of Sale Orders Statistics"
-msgstr ""
+msgstr "Point of Sale statistika naružbi"
 
 #. module: point_of_sale
 #: model:ir.model,name:point_of_sale.model_pos_make_payment
@@ -2811,23 +2827,23 @@ msgstr "Sesija POS-a"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_group_pos_user_id
 msgid "Point of Sale User Group"
-msgstr ""
+msgstr "Point of Sale korisnička grupa"
 
 #. module: point_of_sale
 #: selection:pos.config.settings,module_pos_restaurant:0
 msgid "Point of sale for shops"
-msgstr ""
+msgstr "Point of sale za prodavnice"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.product_pos_category_form_view
 msgid "Pos Categories"
-msgstr ""
+msgstr "Pos Kategorije"
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,name:point_of_sale.product_pos_category_action
 #: model:ir.ui.menu,name:point_of_sale.menu_product_pos_category
 msgid "Pos Product Categories"
-msgstr ""
+msgstr "Pos kategorije proizvoda"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_confirm
@@ -2841,10 +2857,10 @@ msgstr "Knjiži stavke dnevnika POS-a"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:318
+#: code:addons/point_of_sale/static/src/xml/pos.xml:324
 #, python-format
 msgid "Postcode"
-msgstr ""
+msgstr "Broj pošte"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
@@ -2861,15 +2877,21 @@ msgstr ""
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_precompute_cash
 msgid "Prefill Cash Payment"
-msgstr ""
+msgstr "Popuni gotovinsko plaćanje"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:138
+#: code:addons/point_of_sale/static/src/xml/pos.xml:144
 #: model:ir.ui.view,arch_db:point_of_sale.report_receipt
 #, python-format
 msgid "Price"
 msgstr "Cijena"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/point_of_sale.py:1601
+#, python-format
+msgid "Priced Product"
+msgstr ""
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_pricelist_id
@@ -2880,11 +2902,11 @@ msgstr "Cijenovnik"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:649
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1179
+#: code:addons/point_of_sale/static/src/xml/pos.xml:655
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1185
 #, python-format
 msgid "Print Receipt"
-msgstr ""
+msgstr "Štampaj račun"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_details
@@ -2894,21 +2916,21 @@ msgstr "Ispiši"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_print_via_proxy
 msgid "Print via Proxy"
-msgstr ""
+msgstr "Štampaj putem Proxy"
 
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/js/chrome.js:376
 #, python-format
 msgid "Printer"
-msgstr ""
+msgstr "Štampač"
 
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/js/devices.js:425
 #, python-format
 msgid "Printing Error: "
-msgstr ""
+msgstr "Greška štampanja:"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_product_id
@@ -2956,7 +2978,7 @@ msgstr "Proizvodi"
 #: model:ir.model,name:point_of_sale.model_pos_category
 #: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_pos_categ_id
 msgid "Public Category"
-msgstr ""
+msgstr "Javna kategorija"
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,name:point_of_sale.action_pos_box_in
@@ -2965,7 +2987,7 @@ msgstr "Primi novac"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:128
+#: code:addons/point_of_sale/static/src/xml/pos.xml:134
 #: model:ir.ui.view,arch_db:point_of_sale.report_usersproduct
 #, python-format
 msgid "Qty"
@@ -2986,7 +3008,7 @@ msgstr "Ponovi ispis"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1180
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1186
 #, python-format
 msgid "Read Weighting Scale"
 msgstr "Očitanje sa vage"
@@ -2994,7 +3016,7 @@ msgstr "Očitanje sa vage"
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
 msgid "Real Closing Balance"
-msgstr ""
+msgstr "Stvarni saldo zaključka"
 
 #. module: point_of_sale
 #: model:ir.actions.report.xml,name:point_of_sale.action_report_pos_receipt
@@ -3005,22 +3027,22 @@ msgstr "Račun"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_receipt_footer
 msgid "Receipt Footer"
-msgstr ""
+msgstr "Podnožje računa"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_receipt_header
 msgid "Receipt Header"
-msgstr ""
+msgstr "Zaglavlje računa"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
 msgid "Receipt Printer"
-msgstr ""
+msgstr "Štampač računa"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_pos_reference
 msgid "Receipt Ref"
-msgstr ""
+msgstr "Ref. Računa"
 
 #. module: point_of_sale
 #: model:product.product,name:point_of_sale.poivron_rouges
@@ -3040,11 +3062,6 @@ msgid "Reference"
 msgstr "Referenca"
 
 #. module: point_of_sale
-#: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_font
-msgid "Report Font"
-msgstr ""
-
-#. module: point_of_sale
 #: model:ir.ui.menu,name:point_of_sale.menu_point_rep
 msgid "Reports"
 msgstr "Izvještaji"
@@ -3062,11 +3079,11 @@ msgstr ""
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session_rescue
 msgid "Rescue session"
-msgstr ""
+msgstr "Spasi sesiju"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1149
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1155
 #, python-format
 msgid "Reset"
 msgstr "Resetuj"
@@ -3079,12 +3096,12 @@ msgstr "Odgovoran"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_pos_restaurant
 msgid "Restaurant"
-msgstr ""
+msgstr "Restoran"
 
 #. module: point_of_sale
 #: selection:pos.config.settings,module_pos_restaurant:0
 msgid "Restaurant: activate table management"
-msgstr ""
+msgstr "Restoran: aktiviraj upravljanje stolovima"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
@@ -3092,7 +3109,7 @@ msgid "Resume"
 msgstr "Nastavi"
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1085
+#: code:addons/point_of_sale/point_of_sale.py:1075
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
 #, python-format
 msgid "Return Products"
@@ -3101,7 +3118,7 @@ msgstr "Vrati proizvode"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_amount_return
 msgid "Returned"
-msgstr ""
+msgstr "Vraćeno"
 
 #. module: point_of_sale
 #: model:product.product,name:point_of_sale.rochefort_8_33cl
@@ -3131,7 +3148,7 @@ msgstr "Stavka prodaje"
 #. module: point_of_sale
 #: model:ir.model,name:point_of_sale.model_pos_details
 msgid "Sales Details"
-msgstr ""
+msgstr "Detalji prodaje"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_report_transaction_pos_journal_id
@@ -3174,18 +3191,18 @@ msgstr "Prodaje po mjesecima"
 #: model:ir.actions.act_window,name:point_of_sale.action_trans_pos_tree
 #: model:ir.model,name:point_of_sale.model_report_sales_by_user_pos
 msgid "Sales by user"
-msgstr ""
+msgstr "Prodaja po korisnicima"
 
 #. module: point_of_sale
 #: model:ir.model,name:point_of_sale.model_report_sales_by_user_pos_month
 msgid "Sales by user monthly"
-msgstr ""
+msgstr "Prodaja po korisnicima mjesečni"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_user_id
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
 msgid "Salesman"
-msgstr ""
+msgstr "Prodavač"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_details_user_ids
@@ -3209,47 +3226,47 @@ msgstr "San Pellegrino 1L"
 #: code:addons/point_of_sale/static/src/js/chrome.js:384
 #, python-format
 msgid "Scale"
-msgstr ""
+msgstr "Vaga"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1155
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1161
 #, python-format
 msgid "Scan"
-msgstr ""
+msgstr "Skeniraj"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1156
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1162
 #, python-format
 msgid "Scan EAN-13"
-msgstr ""
+msgstr "Skeniraj EAN-13"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_scan_via_proxy
 msgid "Scan via Proxy"
-msgstr ""
+msgstr "Skeniraj putem Proxy"
 
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/js/chrome.js:367
 #, python-format
 msgid "Scanner"
-msgstr ""
+msgstr "Skener"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:416
+#: code:addons/point_of_sale/static/src/xml/pos.xml:422
 #, python-format
 msgid "Search Customers"
-msgstr ""
+msgstr "Pretraga kupaca"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:185
+#: code:addons/point_of_sale/static/src/xml/pos.xml:191
 #, python-format
 msgid "Search Products"
-msgstr ""
+msgstr "Pretraga proizvoda"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
@@ -3259,29 +3276,36 @@ msgstr "Pretraži prodajne narudžbe"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_res_users_pos_security_pin
 msgid "Security PIN"
-msgstr ""
+msgstr "Sigurnosni PIN"
 
 #. module: point_of_sale
 #: constraint:res.users:0
 msgid "Security PIN can only contain digits"
-msgstr ""
+msgstr "Sigurnosni pin može da sadrži samo brojeve"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:424
+#: code:addons/point_of_sale/static/src/xml/pos.xml:430
 #, python-format
 msgid "Select Customer"
-msgstr ""
+msgstr "Odaberi kupca"
 
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/js/gui.js:235
 #, python-format
 msgid "Select User"
-msgstr ""
+msgstr "Odaberi korisnika"
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1203
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1922
+#, python-format
+msgid "Select tax"
+msgstr "Odaberi porez"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/point_of_sale.py:1197
 #, python-format
 msgid "Selected orders do not have the same session!"
 msgstr "Odabrane narudžbe nisu iz iste sesije!"
@@ -3294,21 +3318,21 @@ msgstr "Sekvenca"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_sequence_number
 msgid "Sequence Number"
-msgstr ""
+msgstr "Broj sekvence"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:696
+#: code:addons/point_of_sale/static/src/xml/pos.xml:702
 #, python-format
 msgid "Served by"
-msgstr ""
+msgstr "Poslužio"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1883
+#: code:addons/point_of_sale/static/src/js/screens.js:1888
 #, python-format
 msgid "Server Error"
-msgstr ""
+msgstr "Serverska greška"
 
 #. module: point_of_sale
 #: code:addons/point_of_sale/point_of_sale.py:326
@@ -3317,7 +3341,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
 #, python-format
 msgid "Session"
-msgstr ""
+msgstr "Sesija"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session_name
@@ -3327,24 +3351,24 @@ msgstr "ID sesija"
 #. module: point_of_sale
 #: model:ir.actions.report.xml,name:point_of_sale.action_report_pos_session_summary
 msgid "Session Summary"
-msgstr ""
+msgstr "Pregled sesije"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 msgid "Session Summary:"
-msgstr ""
+msgstr "Pregled sesije:"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1038
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1044
 #, python-format
 msgid "Session ids:"
-msgstr ""
+msgstr "ID-ovi sesije:"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
 msgid "Session:"
-msgstr ""
+msgstr "Sesija:"
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,name:point_of_sale.act_pos_config_sessions
@@ -3354,33 +3378,26 @@ msgstr ""
 #: model:ir.ui.menu,name:point_of_sale.menu_pos_session_all
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
 msgid "Sessions"
-msgstr ""
+msgstr "Sesije"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1084
+#: code:addons/point_of_sale/static/src/js/screens.js:1088
 #, python-format
 msgid "Set Customer"
-msgstr ""
+msgstr "Postavi kupca"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1148
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1154
 #, python-format
 msgid "Set Weight"
 msgstr "Postavi težinu"
 
 #. module: point_of_sale
-#: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_font
-msgid ""
-"Set the font into the report header, it will be used as default font in the "
-"RML reports of the user company"
-msgstr ""
-
-#. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
 msgid "Set to Active"
-msgstr ""
+msgstr "Postavi na aktivno"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
@@ -3390,7 +3407,7 @@ msgstr "Postavi na Napušteno"
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
 msgid "Set to Inactive"
-msgstr ""
+msgstr "Postavi na neaktivno"
 
 #. module: point_of_sale
 #: model:ir.ui.menu,name:point_of_sale.menu_pos_global_settings
@@ -3401,17 +3418,17 @@ msgstr "Postavke"
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_module_share
 msgid "Share or embbed any screen of Odoo."
-msgstr ""
+msgstr "Dijeli ili ugradi bilo koji Odoo ekran."
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_company_share_partner
 msgid "Share partners to all companies"
-msgstr ""
+msgstr "Dijeli partnere sa svim kompanijama"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_company_share_product
 msgid "Share product to all companies"
-msgstr ""
+msgstr "Dijeli proizvode sa svim kompanijama"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_company_share_partner
@@ -3431,7 +3448,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1258
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1264
 #, python-format
 msgid "Shop:"
 msgstr "Prodavnica:"
@@ -3439,7 +3456,7 @@ msgstr "Prodavnica:"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_google_cal_sync
 msgid "Show Tutorial"
-msgstr ""
+msgstr "Prikaži tutorijal"
 
 #. module: point_of_sale
 #. openerp-web
@@ -3451,12 +3468,12 @@ msgstr "Preskoči"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_print_skip_screen
 msgid "Skip Receipt Screen"
-msgstr ""
+msgstr "Preskoči ekran sa računom"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_category_image_small
-msgid "Smal-sized image"
-msgstr ""
+msgid "Small-sized image"
+msgstr "Male slike"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_category_image_small
@@ -3476,12 +3493,12 @@ msgstr ""
 #: code:addons/point_of_sale/static/src/js/gui.js:320
 #, python-format
 msgid "Some orders could not be submitted to"
-msgstr ""
+msgstr "Neke narudžbe nisu mogle biti predate na"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_start_categ_id
 msgid "Start Category"
-msgstr ""
+msgstr "Početna kategorija"
 
 #. module: point_of_sale
 #: model:ir.actions.act_url,name:point_of_sale.action_pos_pos
@@ -3502,12 +3519,12 @@ msgstr "Izvod"
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 msgid "Statement Details:"
-msgstr ""
+msgstr "Detalji izvoda:"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_sessionsummary
 msgid "Statement Summary"
-msgstr ""
+msgstr "Pregled izvoda"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
@@ -3547,8 +3564,8 @@ msgstr "Lokacije zalihe"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:310
-#: code:addons/point_of_sale/static/src/xml/pos.xml:311
+#: code:addons/point_of_sale/static/src/xml/pos.xml:316
+#: code:addons/point_of_sale/static/src/xml/pos.xml:317
 #, python-format
 msgid "Street"
 msgstr "Ulica"
@@ -3561,7 +3578,7 @@ msgstr "Stringers"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:747
+#: code:addons/point_of_sale/static/src/xml/pos.xml:753
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_price_subtotal_incl
 #, python-format
 msgid "Subtotal"
@@ -3570,43 +3587,43 @@ msgstr "Sub-ukupno"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_price_subtotal
 msgid "Subtotal w/o Tax"
-msgstr ""
+msgstr "Ukupno bez poreza"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_price_sub_total
 msgid "Subtotal w/o discount"
-msgstr ""
+msgstr "Ukupno bez popusta"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1293
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1299
 #, python-format
 msgid "Subtotal:"
 msgstr "Međuzbroj:"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1030
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1036
 #, python-format
 msgid "Successfully  imported"
-msgstr ""
+msgstr "Uspješno uvezeno"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1029
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1035
 #, python-format
 msgid "Successfully imported"
-msgstr ""
+msgstr "Uspješno uvezeno"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_session_cash_register_balance_end
 msgid "Sum of opening balance and transactions."
-msgstr ""
+msgstr "Suma otvorenih salda i transakcija"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_line
 msgid "Sum of subtotals"
-msgstr ""
+msgstr "Ukupna suma"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
@@ -3616,14 +3633,14 @@ msgstr "Sažetak po načinima plaćanja"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_res_users_property_purchase_currency_id
 msgid "Supplier Currency"
-msgstr ""
+msgstr "Valuta dobavljača"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:760
+#: code:addons/point_of_sale/static/src/xml/pos.xml:766
 #, python-format
 msgid "TOTAL"
-msgstr ""
+msgstr "UKUPNO"
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,name:point_of_sale.action_pos_box_out
@@ -3631,15 +3648,17 @@ msgid "Take Money Out"
 msgstr "Podigni novac"
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1325
+#. openerp-web
+#: code:addons/point_of_sale/point_of_sale.py:1319
+#: code:addons/point_of_sale/static/src/xml/pos.xml:105
 #, python-format
 msgid "Tax"
 msgstr "Porez"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:347
-#: code:addons/point_of_sale/static/src/xml/pos.xml:394
+#: code:addons/point_of_sale/static/src/xml/pos.xml:353
+#: code:addons/point_of_sale/static/src/xml/pos.xml:400
 #, python-format
 msgid "Tax ID"
 msgstr "PDV Broj"
@@ -3647,45 +3666,46 @@ msgstr "PDV Broj"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_amount_tax
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_tax_ids
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_tax_ids_after_fiscal_position
 #: model:ir.ui.view,arch_db:point_of_sale.report_saleslines
 msgid "Taxes"
 msgstr "Porezi"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1128
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1134
 #, python-format
 msgid "Taxes:"
 msgstr "Porezi:"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:676
+#: code:addons/point_of_sale/static/src/xml/pos.xml:682
 #, python-format
 msgid "Tel:"
-msgstr ""
+msgstr "Tel:"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_auth_signup_template_user_id
 msgid "Template user for new users created through signup"
-msgstr ""
+msgstr "Prijedlog korisnika za nove korisnike putem prijave"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:484
+#: code:addons/point_of_sale/static/src/xml/pos.xml:490
 #, python-format
 msgid "Tendered"
 msgstr ""
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1282
+#: code:addons/point_of_sale/point_of_sale.py:1276
 #, python-format
 msgid "The POS order must have lines when calling this method"
 msgstr "POS narudžba mora sadržavati stavke kada pozivate ovu metodu"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:882
+#: code:addons/point_of_sale/static/src/xml/pos.xml:888
 #, python-format
 msgid ""
 "The Point of Sale could not find any product, client, employee\n"
@@ -3736,14 +3756,14 @@ msgstr "Naziv POS sesije mora biti jedinstven!"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1878
+#: code:addons/point_of_sale/static/src/js/screens.js:1883
 #, python-format
 msgid "The order could not be sent"
 msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1889
+#: code:addons/point_of_sale/static/src/js/screens.js:1894
 #, python-format
 msgid "The order could not be sent to the server due to an unknown error"
 msgstr ""
@@ -3781,7 +3801,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1230
+#: code:addons/point_of_sale/static/src/js/screens.js:1234
 #, python-format
 msgid "The provided file could not be read due to an unknown error"
 msgstr ""
@@ -3800,7 +3820,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1884
+#: code:addons/point_of_sale/static/src/js/screens.js:1889
 #, python-format
 msgid "The server encountered an error while receiving your order."
 msgstr ""
@@ -3819,7 +3839,7 @@ msgid "The transactions are processed by MercuryPay"
 msgstr ""
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:612
+#: code:addons/point_of_sale/point_of_sale.py:590
 #, python-format
 msgid ""
 "The type of the journal for your payment method should be bank or cash "
@@ -3841,7 +3861,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1831
+#: code:addons/point_of_sale/static/src/js/screens.js:1836
 #, python-format
 msgid ""
 "There is no cash payment method available in this point of sale to handle the change.\n"
@@ -3856,7 +3876,7 @@ msgid "There is no cash register for this PoS Session"
 msgstr ""
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1032
+#: code:addons/point_of_sale/point_of_sale.py:1022
 #, python-format
 msgid ""
 "There is no receivable account defined to make payment for the partner: "
@@ -3864,14 +3884,14 @@ msgid ""
 msgstr "Nije definisan konto prihoda da izvršim plaćanje za partnera: \"%s\" (id:%id)."
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1030
+#: code:addons/point_of_sale/point_of_sale.py:1020
 #, python-format
 msgid "There is no receivable account defined to make payment."
 msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1802
+#: code:addons/point_of_sale/static/src/js/screens.js:1807
 #, python-format
 msgid ""
 "There must be at least one product in your order before it can be validated"
@@ -3992,23 +4012,23 @@ msgstr "Timmermans Kriek 37.5cl"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:623
+#: code:addons/point_of_sale/static/src/xml/pos.xml:629
 #, python-format
 msgid "Tip"
-msgstr ""
+msgstr "Bakšiš"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_tip_product_id
 msgid "Tip Product"
-msgstr ""
+msgstr "Proizvod bakšiša"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_product_template_to_weight
 msgid "To Weigh With Scale"
-msgstr ""
+msgstr "Vaganje sa vagom"
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1069
+#: code:addons/point_of_sale/point_of_sale.py:1059
 #, python-format
 msgid ""
 "To return product(s), you need to open a session that will be used to "
@@ -4023,12 +4043,12 @@ msgstr "Danas"
 #. module: point_of_sale
 #: model:ir.actions.report.xml,name:point_of_sale.pos_payment_report
 msgid "Today's Payment"
-msgstr ""
+msgstr "Današnje uplate"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_payment
 msgid "Today's Payments"
-msgstr ""
+msgstr "Današnje uplate"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_amount_total
@@ -4040,7 +4060,7 @@ msgstr "Ukupno"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session_cash_register_total_entry_encoding
 msgid "Total Cash Transaction"
-msgstr ""
+msgstr "Ukupno transakcija gotovine"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_total_discount
@@ -4054,10 +4074,10 @@ msgstr "Ukupna Cijena"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:797
+#: code:addons/point_of_sale/static/src/xml/pos.xml:803
 #, python-format
 msgid "Total Taxes"
-msgstr ""
+msgstr "Ukupno poreza"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_trans_pos_user_tree
@@ -4067,17 +4087,17 @@ msgstr "Transakcije ukupno"
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_session_cash_register_total_entry_encoding
 msgid "Total of all paid sale orders"
-msgstr ""
+msgstr "Ukupno svih plaćenih narudžbi"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_session_cash_register_balance_end_real
 msgid "Total of closing cash control lines."
-msgstr ""
+msgstr "Ukupno kontrolnih stavki zatvaranja gotovine."
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_session_cash_register_balance_start
 msgid "Total of opening cash control lines."
-msgstr ""
+msgstr "Ukupno kontrolnih stavki otvaranja gotovine."
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_order_line
@@ -4086,14 +4106,14 @@ msgstr "Uk. količina"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1127
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1313
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1133
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1319
 #, python-format
 msgid "Total:"
 msgstr "Ukupno:"
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1337
+#: code:addons/point_of_sale/point_of_sale.py:1331
 #, python-format
 msgid "Trade Receivables"
 msgstr ""
@@ -4109,7 +4129,7 @@ msgid "URI for tuto"
 msgstr ""
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:995
+#: code:addons/point_of_sale/point_of_sale.py:985
 #, python-format
 msgid "Unable to cancel the picking."
 msgstr ""
@@ -4129,34 +4149,29 @@ msgstr "Jedinična cijena"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:878
+#: code:addons/point_of_sale/static/src/xml/pos.xml:884
 #, python-format
 msgid "Unknown Barcode"
-msgstr ""
+msgstr "Nepoznat barkod"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1888
+#: code:addons/point_of_sale/static/src/js/screens.js:1893
 #, python-format
 msgid "Unknown Error"
-msgstr ""
+msgstr "Nepoznata greška"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1214
+#: code:addons/point_of_sale/static/src/js/screens.js:1218
 #, python-format
 msgid "Unsupported File Format"
-msgstr ""
+msgstr "Nepodržan format datoteke"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_auth_oauth
 msgid "Use external authentication providers, sign in with Google..."
-msgstr ""
-
-#. module: point_of_sale
-#: selection:pos.config.settings,module_pos_loyalty:0
-msgid "Use loyalty programs"
-msgstr ""
+msgstr "Koristi eksterne provajdere autentifikacije, prijavi se sa Google..."
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,help:point_of_sale.action_pos_pos_form
@@ -4188,7 +4203,7 @@ msgstr "Korisnikov proizvod"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1257
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1263
 #: model:ir.ui.view,arch_db:point_of_sale.report_receipt
 #, python-format
 msgid "User:"
@@ -4201,22 +4216,17 @@ msgstr "Korisnici"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:679
+#: code:addons/point_of_sale/static/src/xml/pos.xml:685
 #, python-format
 msgid "VAT:"
 msgstr "PDV:"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:583
+#: code:addons/point_of_sale/static/src/xml/pos.xml:589
 #, python-format
 msgid "Validate"
 msgstr "Odobri"
-
-#. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
-msgid "Validate & Open Session"
-msgstr "Potvrdi i otvori smjenu"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
@@ -4232,7 +4242,7 @@ msgstr ""
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_iface_vkeyboard
 msgid "Virtual KeyBoard"
-msgstr ""
+msgstr "Virtuelna tastatura"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_stock_location_id
@@ -4240,19 +4250,25 @@ msgid "Warehouse"
 msgstr "Skladište"
 
 #. module: point_of_sale
+#: code:addons/point_of_sale/point_of_sale.py:1600
+#, python-format
+msgid "Weighted Product"
+msgstr "Proizvod za vaganje"
+
+#. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1174
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1180
 #, python-format
 msgid "Weighting"
 msgstr "Vaganje"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1100
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1277
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1106
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1283
 #, python-format
 msgid "With a"
-msgstr ""
+msgstr "Sa"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_config_settings_group_light_multi_company
@@ -4280,14 +4296,7 @@ msgid "Yellow Peppers"
 msgstr "Žute papričice"
 
 #. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
-msgid ""
-"You can define another list of available currencies on the\n"
-"                                    <i>Cash Registers</i> tab of the"
-msgstr ""
-
-#. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:790
+#: code:addons/point_of_sale/point_of_sale.py:771
 #, python-format
 msgid ""
 "You cannot change the partner of a POS order for which an invoice has "
@@ -4295,7 +4304,7 @@ msgid ""
 msgstr ""
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:640
+#: code:addons/point_of_sale/point_of_sale.py:618
 #, python-format
 msgid ""
 "You cannot confirm all orders of this session, because they have not the "
@@ -4314,7 +4323,7 @@ msgid "You cannot create two active sessions with the same responsible!"
 msgstr "Nije moguće otvoriti dvije aktivne sesije sa istom odgovornom osobom!"
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1553
+#: code:addons/point_of_sale/point_of_sale.py:1554
 #, python-format
 msgid ""
 "You cannot delete a product saleable in point of sale while a session is "
@@ -4323,7 +4332,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1812
+#: code:addons/point_of_sale/static/src/js/screens.js:1817
 #, python-format
 msgid ""
 "You cannot have a negative amount in a Bank payment. Use a cash payment "
@@ -4331,7 +4340,7 @@ msgid ""
 msgstr ""
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:653
+#: code:addons/point_of_sale/point_of_sale.py:631
 #, python-format
 msgid ""
 "You cannot use the session of another users. This session is owned by %s. "
@@ -4351,19 +4360,19 @@ msgid ""
 msgstr "Morate definisati koji načini plaćanja će biti dostupni na prodajnom mjestu, korištenjem postojećih dnevnika gotovine i bankovnih računa kroz \"Računovodstvo / Postavke /Dnevnici /Dnevnici\". Odaberite dnevnik i označite polje \"POS metoda plaćanja\" na kartici \"Prodajna mjesta\". Također možete kreirati novi način plaćanja direktno iz izbornika \"POS Backend/ Postavke / Načini plaćanja\"."
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1046
+#: code:addons/point_of_sale/point_of_sale.py:1036
 #, python-format
 msgid "You have to open at least one cashbox."
 msgstr "Morate otvoriti barem jednu kasu"
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1433
+#: code:addons/point_of_sale/point_of_sale.py:1426
 #, python-format
 msgid "You have to select a pricelist in the sale form !"
 msgstr ""
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:1418
+#: code:addons/point_of_sale/point_of_sale.py:1407
 #, python-format
 msgid ""
 "You have to select a pricelist in the sale form !\n"
@@ -4379,7 +4388,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1871
+#: code:addons/point_of_sale/static/src/js/screens.js:1876
 #, python-format
 msgid "You need to select the customer before you can invoice an order."
 msgstr ""
@@ -4399,13 +4408,13 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1159
+#: code:addons/point_of_sale/static/src/js/screens.js:1163
 #, python-format
 msgid "Your Internet connection is probably down."
 msgstr ""
 
 #. module: point_of_sale
-#: code:addons/point_of_sale/point_of_sale.py:610
+#: code:addons/point_of_sale/point_of_sale.py:588
 #, python-format
 msgid ""
 "Your ending balance is too different from the theoretical cash closing "
@@ -4422,14 +4431,14 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1119
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1125
 #, python-format
 msgid "Your shopping cart is empty"
 msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:319
+#: code:addons/point_of_sale/static/src/xml/pos.xml:325
 #, python-format
 msgid "ZIP"
 msgstr "Broj pošte"
@@ -4442,7 +4451,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1092
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1098
 #, python-format
 msgid "at"
 msgstr "kod"
@@ -4454,7 +4463,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1035
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1041
 #, python-format
 msgid "belong to another session:"
 msgstr ""
@@ -4467,7 +4476,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1380
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1386
 #, python-format
 msgid "caps lock"
 msgstr "caps lock"
@@ -4484,30 +4493,30 @@ msgstr "cash.box.out"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1407
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1449
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1413
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1455
 #, python-format
 msgid "close"
 msgstr "zatvori"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1365
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1442
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1371
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1448
 #, python-format
 msgid "delete"
-msgstr ""
+msgstr "obriši"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1102
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1108
 #, python-format
 msgid "discount"
-msgstr ""
+msgstr "popust"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/js/screens.js:1845
+#: code:addons/point_of_sale/static/src/js/screens.js:1850
 #, python-format
 msgid "for an order of"
 msgstr ""
@@ -4520,15 +4529,10 @@ msgstr "ne koristi se"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1029
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1035
 #, python-format
 msgid "paid orders"
-msgstr ""
-
-#. module: point_of_sale
-#: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
-msgid "payment method."
-msgstr "način plaćanja."
+msgstr "plaćene narudžbe"
 
 #. module: point_of_sale
 #: model:ir.model,name:point_of_sale.model_pos_config
@@ -4582,24 +4586,24 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/point_of_sale.py:749
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1392
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1447
+#: code:addons/point_of_sale/point_of_sale.py:730
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1398
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1453
 #, python-format
 msgid "return"
 msgstr "vrati"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1393
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1404
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1399
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1410
 #, python-format
 msgid "shift"
-msgstr ""
+msgstr "pomjeri"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1366
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1372
 #, python-format
 msgid "tab"
 msgstr "tab"
@@ -4620,17 +4624,17 @@ msgstr "nepoznato"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1030
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1036
 #, python-format
 msgid "unpaid orders"
-msgstr ""
+msgstr "neplaćene narudžbe"
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1032
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1038
 #, python-format
 msgid "unpaid orders could not be imported"
-msgstr ""
+msgstr "neplaćene narudžbe nisu mogle biti uvežene"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_uuid
@@ -4639,7 +4643,7 @@ msgstr ""
 
 #. module: point_of_sale
 #. openerp-web
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1034
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1040
 #, python-format
 msgid "were duplicates of existing orders"
 msgstr ""

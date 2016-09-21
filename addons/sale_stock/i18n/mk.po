@@ -3,13 +3,14 @@
 # * sale_stock
 # 
 # Translators:
+# Aleksandar Vangelovski <aleksandarv@hbee.eu>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-14 10:28+0000\n"
-"PO-Revision-Date: 2015-09-08 08:07+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"POT-Creation-Date: 2015-10-01 06:27+0000\n"
+"PO-Revision-Date: 2016-05-19 11:48+0000\n"
+"Last-Translator: Aleksandar Vangelovski <aleksandarv@hbee.eu>\n"
 "Language-Team: Macedonian (http://www.transifex.com/odoo/odoo-9/language/mk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +31,7 @@ msgstr "Овозможи додавање на трошоци за испора�
 
 #. module: sale_stock
 #: selection:sale.config.settings,group_mrp_properties:0
-msgid "Allow setting manufacturing order properties per order line (avanced)"
+msgid "Allow setting manufacturing order properties per order line (advanced)"
 msgstr ""
 
 #. module: sale_stock
@@ -107,12 +108,17 @@ msgstr "Интернационалните Економски Термини п�
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_stock_location_route
 msgid "Inventory Routes"
-msgstr ""
+msgstr "Рути на залиха"
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_account_invoice
 msgid "Invoice"
 msgstr "Фактура"
+
+#. module: sale_stock
+#: model:ir.model,name:sale_stock.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Ставка од фактура"
 
 #. module: sale_stock
 #: model:ir.model.fields,help:sale_stock.field_res_company_security_lead
@@ -130,10 +136,10 @@ msgstr ""
 #. module: sale_stock
 #: selection:sale.config.settings,module_delivery:0
 msgid "No shipping costs on sales orders"
-msgstr ""
+msgstr "Нема трошоци на испорака од налозите на продажба"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:140
+#: code:addons/sale_stock/sale_stock.py:141
 #, python-format
 msgid "Not enough inventory!"
 msgstr ""
@@ -150,6 +156,12 @@ msgid "Order Routing"
 msgstr ""
 
 #. module: sale_stock
+#: code:addons/sale_stock/sale_stock.py:152
+#, python-format
+msgid "Ordered quantity decreased!"
+msgstr "Нарачаните количини се намалени!"
+
+#. module: sale_stock
 #: model:ir.model.fields,field_description:sale_stock.field_sale_order_line_product_packaging
 msgid "Packaging"
 msgstr "Пакување"
@@ -157,7 +169,7 @@ msgstr "Пакување"
 #. module: sale_stock
 #: model:ir.model.fields,field_description:sale_stock.field_sale_order_picking_ids
 msgid "Picking associated to this sale"
-msgstr ""
+msgstr "Требување поврзано на оваа продажба"
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_procurement_order
@@ -172,7 +184,7 @@ msgstr "Урнек на производ"
 #. module: sale_stock
 #: model:ir.model.fields,field_description:sale_stock.field_sale_config_settings_group_mrp_properties
 msgid "Properties on SO Lines"
-msgstr ""
+msgstr "Својства на ставки од налози за продажба"
 
 #. module: sale_stock
 #: model:ir.model.fields,field_description:sale_stock.field_sale_order_line_route_id
@@ -180,9 +192,9 @@ msgid "Route"
 msgstr "Рута"
 
 #. module: sale_stock
-#: model:ir.model.fields,field_description:sale_stock.field_procurement_order_so_line_id
-msgid "Sale Order Line"
-msgstr "Ставка од налог за продажба"
+#: model:ir.model.fields,field_description:sale_stock.field_stock_picking_sale_id
+msgid "Sale Order"
+msgstr "Налог за продажба"
 
 #. module: sale_stock
 #: model:ir.ui.view,arch_db:sale_stock.stock_location_route_form_view_inherit_sale_stock
@@ -246,10 +258,15 @@ msgid "Stock Move"
 msgstr "Движење на залиха"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:183
+#: code:addons/sale_stock/sale_stock.py:194
 #, python-format
-msgid "This product is packaged by %d %s. You should sell %d %s."
+msgid "This product is packaged by %d . You should sell %d ."
 msgstr ""
+
+#. module: sale_stock
+#: model:ir.model,name:sale_stock.model_stock_picking
+msgid "Transfer"
+msgstr "Трансфер"
 
 #. module: sale_stock
 #: model:ir.model.fields,field_description:sale_stock.field_sale_order_warehouse_id
@@ -258,13 +275,21 @@ msgid "Warehouse"
 msgstr "Магацин"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:182
+#: code:addons/sale_stock/sale_stock.py:193
 #, python-format
-msgid "Warning!"
-msgstr "Внимание!"
+msgid "Warning"
+msgstr "Внимание"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:141
+#: code:addons/sale_stock/sale_stock.py:153
+#, python-format
+msgid ""
+"You are decreasing the ordered quantity! Do not forget to manually update "
+"the delivery order if needed."
+msgstr "Вие го намалувате бројот на нарачана количина! Не заборавајте рачно да го ажурирате налогот на испорака доколку е тоа потребно."
+
+#. module: sale_stock
+#: code:addons/sale_stock/sale_stock.py:142
 #, python-format
 msgid ""
 "You plan to sell %.2f %s but you only have %.2f %s available!\n"

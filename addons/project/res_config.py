@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+from openerp import SUPERUSER_ID
 from openerp.osv import fields, osv
 from openerp.tools.translate import _
 
@@ -46,7 +47,7 @@ class project_configuration(osv.osv_memory):
         'group_time_work_estimation_tasks': fields.selection([
             (0, "Do not estimate working time on tasks"),
             (1, "Manage time estimation on tasks")
-            ], "Time Work Estimation",
+            ], "Time on Tasks",
             implied_group='project.group_time_work_estimation_tasks',
             help="Allows you to compute Time Estimation on tasks."),
         'generate_project_alias': fields.selection([
@@ -54,9 +55,8 @@ class project_configuration(osv.osv_memory):
             (1, "Automatically generate an email alias at the project creation")
             ], "Project Alias",
             help="Odoo will generate an email alias at the project creation from project name."),
-        'module_project_timesheet_synchro': fields.boolean("Awesome Timesheet",
-            help="Timesheet App for Chrome/Android/iOS"),
-        'module_project_forecast': fields.boolean("Forecasts and Planning"),
+        'module_project_timesheet_synchro': fields.boolean("Timesheet app for Chrome/Android/iOS"),
+        'module_project_forecast': fields.boolean("Forecasts, planning and Gantt charts"),
     }
 
     def onchange_time_estimation_project_timesheet(self, cr, uid, ids, group_time_work_estimation_tasks):
@@ -66,4 +66,5 @@ class project_configuration(osv.osv_memory):
 
     def set_default_generate_project_alias(self, cr, uid, ids, context=None):
         config_value = self.browse(cr, uid, ids, context=context).generate_project_alias
-        self.pool.get('ir.values').set_default(cr, uid, 'project.config.settings', 'generate_project_alias', config_value)
+        check = self.pool['res.users'].has_group(cr, uid, 'base.group_system')
+        self.pool.get('ir.values').set_default(cr, check and SUPERUSER_ID or uid, 'project.config.settings', 'generate_project_alias', config_value)

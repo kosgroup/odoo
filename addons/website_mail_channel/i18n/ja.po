@@ -3,13 +3,14 @@
 # * website_mail_channel
 # 
 # Translators:
+# Yoshi Tashiro <tashiro@roomsfor.hk>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-07 14:41+0000\n"
-"PO-Revision-Date: 2015-09-11 01:41+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"PO-Revision-Date: 2016-08-27 09:00+0000\n"
+"Last-Translator: Yoshi Tashiro <tashiro@roomsfor.hk>\n"
 "Language-Team: Japanese (http://www.transifex.com/odoo/odoo-9/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -71,7 +72,7 @@ msgstr ""
 #. module: website_mail_channel
 #: model:ir.model.fields,field_description:website_mail_channel.field_mail_mail_path
 msgid "Discussion Path"
-msgstr ""
+msgstr "ディスカッションパス"
 
 #. module: website_mail_channel
 #: model:ir.model,name:website_mail_channel.model_mail_channel
@@ -86,7 +87,7 @@ msgstr ""
 #. module: website_mail_channel
 #: model:ir.ui.view,arch_db:website_mail_channel.footer_mailing_list
 msgid "Mailing List"
-msgstr ""
+msgstr "メーリングリスト"
 
 #. module: website_mail_channel
 #: model:ir.ui.view,arch_db:website_mail_channel.group_message
@@ -115,7 +116,7 @@ msgstr ""
 #. module: website_mail_channel
 #: model:ir.model,name:website_mail_channel.model_mail_mail
 msgid "Outgoing Mails"
-msgstr ""
+msgstr "送信メール"
 
 #. module: website_mail_channel
 #: code:addons/website_mail_channel/models/mail_mail.py:24
@@ -126,7 +127,7 @@ msgstr ""
 #. module: website_mail_channel
 #: model:ir.model.fields,field_description:website_mail_channel.field_mail_mail_website_published
 msgid "Published"
-msgstr ""
+msgstr "発行済"
 
 #. module: website_mail_channel
 #: model:ir.ui.view,arch_db:website_mail_channel.group_message

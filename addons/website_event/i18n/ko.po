@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-14 10:28+0000\n"
-"PO-Revision-Date: 2015-09-10 15:22+0000\n"
+"POT-Creation-Date: 2015-09-29 10:27+0000\n"
+"PO-Revision-Date: 2016-07-01 09:20+0000\n"
 "Last-Translator: Martin Trigaux\n"
 "Language-Team: Korean (http://www.transifex.com/odoo/odoo-9/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -119,6 +119,11 @@ msgstr "모든 국가"
 #: model:ir.ui.view,arch_db:website_event.layout
 msgid "All Events"
 msgstr "모든 일정"
+
+#. module: website_event
+#: model:ir.ui.view,arch_db:website_event.registration_attendee_details
+msgid "Attendee #%s"
+msgstr ""
 
 #. module: website_event
 #: model:ir.ui.view,arch_db:website_event.registration_attendee_details
@@ -243,6 +248,11 @@ msgstr "일정 페이지에 '문자 블럭'을 끌어옵니다."
 #: model:ir.ui.view,arch_db:website_event.registration_complete
 msgid "E-mail"
 msgstr "이메일"
+
+#. module: website_event
+#: model:ir.ui.view,arch_db:website_event.view_event_sale_form
+msgid "Edit Badges"
+msgstr ""
 
 #. module: website_event
 #: model:ir.ui.view,arch_db:website_event.registration_template
@@ -456,11 +466,6 @@ msgstr "지난 일정 사진"
 #: model:ir.ui.view,arch_db:website_event.registration_template
 msgid "Price"
 msgstr "가격"
-
-#. module: website_event
-#: model:ir.ui.view,arch_db:website_event.view_event_sale_form
-msgid "Print Badges"
-msgstr ""
 
 #. module: website_event
 #. openerp-web

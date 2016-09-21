@@ -41,6 +41,8 @@ class SaleOrderEventRegistration(models.TransientModel):
                     'sale_order_line_id': so_line.id,
                 }])
         res['event_registration_ids'] = attendee_list
+        res = self._convert_to_cache(res, validate=False)
+        res = self._convert_to_write(res)
         return res
 
     @api.multi
@@ -66,7 +68,7 @@ class RegistrationEditorLine(models.TransientModel):
     event_ticket_id = fields.Many2one('event.event.ticket', string='Event Ticket')
     email = fields.Char(string='Email')
     phone = fields.Char(string='Phone')
-    name = fields.Char(string='Name', select=True)
+    name = fields.Char(string='Name', index=True)
 
     @api.one
     def get_registration_data(self):

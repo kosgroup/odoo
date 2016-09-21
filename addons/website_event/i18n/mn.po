@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-14 10:28+0000\n"
-"PO-Revision-Date: 2015-09-10 15:22+0000\n"
+"POT-Creation-Date: 2015-09-29 10:27+0000\n"
+"PO-Revision-Date: 2016-07-01 09:20+0000\n"
 "Last-Translator: Martin Trigaux\n"
 "Language-Team: Mongolian (http://www.transifex.com/odoo/odoo-9/language/mn/)\n"
 "MIME-Version: 1.0\n"
@@ -118,6 +118,11 @@ msgstr ""
 #. module: website_event
 #: model:ir.ui.view,arch_db:website_event.layout
 msgid "All Events"
+msgstr ""
+
+#. module: website_event
+#: model:ir.ui.view,arch_db:website_event.registration_attendee_details
+msgid "Attendee #%s"
 msgstr ""
 
 #. module: website_event
@@ -243,6 +248,11 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_event.registration_complete
 msgid "E-mail"
 msgstr "Э-мэйл"
+
+#. module: website_event
+#: model:ir.ui.view,arch_db:website_event.view_event_sale_form
+msgid "Edit Badges"
+msgstr ""
 
 #. module: website_event
 #: model:ir.ui.view,arch_db:website_event.registration_template
@@ -456,11 +466,6 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_event.registration_template
 msgid "Price"
 msgstr "Үнэ"
-
-#. module: website_event
-#: model:ir.ui.view,arch_db:website_event.view_event_sale_form
-msgid "Print Badges"
-msgstr ""
 
 #. module: website_event
 #. openerp-web

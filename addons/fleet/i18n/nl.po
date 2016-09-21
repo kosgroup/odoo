@@ -4,14 +4,16 @@
 # 
 # Translators:
 # Eric Geens <ericgeens@yahoo.com>, 2015
+# Erwin van der Ploeg <erwin@odooexperts.nl>, 2015
+# Erwin van der Ploeg <erwin@odooexperts.nl>, 2016
 # Yenthe Van Ginneken <yenthespam@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-29 10:27+0000\n"
-"PO-Revision-Date: 2015-09-30 09:23+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"PO-Revision-Date: 2016-08-30 16:20+0000\n"
+"Last-Translator: Erwin van der Ploeg <erwin@odooexperts.nl>\n"
 "Language-Team: Dutch (http://www.transifex.com/odoo/odoo-9/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -69,7 +71,7 @@ msgstr "Airco bijvullen"
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_acquisition_date
 msgid "Acquisition Date"
-msgstr "Aankoopdatum"
+msgstr "Inkoopdatum"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_message_needaction
@@ -563,7 +565,7 @@ msgstr "Diesel"
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_state_display_name
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_tag_display_name
 msgid "Display Name"
-msgstr "Naam weergeven"
+msgstr "Weergave naam"
 
 #. module: fleet
 #: model:fleet.service.type,name:fleet.type_service_17
@@ -820,7 +822,7 @@ msgstr "Hier kunt de verschillende kilometerstanden voor alle voertuigen invoere
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_horsepower
 msgid "Horsepower"
-msgstr "Paardenkracht"
+msgstr "PK"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_horsepower_tax
@@ -1037,7 +1039,7 @@ msgstr "Logo"
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_image_medium
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model_image_medium
 msgid "Logo (medium)"
-msgstr "Logo (medium)"
+msgstr "Logo (middel groot)"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_image_small
@@ -1078,12 +1080,12 @@ msgstr "Manager"
 #. module: fleet
 #: selection:fleet.vehicle,transmission:0
 msgid "Manual"
-msgstr "Handgeschakeld"
+msgstr "Handmatig"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model_brand_image_medium
 msgid "Medium-sized image"
-msgstr ""
+msgstr "Middelgrote afbeelding"
 
 #. module: fleet
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle_model_brand_image_medium
@@ -1385,7 +1387,7 @@ msgstr "Persoon voor wie het contract wordt getekend"
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_power
 msgid "Power"
-msgstr "Kracht"
+msgstr "Vermogen"
 
 #. module: fleet
 #: model:fleet.service.type,name:fleet.type_service_35
@@ -1482,12 +1484,12 @@ msgstr "Rapportages"
 #. module: fleet
 #: model:fleet.service.type,name:fleet.type_service_service_15
 msgid "Residual value (Excluding VAT)"
-msgstr "Restwaarde (excl. BTW)"
+msgstr "Boekwaarde (excl. BTW)"
 
 #. module: fleet
 #: model:fleet.service.type,name:fleet.type_service_service_19
 msgid "Residual value in %"
-msgstr "Restwaarde in %"
+msgstr "Boekwaarde in %"
 
 #. module: fleet
 #: model:fleet.service.type,name:fleet.type_service_38
@@ -1575,7 +1577,7 @@ msgstr "Stel contract in op in behandeling"
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model_brand_image_small
 msgid "Small-sized image"
-msgstr ""
+msgstr "Kleine afbeelding"
 
 #. module: fleet
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle_model_brand_image_small
@@ -1583,7 +1585,7 @@ msgid ""
 "Small-sized logo of the brand. It is automatically resized as a 64x64px "
 "image, with aspect ratio preserved. Use this field anywhere a small image is"
 " required."
-msgstr ""
+msgstr "Klein formaat plaatje van het merk. Wordt automatisch aangepast naar een 64x64px image, met behoud van de aspect-ratio. Gebruik dit veld overal waar een klein formaat plaatje nodig is."
 
 #. module: fleet
 #: model:fleet.service.type,name:fleet.type_service_service_6
@@ -1604,7 +1606,7 @@ msgstr "Startmotor vervangen"
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_state_id_2863
 #: model:ir.ui.view,arch_db:fleet.fleet_vehicle_state_tree
 msgid "State"
-msgstr "Provincie/Staat"
+msgstr "Status"
 
 #. module: fleet
 #: sql_constraint:fleet.vehicle.state:0
@@ -1721,7 +1723,7 @@ msgstr "Totale uitgaven (excl. BTW)"
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_contract_renewal_total
 msgid "Total of contracts due or overdue minus one"
-msgstr "Totaal van de contracten verschuldigd of achterstallig minus een"
+msgstr "Totaal van de contracten verschuldigd of achterstallig minus één"
 
 #. module: fleet
 #: model:fleet.service.type,name:fleet.type_service_service_18
@@ -1919,13 +1921,13 @@ msgstr "Voertuigmeter km-tellers"
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel_vendor_id
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services_vendor_id
 msgid "Vendor"
-msgstr "Fabrikant"
+msgstr "Leverancier"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model_vendors
 #: model:ir.ui.view,arch_db:fleet.fleet_vehicle_model_form
 msgid "Vendors"
-msgstr "Fabrikanten"
+msgstr "Leveranciers"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract_days_left

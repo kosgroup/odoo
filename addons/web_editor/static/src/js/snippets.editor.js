@@ -248,8 +248,7 @@ var BuildingBlock = Widget.extend({
         });
 
         $styles.addClass("hidden");
-        globalSelector = {
-            closest: function ($from) {
+        globalSelector.closest = function ($from) {
                 var $temp;
                 var $target;
                 var len = selector.length;
@@ -260,8 +259,8 @@ var BuildingBlock = Widget.extend({
                     }
                 }
                 return $target;
-            },
-            all: function ($from) {
+        };
+        globalSelector.all = function ($from) {
                 var $target;
                 var len = selector.length;
                 for (var i = 0; i<len; i++) {
@@ -269,8 +268,8 @@ var BuildingBlock = Widget.extend({
                     else $target = $target.add(selector[i].all($from));
                 }
                 return $target;
-            },
-            is: function ($from) {
+        };
+        globalSelector.is = function ($from) {
                 var len = selector.length;
                 for (var i = 0; i<len; i++) {
                     if (selector[i].is($from)) {
@@ -278,7 +277,6 @@ var BuildingBlock = Widget.extend({
                     }
                 }
                 return false;
-            },
         };
 
         var number = 0;
@@ -318,11 +316,11 @@ var BuildingBlock = Widget.extend({
         $("body").toggleClass("editor_has_snippets", !!number);
 
         // select all default text to edit (if snippet default text)
-        /*self.$snippets.find('.oe_snippet_body, .oe_snippet_body *')
+        self.$snippets.find('.oe_snippet_body, .oe_snippet_body *')
             .contents()
             .filter(function() {
                 return this.nodeType === 3 && this.textContent.match(/\S/);
-            }).parent().addClass("o_default_snippet_text");*/
+            }).parent().addClass("o_default_snippet_text");
         $(document).on("mouseup", ".o_default_snippet_text", function (event) {
             $(event.target).selectContent();
         });
@@ -665,7 +663,7 @@ var BuildingBlock = Widget.extend({
                         animation.start(true, $target);
 
                         self.call_for_all_snippets($target, function (editor, $snippet) {
-                            editor.drop_and_build_snippet();
+                            _.defer(function () { editor.drop_and_build_snippet(); });
                         });
                         self.create_snippet_editor($target);
                         self.cover_target($target.data('overlay'), $target);
@@ -685,12 +683,10 @@ var BuildingBlock = Widget.extend({
         var self = this;
         $snippet.add(globalSelector.all($snippet)).each(function () {
             var $snippet = $(this);
-            setTimeout(function () {
-                self.create_snippet_editor($snippet);
-                if ($snippet.data("snippet-editor")) {
-                    callback.call(self, $snippet.data("snippet-editor"), $snippet);
-                }
-            });
+            self.create_snippet_editor($snippet);
+            if ($snippet.data("snippet-editor")) {
+                callback.call(self, $snippet.data("snippet-editor"), $snippet);
+            }
         });
     },
 
@@ -963,17 +959,25 @@ var Editor = Class.extend({
     },
     _drag_and_drop_stop: function (){
         var self = this;
-        var $dropzone = this.$target.prev();
-        var prev = $dropzone.length && $dropzone[0].previousSibling;
+
+        $(".oe_drop_zone").droppable('destroy').remove();
+
+        var prev = this.$target.first()[0].previousSibling;
         var next = this.$target.last()[0].nextSibling;
         var $parent = this.$target.parent();
 
-        $(".oe_drop_clone").after(this.$target);
+        var $clone = $(".oe_drop_clone");
+        if (prev === $clone[0]) {
+            prev = $clone[0].previousSibling;
+        } else if (next === $clone[0]) {
+            next = $clone[0].nextSibling;
+        }
+        $clone.after(this.$target);
 
         this.$overlay.removeClass("hidden");
         $("body").removeClass('move-important');
-        $('.oe_drop_zone').droppable('destroy').remove();
-        $(".oe_drop_clone, .oe_drop_to_remove").remove();
+        $clone.remove();
+        $(".oe_drop_to_remove").remove();
 
         if (this.dropped) {
             this.buildingBlock.parent.rte.historyRecordUndo(this.$target);
@@ -1149,8 +1153,9 @@ var Editor = Class.extend({
 });
 
 var data = {
-    'Class': BuildingBlock,
-    'globalSelector': globalSelector,
+    Class: BuildingBlock,
+    Editor: Editor,
+    globalSelector: globalSelector,
 };
 return data;
 

@@ -3,13 +3,15 @@
 # * stock_account
 # 
 # Translators:
+# Marko Happonen <marko.happonen@sprintit.fi>, 2016
+# Tuomo Aura <tuomo.aura@web-veistamo.fi>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-14 10:26+0000\n"
-"PO-Revision-Date: 2015-09-14 10:52+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"POT-Creation-Date: 2015-10-01 06:26+0000\n"
+"PO-Revision-Date: 2016-08-29 07:52+0000\n"
+"Last-Translator: Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>\n"
 "Language-Team: Finnish (http://www.transifex.com/odoo/odoo-9/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,7 +54,7 @@ msgstr "Sallii varastoarvostusten konfiguroinnin tuotteille ja tuoteryhmille."
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_product_product_asset_category_id
 msgid "Asset Type"
-msgstr ""
+msgstr "Käyttöomaisuus tyyppi"
 
 #. module: stock_account
 #: selection:product.category,property_cost_method:0
@@ -105,7 +107,7 @@ msgstr ""
 msgid ""
 "Coefficient to convert default Unit of Measure to Unit of Sale uos = uom * "
 "coeff"
-msgstr ""
+msgstr "Kerroin muunnettaessa oletusyksikkö myyntiyksiköksi\n my = yks * kerroin"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_history_company_id
@@ -150,14 +152,14 @@ msgstr "Päivämäärä"
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_product_product_deferred_revenue_category_id
 msgid "Deferred Revenue Type"
-msgstr ""
+msgstr "Tuloennakon tyyppi"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_change_standard_price_display_name
 #: model:ir.model.fields,field_description:stock_account.field_stock_history_display_name
 #: model:ir.model.fields,field_description:stock_account.field_wizard_valuation_history_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Näytä nimi"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_inventory_accounting_date
@@ -207,13 +209,6 @@ msgid ""
 msgstr ""
 
 #. module: stock_account
-#: model:ir.model.fields,help:stock_account.field_account_invoice_line_move_id
-msgid ""
-"If the invoice was generated from a stock transfer, specify the reference to"
-" the related stock move."
-msgstr ""
-
-#. module: stock_account
 #: selection:stock.config.settings,module_stock_landed_costs:0
 msgid "Include landed costs in product costing computation"
 msgstr ""
@@ -228,12 +223,12 @@ msgstr ""
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_stock_inventory
 msgid "Inventory"
-msgstr ""
+msgstr "Varasto"
 
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_stock_location
 msgid "Inventory Locations"
-msgstr ""
+msgstr "Varastopaikat"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_product_category_property_valuation
@@ -254,7 +249,7 @@ msgstr "Varaston arvo"
 #: model:ir.model.fields,field_description:stock_account.field_wizard_valuation_history_choose_date
 #: model:ir.ui.menu,name:stock_account.menu_action_wizard_valuation_history
 msgid "Inventory at Date"
-msgstr ""
+msgstr "Varaston arvo"
 
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_account_invoice
@@ -269,14 +264,14 @@ msgstr "Laskun rivi"
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_config_settings_module_stock_landed_costs
 msgid "Landed Costs"
-msgstr ""
+msgstr "Lähetyksen kokonaiskulut"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_change_standard_price___last_update
 #: model:ir.model.fields,field_description:stock_account.field_stock_history___last_update
 #: model:ir.model.fields,field_description:stock_account.field_wizard_valuation_history___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Viimeksi muokattu"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_change_standard_price_write_uid
@@ -305,11 +300,6 @@ msgstr ""
 #: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_search
 msgid "Move"
 msgstr "Siirrä"
-
-#. module: stock_account
-#: model:ir.model.fields,field_description:stock_account.field_account_invoice_line_move_id
-msgid "Move line"
-msgstr "Siirtymärivi"
 
 #. module: stock_account
 #: code:addons/stock_account/product.py:124
@@ -410,12 +400,12 @@ msgstr "Määrät"
 #: selection:product.category,property_cost_method:0
 #: selection:product.template,property_cost_method:0
 msgid "Real Price"
-msgstr ""
+msgstr "Reaalihinta"
 
 #. module: stock_account
 #: model:ir.ui.view,arch_db:stock_account.view_wizard_valuation_history
 msgid "Retrieve the Inventory Value"
-msgstr ""
+msgstr "Hae varaston arvo"
 
 #. module: stock_account
 #: model:ir.ui.view,arch_db:stock_account.view_wizard_valuation_history
@@ -456,7 +446,7 @@ msgstr "Standardi-hinta"
 #: code:addons/stock_account/product.py:152
 #, python-format
 msgid "Standard Price changed"
-msgstr ""
+msgstr "Standardihinta muuttunut"
 
 #. module: stock_account
 #: model:ir.model.fields,help:stock_account.field_product_product_property_cost_method
@@ -483,7 +473,7 @@ msgid "Stock Input Account"
 msgstr "Saapuvan varaston tili"
 
 #. module: stock_account
-#: code:addons/stock_account/stock_account.py:425
+#: code:addons/stock_account/stock_account.py:418
 #: model:ir.model.fields,field_description:stock_account.field_product_category_property_stock_journal
 #, python-format
 msgid "Stock Journal"
@@ -518,14 +508,14 @@ msgid "Stock Valuation Account (Outgoing)"
 msgstr "Varaston arvostustili (lähtevä)"
 
 #. module: stock_account
-#: code:addons/stock_account/wizard/stock_valuation_history.py:30
+#: code:addons/stock_account/wizard/stock_valuation_history.py:31
 #: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_graph
 #: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_pivot
 #: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_search
 #: model:ir.ui.view,arch_db:stock_account.view_stock_history_report_tree
 #, python-format
 msgid "Stock Value At Date"
-msgstr ""
+msgstr "Varaston arvopäivä"
 
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_account_chart_template
@@ -577,14 +567,14 @@ msgstr "Arvo"
 msgid ""
 "When a new a Serial Number is issued, this is the number of days before an "
 "alert should be notified."
-msgstr ""
+msgstr "Kun uusi sarjanumero myönnetään käyttöön, niin näin monta päivää aikaisemmin pitäisi aiheesta tulla hälytys."
 
 #. module: stock_account
 #: model:ir.model.fields,help:stock_account.field_product_product_life_time
 msgid ""
 "When a new a Serial Number is issued, this is the number of days before the "
 "goods may become dangerous and must not be consumed."
-msgstr ""
+msgstr "Kun uusi sarjanumero myönnetään käyttöön, niin näin monta päivää aikaisemmin tuotteet tulevat vaaralliseksi eikä niitä pitäisi nauttia."
 
 #. module: stock_account
 #: model:ir.model.fields,help:stock_account.field_product_product_removal_time
@@ -657,6 +647,14 @@ msgstr "Jos reaaliaikainen varastonarvostus on päällä tuotteella, tätä tili
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_wizard_valuation_history
 msgid "Wizard that opens the stock valuation history table"
+msgstr ""
+
+#. module: stock_account
+#: code:addons/stock_account/stock_account.py:275
+#, python-format
+msgid ""
+"You don't have any stock journal defined on your product category, check if "
+"you have installed a chart of accounts"
 msgstr ""
 
 #. module: stock_account

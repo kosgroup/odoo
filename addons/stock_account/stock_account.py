@@ -2,6 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from openerp.osv import fields, osv
+from openerp.tools import float_compare, float_round
 from openerp.tools.translate import _
 from openerp import SUPERUSER_ID, api, models
 from openerp.exceptions import UserError
@@ -27,7 +28,7 @@ class stock_inventory(osv.osv):
 class account_invoice_line(osv.osv):
     _inherit = "account.invoice.line"
 
-    def _get_price_unit(self):
+    def _get_anglo_saxon_price_unit(self):
         self.ensure_one()
         return self.product_id.standard_price
 
@@ -40,11 +41,11 @@ class account_invoice_line(osv.osv):
         return round(price, inv.currency_id.decimal_places)
 
     def get_invoice_line_account(self, type, product, fpos, company):
-        if company.anglo_saxon_accounting and type in ('in_invoice', 'in_refund'):
-            accounts = product.product_tmpl_id.get_product_accounts(fpos)
+        if company.anglo_saxon_accounting and type in ('in_invoice', 'in_refund') and product and product.type in ('consu', 'product'):
+            accounts = product.product_tmpl_id.get_product_accounts(fiscal_pos=fpos)
             if type == 'in_invoice':
                 return accounts['stock_input']
-            return accounts['stock_ouput']
+            return accounts['stock_output']
         return super(account_invoice_line, self).get_invoice_line_account(type, product, fpos, company)
 
 class account_invoice(osv.osv):
@@ -70,13 +71,14 @@ class account_invoice(osv.osv):
         company_currency = inv.company_id.currency_id.id
 
         if i_line.product_id.type in ('product', 'consu') and i_line.product_id.valuation == 'real_time':
-            accounts = i_line.product_id.product_tmpl_id.get_product_accounts()
+            fpos = i_line.invoice_id.fiscal_position_id
+            accounts = i_line.product_id.product_tmpl_id.get_product_accounts(fiscal_pos=fpos)
             # debit account dacc will be the output account
             dacc = accounts['stock_output'].id
             # credit account cacc will be the expense account
             cacc = accounts['expense'].id
             if dacc and cacc:
-                price_unit = i_line._get_price_unit()
+                price_unit = i_line._get_anglo_saxon_price_unit()
                 return [
                     {
                         'type':'src',
@@ -88,7 +90,6 @@ class account_invoice(osv.osv):
                         'product_id':i_line.product_id.id,
                         'uom_id':i_line.uom_id.id,
                         'account_analytic_id': False,
-                        'taxes':i_line.invoice_line_tax_ids,
                     },
 
                     {
@@ -101,13 +102,12 @@ class account_invoice(osv.osv):
                         'product_id':i_line.product_id.id,
                         'uom_id':i_line.uom_id.id,
                         'account_analytic_id': False,
-                        'taxes':i_line.invoice_line_tax_ids,
                     },
                 ]
         return []
 
     def _prepare_refund(self, cr, uid, invoice, date_invoice=None, date=None, description=None, journal_id=None, context=None):
-        invoice_data = super(account_invoice, self)._prepare_refund(cr, uid, invoice, date, date,
+        invoice_data = super(account_invoice, self)._prepare_refund(cr, uid, invoice, date_invoice, date,
                                                                     description, journal_id, context=context)
         #for anglo-saxon accounting
         if invoice.company_id.anglo_saxon_accounting and invoice.type == 'in_invoice':
@@ -235,9 +235,33 @@ class stock_quant(osv.osv):
                 self._create_account_move_line(cr, uid, quants, move, acc_valuation, acc_dest, journal_id, context=ctx)
 
     def _quant_create(self, cr, uid, qty, move, lot_id=False, owner_id=False, src_package_id=False, dest_package_id=False, force_location_from=False, force_location_to=False, context=None):
+        quant_obj = self.pool.get('stock.quant')
         quant = super(stock_quant, self)._quant_create(cr, uid, qty, move, lot_id=lot_id, owner_id=owner_id, src_package_id=src_package_id, dest_package_id=dest_package_id, force_location_from=force_location_from, force_location_to=force_location_to, context=context)
         if move.product_id.valuation == 'real_time':
             self._account_entry_move(cr, uid, [quant], move, context)
+
+            # If the precision required for the variable quant cost is larger than the accounting
+            # precision, inconsistencies between the stock valuation and the accounting entries
+            # may arise.
+            # For example, a box of 13 units is bought 15.00. If the products leave the
+            # stock one unit at a time, the amount related to the cost will correspond to
+            # round(15/13, 2)*13 = 14.95. To avoid this case, we split the quant in 12 + 1, then
+            # record the difference on the new quant.
+            # We need to make sure to able to extract at least one unit of the product. There is
+            # an arbitrary minimum quantity set to 2.0 from which we consider we can extract a
+            # unit and adapt the cost.
+            curr_rounding = move.company_id.currency_id.rounding
+            cost_rounded = float_round(quant.cost, precision_rounding=curr_rounding)
+            cost_correct = cost_rounded
+            if float_compare(quant.product_id.uom_id.rounding, 1.0, precision_digits=1) == 0\
+                    and float_compare(quant.qty * quant.cost, quant.qty * cost_rounded, precision_rounding=curr_rounding) != 0\
+                    and float_compare(quant.qty, 2.0, precision_rounding=quant.product_id.uom_id.rounding) >= 0:
+                qty = quant.qty
+                cost = quant.cost
+                quant_correct = quant_obj._quant_split(cr, uid, quant, quant.qty - 1.0, context=context)
+                cost_correct += (qty * cost) - (qty * cost_rounded)
+                quant_obj.write(cr, SUPERUSER_ID, [quant.id], {'cost': cost_rounded}, context=context)
+                quant_obj.write(cr, SUPERUSER_ID, [quant_correct.id], {'cost': cost_correct}, context=context)
         return quant
 
     def move_quants_write(self, cr, uid, quants, move, location_dest_id, dest_package_id, lot_id=False, entire_pack=False, context=None):
@@ -253,7 +277,7 @@ class stock_quant(osv.osv):
 
         :param context: context dictionary that can explicitly mention the company to consider via the 'force_company' key
         :returns: journal_id, source account, destination account, valuation account
-        :raise: osv.except_osv() is any mandatory account or journal is not defined.
+        :raise: openerp.exceptions.UserError if any mandatory account or journal is not defined.
         """
         product_obj = self.pool.get('product.template')
         accounts = product_obj.browse(cr, uid, move.product_id.product_tmpl_id.id, context).get_product_accounts()
@@ -272,6 +296,12 @@ class stock_quant(osv.osv):
             acc_valuation = acc_valuation.id
         if not accounts.get('stock_journal', False):
             raise UserError(_('You don\'t have any stock journal defined on your product category, check if you have installed a chart of accounts'))
+        if not acc_src:
+            raise UserError(_('Cannot find a stock input account for the product %s. You must define one on the product category, or on the location, before processing this operation.') % (move.product_id.name))
+        if not acc_dest:
+            raise UserError(_('Cannot find a stock output account for the product %s. You must define one on the product category, or on the location, before processing this operation.') % (move.product_id.name))
+        if not acc_valuation:
+            raise UserError(_('You don\'t have any stock valuation account defined on your product category. You must define one before processing this operation.'))
         journal_id = accounts['stock_journal'].id
         return journal_id, acc_src, acc_dest, acc_valuation
 
@@ -293,6 +323,12 @@ class stock_quant(osv.osv):
         #the standard_price of the product may be in another decimal precision, or not compatible with the coinage of
         #the company currency... so we need to use round() before creating the accounting entries.
         valuation_amount = currency_obj.round(cr, uid, move.company_id.currency_id, valuation_amount * qty)
+        #check that all data is correct
+        if move.company_id.currency_id.is_zero(valuation_amount):
+            if move.product_id.cost_method == 'standard':
+                raise UserError(_("The found valuation amount for product %s is zero. Which means there is probably a configuration error. Check the costing method and the standard price") % (move.product_id.name,))
+            else:
+                return []
         partner_id = (move.picking_id.partner_id and self.pool.get('res.partner')._find_accounting_partner(move.picking_id.partner_id).id) or False
         debit_line_vals = {
                     'name': move.name,
@@ -329,12 +365,13 @@ class stock_quant(osv.osv):
         move_obj = self.pool.get('account.move')
         for cost, qty in quant_cost_qty.items():
             move_lines = self._prepare_account_move_line(cr, uid, move, qty, cost, credit_account_id, debit_account_id, context=context)
-            date = context.get('force_period_date', move.date)
-            new_move = move_obj.create(cr, uid, {'journal_id': journal_id,
-                                      'line_ids': move_lines,
-                                      'date': date,
-                                      'ref': move.picking_id.name}, context=context)
-            move_obj.post(cr, uid, [new_move], context=context)
+            if move_lines:
+                date = context.get('force_period_date', fields.date.context_today(self, cr, uid, context=context))
+                new_move = move_obj.create(cr, uid, {'journal_id': journal_id,
+                                          'line_ids': move_lines,
+                                          'date': date,
+                                          'ref': move.picking_id.name}, context=context)
+                move_obj.post(cr, uid, [new_move], context=context)
 
     #def _reconcile_single_negative_quant(self, cr, uid, to_solve_quant, quant, quant_neg, qty, context=None):
     #    move = self._get_latest_move(cr, uid, to_solve_quant, context=context)
@@ -360,10 +397,10 @@ class stock_move(osv.osv):
     def _store_average_cost_price(self, cr, uid, move, context=None):
         ''' move is a browe record '''
         product_obj = self.pool.get('product.product')
-        if any([q.qty <= 0 for q in move.quant_ids]):
+        if any([q.qty <= 0 for q in move.quant_ids]) or move.product_qty == 0:
             #if there is a negative quant, the standard price shouldn't be updated
             return
-        #Note: here we can't store a quant.cost directly as we may have moved out 2 units (1 unit to 5€ and 1 unit to 7€) and in case of a product return of 1 unit, we can't know which of the 2 costs has to be used (5€ or 7€?). So at that time, thanks to the average valuation price we are storing we will svaluate it at 6€
+        #Note: here we can't store a quant.cost directly as we may have moved out 2 units (1 unit to 5€ and 1 unit to 7€) and in case of a product return of 1 unit, we can't know which of the 2 costs has to be used (5€ or 7€?). So at that time, thanks to the average valuation price we are storing we will valuate it at 6€
         average_valuation_price = 0.0
         for q in move.quant_ids:
             average_valuation_price += q.qty * q.cost
@@ -387,12 +424,14 @@ class stock_move(osv.osv):
                 else:
                     tmpl_dict[product_id] = 0
                     product_avail = qty_available
+                # if the incoming move is for a purchase order with foreign currency, need to call this to get the same value that the quant will use.
+                price_unit = self.pool.get('stock.move').get_price_unit(cr, uid, move, context=context)
                 if product_avail <= 0:
-                    new_std_price = move.price_unit
+                    new_std_price = price_unit
                 else:
                     # Get the standard price
                     amount_unit = product.standard_price
-                    new_std_price = ((amount_unit * product_avail) + (move.price_unit * move.product_qty)) / (product_avail + move.product_qty)
+                    new_std_price = ((amount_unit * product_avail) + (price_unit * move.product_qty)) / (product_avail + move.product_qty)
                 tmpl_dict[product_id] += move.product_qty
                 # Write the standard price, as SUPERUSER_ID because a warehouse manager may not have the right to write on products
                 ctx = dict(context or {}, force_company=move.company_id.id)
@@ -453,7 +492,6 @@ class AccountChartTemplate(models.Model):
                     'company_id': company.id,
                     'fields_id': field.id,
                     'value': value,
-                    'res_id': 'product.category,' + str(self.env['ir.model.data'].xmlid_to_res_id('product.product_category_all')),
                 }
                 properties = PropertyObj.search([('name', '=', record), ('company_id', '=', company.id)])
                 if properties:

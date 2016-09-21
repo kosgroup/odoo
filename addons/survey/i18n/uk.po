@@ -3,13 +3,16 @@
 # * survey
 # 
 # Translators:
+# Bohdan Lisnenko, 2015-2016
+# Bohdan Lisnenko, 2016
+# Yaroslav Molochko <onorua@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-07 14:41+0000\n"
-"PO-Revision-Date: 2015-09-08 09:10+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"POT-Creation-Date: 2015-09-18 08:12+0000\n"
+"PO-Revision-Date: 2016-08-28 12:33+0000\n"
+"Last-Translator: Bohdan Lisnenko\n"
 "Language-Team: Ukrainian (http://www.transifex.com/odoo/odoo-9/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +38,7 @@ msgstr ""
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_page_tree
 msgid "#Questions"
-msgstr ""
+msgstr "Питань"
 
 #. module: survey
 #: code:addons/survey/survey.py:229 code:addons/survey/survey.py:525
@@ -47,7 +50,7 @@ msgstr "%s (копія)"
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.page
 msgid "&amp;times;"
-msgstr ""
+msgstr "&amp;times;"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.result
@@ -225,9 +228,14 @@ msgid "About your Odoo usage"
 msgstr ""
 
 #. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey_message_needaction
+msgid "Action Needed"
+msgstr "Необхідна дія"
+
+#. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_active_domain
 msgid "Active domain"
-msgstr ""
+msgstr "Активний домен"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_email_compose_message
@@ -287,14 +295,14 @@ msgstr ""
 #: model:ir.ui.menu,name:survey.menu_survey_type_form1
 #: model:ir.ui.view,arch_db:survey.survey_question_form
 msgid "Answers"
-msgstr ""
+msgstr "Відповіді"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_mail_compose_message_no_auto_thread
 msgid ""
 "Answers do not go in the original document discussion thread. This has an "
 "impact on the generated message-id."
-msgstr ""
+msgstr "Відповіді не надходять до початкового обговорення документа. Це має вплив на створені ідентифікатори повідомлень."
 
 #. module: survey
 #: model:survey.question,question:survey.feedback_1_1
@@ -321,7 +329,7 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_author_avatar
 msgid "Author's avatar"
-msgstr ""
+msgstr "Аватар автора"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_mail_compose_message_body
@@ -336,22 +344,22 @@ msgstr ""
 #. module: survey
 #: model:survey.label,value:survey.choice_1_2_4
 msgid "CRM"
-msgstr "RML"
+msgstr "CRM"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_email_compose_message
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "Скасувати"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_channel_ids
 msgid "Channels"
-msgstr ""
+msgstr "Канали"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_child_ids
 msgid "Child Messages"
-msgstr ""
+msgstr "Дочірні повідомлення"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_question_form
@@ -385,18 +393,18 @@ msgstr ""
 #: model:ir.ui.view,arch_db:survey.page
 #: model:ir.ui.view,arch_db:survey.survey_email_compose_message
 msgid "Close"
-msgstr "Close"
+msgstr "Закрити"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_stage_closed
 #: model:survey.stage,name:survey.stage_closed
 msgid "Closed"
-msgstr "Closed"
+msgstr "Завершено"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey_color
 msgid "Color Index"
-msgstr ""
+msgstr "Індекс кольору"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.result_comments
@@ -434,12 +442,12 @@ msgstr "Створити лист"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_composition_mode
 msgid "Composition mode"
-msgstr ""
+msgstr "Режим створення"
 
 #. module: survey
 #: model:ir.ui.menu,name:survey.menu_surveys_configuration
 msgid "Configuration"
-msgstr "Configuration"
+msgstr "Налаштування"
 
 #. module: survey
 #: model:survey.label,value:survey.frow_2_7_2
@@ -454,7 +462,7 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_body
 msgid "Contents"
-msgstr ""
+msgstr "Містить"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_email_compose_message
@@ -470,7 +478,7 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_line_date_create
 msgid "Create Date"
-msgstr ""
+msgstr "Дата створення"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_label_create_uid
@@ -482,7 +490,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_create_uid
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_line_create_uid
 msgid "Created by"
-msgstr "Created by"
+msgstr "Створив"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_label_create_date
@@ -494,7 +502,7 @@ msgstr "Created by"
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_create_date
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_line_create_date
 msgid "Created on"
-msgstr "Created on"
+msgstr "Дата створення"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_date_create
@@ -504,13 +512,13 @@ msgstr "Дата створення"
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_mail_compose_message_starred
 msgid "Current user has a starred notification linked to this message"
-msgstr ""
+msgstr "Поточний користувач має сповіщення позначене зірочкою, що пов'язане до цього повідомлення"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_date
 #: selection:survey.user_input_line,answer_type:0
 msgid "Date"
-msgstr "Date"
+msgstr "Дата"
 
 #. module: survey
 #: selection:survey.question,type:0
@@ -559,7 +567,7 @@ msgstr "Вилучити"
 #: model:ir.model.fields,field_description:survey.field_survey_question_description
 #: model:ir.model.fields,field_description:survey.field_survey_survey_description
 msgid "Description"
-msgstr "Description"
+msgstr "Опис"
 
 #. module: survey
 #: model:survey.label,value:survey.frow_2_7_1
@@ -569,7 +577,7 @@ msgstr ""
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_kanban
 msgid "Design"
-msgstr ""
+msgstr "Дизайн"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_form
@@ -601,7 +609,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_display_name
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_line_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Назва для відображення"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question_display_mode
@@ -627,12 +635,12 @@ msgstr ""
 #. module: survey
 #: model:survey.stage,name:survey.stage_draft
 msgid "Draft"
-msgstr "Чернетка"
+msgstr "Чорновий"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_email
 msgid "E-mail"
-msgstr ""
+msgstr "E-mail"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_form
@@ -653,19 +661,19 @@ msgstr "Email"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey_email_template_id
 msgid "Email Template"
-msgstr ""
+msgstr "Шаблон ел. листа"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_mail_compose_message_email_from
 msgid ""
 "Email address of the sender. This field is set when no matching partner is "
 "found and replaces the author_id field in the chatter."
-msgstr ""
+msgstr "Електронна адреса відправника. Це поле встановлюється, коли не знайдено відповідного партнера і воно замінює ідентифікатор автора у обговоренні."
 
 #. module: survey
 #: model:ir.model,name:survey.model_survey_mail_compose_message
 msgid "Email composition wizard for Survey"
-msgstr ""
+msgstr "Майстер створення електронного листа для опитування"
 
 #. module: survey
 #: model:survey.page,title:survey.feedback_2
@@ -691,12 +699,12 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_starred_partner_ids
 msgid "Favorited By"
-msgstr ""
+msgstr "В улюблених у"
 
 #. module: survey
 #: model:survey.label,value:survey.choice_1_2_3
 msgid "Financial Management"
-msgstr ""
+msgstr "Фінансове управління"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_stage_fold
@@ -711,17 +719,17 @@ msgstr "Підписники"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey_message_channel_ids
 msgid "Followers (Channels)"
-msgstr ""
+msgstr "Підписники (Канали)"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey_message_partner_ids
 msgid "Followers (Partners)"
-msgstr ""
+msgstr "Підписники (Партнери)"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_question_form
 msgid "Format"
-msgstr ""
+msgstr "Формат"
 
 #. module: survey
 #: selection:survey.user_input_line,answer_type:0
@@ -816,7 +824,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_id
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_line_id
 msgid "ID"
-msgstr "ІД"
+msgstr "ID"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_token
@@ -824,10 +832,14 @@ msgid "Identification token"
 msgstr ""
 
 #. module: survey
-#: model:ir.model.fields,help:survey.field_survey_survey_message_needaction
 #: model:ir.model.fields,help:survey.field_survey_survey_message_unread
 msgid "If checked new messages require your attention."
 msgstr "Якщо позначено, то повідомленя потребує вашої уваги"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Якщо відмічено, то нові повідомлення будуть потребувати вашої уваги."
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_survey_users_can_go_back
@@ -871,12 +883,12 @@ msgstr ""
 #. module: survey
 #: model:survey.stage,name:survey.stage_in_progress
 msgid "In progress"
-msgstr ""
+msgstr "В процесі"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_mail_compose_message_parent_id
 msgid "Initial thread message."
-msgstr ""
+msgstr "Початковий ланцюжок повідомлення."
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question_validation_email
@@ -891,7 +903,7 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey_message_is_follower
 msgid "Is Follower"
-msgstr ""
+msgstr "Стежить"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey_designed
@@ -954,7 +966,7 @@ msgstr "Дата останнього повідомлення"
 #: model:ir.model.fields,field_description:survey.field_survey_user_input___last_update
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_line___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Остання модифікація"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_label_write_uid
@@ -966,7 +978,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_line_write_uid
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_write_uid
 msgid "Last Updated by"
-msgstr "Last Updated by"
+msgstr "Востаннє оновив"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_label_write_date
@@ -978,7 +990,7 @@ msgstr "Last Updated by"
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_line_write_date
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_write_date
 msgid "Last Updated on"
-msgstr "Last Updated on"
+msgstr "Останнє оновлення"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_last_displayed_page_id
@@ -988,7 +1000,7 @@ msgstr ""
 #. module: survey
 #: selection:survey.user_input,type:0
 msgid "Link"
-msgstr ""
+msgstr "Посилання"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_multi_email
@@ -1065,7 +1077,7 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_record_name
 msgid "Message Record Name"
-msgstr ""
+msgstr "Назва запису повідомлення"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_mail_compose_message_message_type
@@ -1077,12 +1089,12 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_mail_compose_message_message_id
 msgid "Message unique identifier"
-msgstr ""
+msgstr "Унікальний ідентифікатор повідомлення"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_message_id
 msgid "Message-Id"
-msgstr ""
+msgstr "ІД-повідомлення"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey_message_ids
@@ -1142,15 +1154,9 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_needaction
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_needaction_partner_ids
-#: model:ir.model.fields,field_description:survey.field_survey_survey_message_needaction
 #: model:ir.model.fields,help:survey.field_survey_mail_compose_message_needaction
 msgid "Need Action"
-msgstr ""
-
-#. module: survey
-#: model:ir.model.fields,field_description:survey.field_survey_survey_message_needaction_counter
-msgid "Need Action Counter"
-msgstr ""
+msgstr "Необхідна дія"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_user_input_search
@@ -1165,7 +1171,7 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_no_auto_thread
 msgid "No threading for answers"
-msgstr ""
+msgstr "Немає ланцюжків для відповіді"
 
 #. module: survey
 #: model:survey.label,value:survey.choice_1_1_4
@@ -1200,17 +1206,22 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_notify
 msgid "Notify followers"
-msgstr ""
+msgstr "Сповістити підписників"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_mail_compose_message_notify
 msgid "Notify followers of the document (mass post only)"
-msgstr ""
+msgstr "сповістити підписників документа (тільки масові повідомлення)"
 
 #. module: survey
 #: selection:survey.user_input_line,answer_type:0
 msgid "Number"
 msgstr "Number"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey_message_needaction_counter
+msgid "Number of Actions"
+msgstr "Кількість дій"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question_column_nb
@@ -1225,8 +1236,8 @@ msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_survey_message_needaction_counter
-msgid "Number of needaction messages"
-msgstr ""
+msgid "Number of messages which requires an action"
+msgstr "Кількість повідомлень, які потебують дії"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey_tot_sent_survey
@@ -1241,7 +1252,7 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_survey_message_unread_counter
 msgid "Number of unread messages"
-msgstr ""
+msgstr "Кількість непрочитаних повідомлень"
 
 #. module: survey
 #: selection:survey.question,type:0
@@ -1283,7 +1294,7 @@ msgstr "Опції"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_mail_server_id
 msgid "Outgoing mail server"
-msgstr ""
+msgstr "Вихідний поштовий сервер"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_line_page_id
@@ -1291,13 +1302,13 @@ msgstr ""
 #: model:ir.ui.view,arch_db:survey.survey_page_search
 #: model:ir.ui.view,arch_db:survey.survey_question_search
 msgid "Page"
-msgstr ""
+msgstr "Сторінка"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_page_title
 #: model:ir.ui.view,arch_db:survey.survey_page_form
 msgid "Page Title"
-msgstr ""
+msgstr "Заголовок сторінки"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_page_sequence
@@ -1315,7 +1326,7 @@ msgstr "Сторінки"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_parent_id
 msgid "Parent Message"
-msgstr ""
+msgstr "Батьківське повідомленя"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_user_input_search
@@ -1327,7 +1338,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_partner_id
 #: model:ir.ui.view,arch_db:survey.survey_user_input_search
 msgid "Partner"
-msgstr "Partner"
+msgstr "Партнер"
 
 #. module: survey
 #: model:ir.actions.act_window,name:survey.action_partner_survey_mail
@@ -1375,7 +1386,7 @@ msgstr ""
 #. module: survey
 #: model:survey.label,value:survey.choice_1_2_5
 msgid "Project Management"
-msgstr "Управління модулями"
+msgstr "Управління проектами"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_public_url_html
@@ -1410,7 +1421,7 @@ msgstr ""
 #. module: survey
 #: model:survey.label,value:survey.choice_1_2_2
 msgid "Purchases Management"
-msgstr ""
+msgstr "Керування закупівлями"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_label_question_id
@@ -1464,14 +1475,14 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_model
 msgid "Related Document Model"
-msgstr ""
+msgstr "Пов'язана модель документа"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_mail_compose_message_reply_to
 msgid ""
 "Reply email address. Setting the reply_to bypasses the automatic thread "
 "creation."
-msgstr ""
+msgstr "Адреса для відповіді. Встановлення цієї адреси скасовує автоматичне створення ланцюжка."
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_reply_to
@@ -1521,17 +1532,17 @@ msgstr ""
 #. module: survey
 #: model:survey.label,value:survey.choice_1_2_1
 msgid "Sales Management"
-msgstr "Управління модулями"
+msgstr "Керування продажами"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_email_compose_message
 msgid "Save as a new template"
-msgstr ""
+msgstr "Зберегти як новий шаблон"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_email_compose_message
 msgid "Save as new template"
-msgstr ""
+msgstr "Зберегти як новий шаблон"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_quizz_score
@@ -1581,7 +1592,7 @@ msgstr ""
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_email_compose_message
 msgid "Send"
-msgstr ""
+msgstr "Надіслати"
 
 #. module: survey
 #: selection:survey.mail.compose.message,public:0
@@ -1672,12 +1683,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:survey.field_survey_survey_stage_id
 #: model:ir.ui.view,arch_db:survey.survey_stage_form
 msgid "Stage"
-msgstr ""
+msgstr "Стадія"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_starred
 msgid "Starred"
-msgstr ""
+msgstr "З зірочкою"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_init
@@ -1687,12 +1698,12 @@ msgstr ""
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_tree
 msgid "Started"
-msgstr ""
+msgstr "Розпочато"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_state
 msgid "Status"
-msgstr "Ствтус"
+msgstr "Статус"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_subject
@@ -1702,7 +1713,7 @@ msgstr "Тема"
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_email_compose_message
 msgid "Subject..."
-msgstr ""
+msgstr "Тема..."
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.page
@@ -1712,7 +1723,7 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_subtype_id
 msgid "Subtype"
-msgstr ""
+msgstr "Підтип"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_line_value_suggested
@@ -1743,7 +1754,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:survey.survey_tree
 #: model:ir.ui.view,arch_db:survey.survey_user_input_search
 msgid "Survey"
-msgstr ""
+msgstr "Опитування"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_response_line_tree
@@ -1816,12 +1827,12 @@ msgstr ""
 #: model:ir.ui.menu,name:survey.menu_survey_form
 #: model:ir.ui.menu,name:survey.menu_surveys
 msgid "Surveys"
-msgstr ""
+msgstr "Опитування"
 
 #. module: survey
 #: selection:survey.mail.compose.message,message_type:0
 msgid "System notification"
-msgstr ""
+msgstr "Сповіщення системи"
 
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.survey_kanban
@@ -1857,7 +1868,7 @@ msgstr ""
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.sfinished
 msgid "Thank you!"
-msgstr ""
+msgstr "Дякую!"
 
 #. module: survey
 #: model:survey.label,value:survey.frow_2_5_3
@@ -2072,7 +2083,7 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_tracking_value_ids
 msgid "Tracking values"
-msgstr ""
+msgstr "Значення відстеження"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_message_type
@@ -2103,18 +2114,18 @@ msgstr "Непрочитані повідомлення"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey_message_unread_counter
 msgid "Unread Messages Counter"
-msgstr ""
+msgstr "Кількість непрочитаних повідомлень"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_use_active_domain
 msgid "Use active domain"
-msgstr ""
+msgstr "Використовувати активний домкен"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message_template_id
 #: model:ir.ui.view,arch_db:survey.survey_email_compose_message
 msgid "Use template"
-msgstr ""
+msgstr "Використовувати шаблон"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_question_description

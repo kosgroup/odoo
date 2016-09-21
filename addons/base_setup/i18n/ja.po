@@ -3,13 +3,15 @@
 # * base_setup
 # 
 # Translators:
+# takuan_osho <shimizu.taku@gmail.com>, 2015
+# Yoshi Tashiro <tashiro@roomsfor.hk>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-29 10:25+0000\n"
-"PO-Revision-Date: 2015-09-30 09:24+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"PO-Revision-Date: 2016-09-05 06:28+0000\n"
+"Last-Translator: Yoshi Tashiro <tashiro@roomsfor.hk>\n"
 "Language-Team: Japanese (http://www.transifex.com/odoo/odoo-9/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,17 +27,17 @@ msgstr "顧客ポータルを活性化"
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_module_share
 msgid "Allow documents sharing"
-msgstr ""
+msgstr "ドキュメントを共有する"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_module_google_calendar
 msgid "Allow the users to synchronize their calendar  with Google Calendar"
-msgstr ""
+msgstr "ユーザのカレンダをGoogleカレンダーと同期"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_module_base_import
 msgid "Allow users to import data from CSV/XLS/XLSX/ODS files"
-msgstr ""
+msgstr "CSV/XLS/XLSX/ODSファイルからデータをインポート"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
@@ -46,7 +48,7 @@ msgstr "適用"
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_module_google_drive
 msgid "Attach Google documents to any record"
-msgstr ""
+msgstr "Googleドキュメントをレコードにリンク"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
@@ -78,7 +80,7 @@ msgstr "送信メールサーバを設定"
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "Configure your company data"
-msgstr "会社のデータを設定"
+msgstr "会社データ設定"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_create_uid
@@ -104,7 +106,7 @@ msgstr "顧客"
 #: model:ir.model.fields,field_description:base_setup.field_base_setup_terminology_display_name
 #: model:ir.model.fields,field_description:base_setup.field_sale_config_settings_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "表示名"
 
 #. module: base_setup
 #: selection:base.setup.terminology,partner:0
@@ -130,17 +132,17 @@ msgstr "顧客に文書へのアクセスを与えます。"
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "Google Calendar"
-msgstr ""
+msgstr "Google カレンダ"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "Google Drive"
-msgstr ""
+msgstr "Google ドライブ"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "Google Integration"
-msgstr ""
+msgstr "Google連携"
 
 #. module: base_setup
 #: selection:base.setup.terminology,partner:0
@@ -174,7 +176,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base_setup.field_base_setup_terminology___last_update
 #: model:ir.model.fields,field_description:base_setup.field_sale_config_settings___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "最終更新日"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_write_uid
@@ -208,7 +210,7 @@ msgstr "メンバー"
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "Multi Company"
-msgstr "多角化会社"
+msgstr "複数会社"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
@@ -252,7 +254,7 @@ msgstr ""
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
-msgid "Shared ressources"
+msgid "Shared resources"
 msgstr ""
 
 #. module: base_setup
@@ -268,12 +270,12 @@ msgstr "テナント"
 #. module: base_setup
 #: model:ir.model.fields,help:base_setup.field_base_config_settings_module_google_calendar
 msgid "This installs the module google_calendar."
-msgstr ""
+msgstr "google_calendar モジュールをインストールします。"
 
 #. module: base_setup
 #: model:ir.model.fields,help:base_setup.field_base_config_settings_module_google_drive
 msgid "This installs the module google_docs."
-msgstr ""
+msgstr "google_docs モジュールをインストールします。"
 
 #. module: base_setup
 #: model:ir.model.fields,help:base_setup.field_base_config_settings_module_inter_company_rules
@@ -290,7 +292,7 @@ msgstr "\"顧客\"を言い表す他の言葉を使用してください。"
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_module_auth_oauth
 msgid "Use external authentication providers, sign in with Google..."
-msgstr ""
+msgstr "Google等の外部認証プロバイダを使用"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
@@ -300,7 +302,7 @@ msgid ""
 "                                    able to signup to get all his documents,\n"
 "                                    read your company news, check his projects,\n"
 "                                    etc."
-msgstr ""
+msgstr "顧客がOdooにサインアップして、Odoo上で関連ドキュメント (見積書、請求書等) を参照したり、ニュースレターやプロジェクト状況を確認したりできるようにします。"
 
 #. module: base_setup
 #: model:ir.model.fields,help:base_setup.field_base_config_settings_group_light_multi_company
@@ -321,12 +323,12 @@ msgstr "アプリケーション全体の顧客の用語を変更するには、
 msgid ""
 "You will find more options in your company details: address for the header "
 "and footer, overdue payments texts, etc."
-msgstr "会社の詳細にはヘッダとフッタのアドレス、遅延支払いのテキストなどより多くのオプションがあります。"
+msgstr "会社詳細にも諸々の設定項目があります: ヘッダとフッタのアドレス、支払督促テキスト等"
 
 #. module: base_setup
 #: model:ir.model,name:base_setup.model_base_config_settings
 msgid "base.config.settings"
-msgstr ""
+msgstr "base.config.settings"
 
 #. module: base_setup
 #: model:ir.model,name:base_setup.model_base_setup_terminology

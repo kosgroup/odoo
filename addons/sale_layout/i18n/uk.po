@@ -3,13 +3,16 @@
 # * sale_layout
 # 
 # Translators:
+# Bohdan Lisnenko, 2015-2016
+# Bohdan Lisnenko, 2016
+# Yaroslav Molochko <onorua@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-07 14:40+0000\n"
-"PO-Revision-Date: 2015-09-08 08:01+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"PO-Revision-Date: 2016-08-28 12:33+0000\n"
+"Last-Translator: Bohdan Lisnenko\n"
 "Language-Team: Ukrainian (http://www.transifex.com/odoo/odoo-9/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +23,7 @@ msgstr ""
 #. module: sale_layout
 #: model:ir.ui.view,arch_db:sale_layout.category_template
 msgid "&amp;bull;"
-msgstr ""
+msgstr "&amp;bull;"
 
 #. module: sale_layout
 #: model:ir.ui.view,arch_db:sale_layout.report_sale_layouted
@@ -44,7 +47,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:sale_layout.report_invoice_layouted
 #: model:ir.ui.view,arch_db:sale_layout.report_sale_layouted
 msgid "&lt;tbody&gt;"
-msgstr ""
+msgstr "&lt;tbody&gt;"
 
 #. module: sale_layout
 #: model:ir.ui.view,arch_db:sale_layout.report_sale_layouted
@@ -54,7 +57,7 @@ msgstr ""
 #. module: sale_layout
 #: model:ir.ui.view,arch_db:sale_layout.subtotal_template
 msgid "<strong>Subtotal: </strong>"
-msgstr ""
+msgstr "<strong>Підсумок: </strong>"
 
 #. module: sale_layout
 #: model:ir.model.fields,field_description:sale_layout.field_sale_layout_category_pagebreak
@@ -64,12 +67,12 @@ msgstr ""
 #. module: sale_layout
 #: model:ir.model.fields,field_description:sale_layout.field_sale_layout_category_separator
 msgid "Add separator"
-msgstr ""
+msgstr "Додати розділювач"
 
 #. module: sale_layout
 #: model:ir.model.fields,field_description:sale_layout.field_sale_layout_category_subtotal
 msgid "Add subtotal"
-msgstr ""
+msgstr "Додати підсумок"
 
 #. module: sale_layout
 #: model:ir.ui.view,arch_db:sale_layout.report_configuration_search_view
@@ -79,18 +82,18 @@ msgstr ""
 #. module: sale_layout
 #: model:ir.model.fields,field_description:sale_layout.field_sale_layout_category_create_uid
 msgid "Created by"
-msgstr "Created by"
+msgstr "Створив"
 
 #. module: sale_layout
 #: model:ir.model.fields,field_description:sale_layout.field_sale_layout_category_create_date
 msgid "Created on"
-msgstr "Created on"
+msgstr "Дата створення"
 
 #. module: sale_layout
 #: model:ir.ui.view,arch_db:sale_layout.report_invoice_layouted
 #: model:ir.ui.view,arch_db:sale_layout.report_sale_layouted
 msgid "Description"
-msgstr "Description"
+msgstr "Опис"
 
 #. module: sale_layout
 #: model:ir.ui.view,arch_db:sale_layout.report_invoice_layouted
@@ -100,7 +103,7 @@ msgstr "Знижка (%)"
 #. module: sale_layout
 #: model:ir.model.fields,field_description:sale_layout.field_sale_layout_category_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Назва для відображення"
 
 #. module: sale_layout
 #: model:ir.ui.view,arch_db:sale_layout.report_configuration_search_view
@@ -110,7 +113,7 @@ msgstr ""
 #. module: sale_layout
 #: model:ir.model.fields,field_description:sale_layout.field_sale_layout_category_id
 msgid "ID"
-msgstr "ІД"
+msgstr "ID"
 
 #. module: sale_layout
 #: model:ir.model,name:sale_layout.model_account_invoice
@@ -125,17 +128,17 @@ msgstr "Рядок рахунку"
 #. module: sale_layout
 #: model:ir.model.fields,field_description:sale_layout.field_sale_layout_category___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Остання модифікація"
 
 #. module: sale_layout
 #: model:ir.model.fields,field_description:sale_layout.field_sale_layout_category_write_uid
 msgid "Last Updated by"
-msgstr "Last Updated by"
+msgstr "Востаннє оновив"
 
 #. module: sale_layout
 #: model:ir.model.fields,field_description:sale_layout.field_sale_layout_category_write_date
 msgid "Last Updated on"
-msgstr "Last Updated on"
+msgstr "Останнє оновлення"
 
 #. module: sale_layout
 #: model:ir.model.fields,field_description:sale_layout.field_account_invoice_line_categ_sequence
@@ -171,7 +174,7 @@ msgstr "Кількість"
 #: model:ir.ui.view,arch_db:sale_layout.report_configuration_form_view
 #: model:ir.ui.view,arch_db:sale_layout.report_configuration_tree_view
 msgid "Report Configuration"
-msgstr ""
+msgstr "Налаштування звітів"
 
 #. module: sale_layout
 #: model:ir.ui.menu,name:sale_layout.Report_configuration
@@ -186,7 +189,7 @@ msgstr "Sales Order"
 #. module: sale_layout
 #: model:ir.model,name:sale_layout.model_sale_order_line
 msgid "Sales Order Line"
-msgstr ""
+msgstr "Рядок замовлення на продаж"
 
 #. module: sale_layout
 #: model:ir.ui.view,arch_db:sale_layout.report_configuration_search_view
@@ -197,7 +200,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sale_layout.field_account_invoice_line_sale_layout_cat_id
 #: model:ir.model.fields,field_description:sale_layout.field_sale_order_line_sale_layout_cat_id
 msgid "Section"
-msgstr "Секція"
+msgstr "Розділ"
 
 #. module: sale_layout
 #: model:ir.ui.view,arch_db:sale_layout.report_configuration_search_view
@@ -212,18 +215,18 @@ msgstr "Послідовність"
 #. module: sale_layout
 #: model:sale_layout.category,name:sale_layout.sale_layout_cat_1
 msgid "Services"
-msgstr ""
+msgstr "Послуги"
 
 #. module: sale_layout
 #: model:ir.ui.view,arch_db:sale_layout.report_invoice_layouted
 #: model:ir.ui.view,arch_db:sale_layout.report_sale_layouted
 msgid "Taxes"
-msgstr "Taxes"
+msgstr "Податки"
 
 #. module: sale_layout
 #: model:ir.ui.view,arch_db:sale_layout.report_configuration_search_view
 msgid "Total"
-msgstr "Total"
+msgstr "Разом"
 
 #. module: sale_layout
 #: model:ir.ui.view,arch_db:sale_layout.category_template
@@ -234,7 +237,7 @@ msgstr "Категорії"
 #: model:ir.ui.view,arch_db:sale_layout.report_invoice_layouted
 #: model:ir.ui.view,arch_db:sale_layout.report_sale_layouted
 msgid "Unit Price"
-msgstr "Ціна за одиницю"
+msgstr "Ціна одиниці"
 
 #. module: sale_layout
 #: model:ir.model,name:sale_layout.model_sale_layout_category

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-14 10:28+0000\n"
-"PO-Revision-Date: 2015-09-10 15:22+0000\n"
+"POT-Creation-Date: 2015-09-29 10:27+0000\n"
+"PO-Revision-Date: 2016-07-01 09:20+0000\n"
 "Last-Translator: Martin Trigaux\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/odoo/odoo-9/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -118,6 +118,11 @@ msgstr ""
 #. module: website_event
 #: model:ir.ui.view,arch_db:website_event.layout
 msgid "All Events"
+msgstr ""
+
+#. module: website_event
+#: model:ir.ui.view,arch_db:website_event.registration_attendee_details
+msgid "Attendee #%s"
 msgstr ""
 
 #. module: website_event
@@ -242,6 +247,11 @@ msgstr ""
 #. module: website_event
 #: model:ir.ui.view,arch_db:website_event.registration_complete
 msgid "E-mail"
+msgstr ""
+
+#. module: website_event
+#: model:ir.ui.view,arch_db:website_event.view_event_sale_form
+msgid "Edit Badges"
 msgstr ""
 
 #. module: website_event
@@ -458,11 +468,6 @@ msgid "Price"
 msgstr "價格"
 
 #. module: website_event
-#: model:ir.ui.view,arch_db:website_event.view_event_sale_form
-msgid "Print Badges"
-msgstr ""
-
-#. module: website_event
 #. openerp-web
 #: code:addons/website_event/static/src/js/website.tour.event.js:81
 #, python-format
@@ -628,7 +633,7 @@ msgstr ""
 #. module: website_event
 #: model:ir.model.fields,field_description:website_event.field_event_event_website_url
 msgid "Website URL"
-msgstr ""
+msgstr "網址"
 
 #. module: website_event
 #: model:ir.model.fields,help:website_event.field_event_event_website_message_ids

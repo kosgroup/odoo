@@ -1,8 +1,7 @@
 #-*- coding:utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-import time
-from datetime import date, datetime, timedelta
 
+from openerp import api
 from openerp.osv import fields, osv
 from openerp.tools import float_compare, float_is_zero
 from openerp.tools.translate import _
@@ -23,11 +22,11 @@ class hr_payslip_line(osv.osv):
             payslip_line.slip_id.employee_id.address_home_id.id
         if credit_account:
             if payslip_line.salary_rule_id.register_id.partner_id or \
-                    payslip_line.salary_rule_id.account_credit.type in ('receivable', 'payable'):
+                    payslip_line.salary_rule_id.account_credit.internal_type in ('receivable', 'payable'):
                 return partner_id
         else:
             if payslip_line.salary_rule_id.register_id.partner_id or \
-                    payslip_line.salary_rule_id.account_debit.type in ('receivable', 'payable'):
+                    payslip_line.salary_rule_id.account_debit.internal_type in ('receivable', 'payable'):
                 return partner_id
         return False
 
@@ -66,9 +65,15 @@ class hr_payslip(osv.osv):
     def onchange_contract_id(self, cr, uid, ids, date_from, date_to, employee_id=False, contract_id=False, context=None):
         contract_obj = self.pool.get('hr.contract')
         res = super(hr_payslip, self).onchange_contract_id(cr, uid, ids, date_from=date_from, date_to=date_to, employee_id=employee_id, contract_id=contract_id, context=context)
-        journal_id = contract_id and contract_obj.browse(cr, uid, contract_id, context=context).journal_id.id or False
+        journal_id = contract_id and contract_obj.browse(cr, uid, contract_id, context=context).journal_id.id or (not contract_id and self._get_default_journal(cr, uid, context=None))
         res['value'].update({'journal_id': journal_id})
         return res
+
+    @api.onchange('contract_id')
+    def onchange_contract(self):
+        super(hr_payslip, self).onchange_contract()
+        self.journal_id = self.contract_id and self.contract_id.journal_id.id or (not self.contract_id and self._get_default_journal())
+        return
 
     def cancel_sheet(self, cr, uid, ids, context=None):
         move_pool = self.pool.get('account.move')
@@ -87,13 +92,12 @@ class hr_payslip(osv.osv):
         move_pool = self.pool.get('account.move')
         hr_payslip_line_pool = self.pool['hr.payslip.line']
         precision = self.pool.get('decimal.precision').precision_get(cr, uid, 'Payroll')
-        timenow = time.strftime('%Y-%m-%d')
 
         for slip in self.browse(cr, uid, ids, context=context):
             line_ids = []
             debit_sum = 0.0
             credit_sum = 0.0
-            date = timenow
+            date = slip.date or slip.date_to
 
             name = _('Payslip of %s') % (slip.employee_id.name)
             move = {
@@ -145,7 +149,6 @@ class hr_payslip(osv.osv):
                     raise UserError(_('The Expense Journal "%s" has not properly configured the Credit Account!') % (slip.journal_id.name))
                 adjust_credit = (0, 0, {
                     'name': _('Adjustment Entry'),
-                    'date': timenow,
                     'partner_id': False,
                     'account_id': acc_id,
                     'journal_id': slip.journal_id.id,
@@ -180,7 +183,7 @@ class hr_payslip(osv.osv):
 class hr_salary_rule(osv.osv):
     _inherit = 'hr.salary.rule'
     _columns = {
-        'analytic_account_id':fields.many2one('account.analytic.account', 'Analytic Account'),
+        'analytic_account_id':fields.many2one('account.analytic.account', 'Analytic Account', domain=[('account_type', '=', 'normal')]),
         'account_tax_id':fields.many2one('account.tax', 'Tax'),
         'account_debit': fields.many2one('account.account', 'Debit Account', domain=[('deprecated', '=', False)]),
         'account_credit': fields.many2one('account.account', 'Credit Account', domain=[('deprecated', '=', False)]),
@@ -191,7 +194,7 @@ class hr_contract(osv.osv):
     _inherit = 'hr.contract'
     _description = 'Employee Contract'
     _columns = {
-        'analytic_account_id':fields.many2one('account.analytic.account', 'Analytic Account'),
+        'analytic_account_id':fields.many2one('account.analytic.account', 'Analytic Account', domain=[('account_type', '=', 'normal')]),
         'journal_id': fields.many2one('account.journal', 'Salary Journal'),
     }
 
